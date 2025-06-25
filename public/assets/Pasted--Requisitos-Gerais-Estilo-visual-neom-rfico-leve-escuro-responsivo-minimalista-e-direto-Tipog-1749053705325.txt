@@ -1,0 +1,149 @@
+ Requisitos Gerais:
+
+Estilo visual: neomórfico leve, escuro, responsivo, minimalista e direto
+
+Tipografia: Montserrat (com variações Light, Medium, Semibold, Bold)
+
+Cores (com base nas imagens fornecidas):
+
+Cinzas: #202020, #2D2D2D, #4E4E4E, #707070, #939393, #B7B7B7, #DADADA, #FEFEFE
+
+Laranja queimado: #AA5C2F
+
+Verde acinzentado: #96B4A8
+
+Azul claro: #7CC1DF
+
+Azul escuro: #2C6ECB
+
+Gradiente: transição do laranja para o azul
+
+Componentes de UI:
+
+Bordas arredondadas
+
+Cartões com sombras internas e contornos sutis
+
+Botões com efeito “pressionado” suave
+
+Fontes e cores devem seguir harmonia conforme as imagens anexadas
+(utilize-as para gerar a paleta cromática e fazer o mapeamento visual)
+
+🔧 Stack Tecnológica:
+
+React 18
+
+TypeScript
+
+Tailwind CSS
+
+Framer Motion (para animações suaves)
+
+Lucide ou Heroicons (para ícones)
+
+Wouter (roteamento leve em SPA)
+
+Outras integrações: WhatsApp API, Calendly, Stripe/Hotmart, Google Tag Manager
+
+📄 Estrutura do Site:
+
+🏠 Home
+Headline: “Dados, inteligência artificial e software para otimização de resultados.”
+
+Subheadline: “Reduza custos invisíveis, automatize tarefas e tome decisões com clareza.”
+
+CTA principal: Botão [Agendar diagnóstico gratuito]
+
+Seções:
+
+Como Funciona — 3 cards com ícones:
+
+“Entramos com robôs e lupa.”
+
+“Resolvemos com dashboards, IA e automações.”
+
+“Acompanhamos com dados reais e ROI visível.”
+
+Impacto Real: Cards com KPIs:
+
+Ex: “+120h economizadas”, “-40% churn”, “+30% margem”
+
+Quem Confia: Logos fictícios por setor
+
+Prova Social: Depoimentos e prints de dashboards
+
+Garantia: “Se você não recuperar o que investiu, devolvemos o dinheiro.”
+
+👤 Sobre a Duatx
+Missão, Visão, Valores
+
+Quem somos: Equipe técnica, base em SP, atuação nacional/internacional
+
+🛠️ Serviços
+Para cada serviço, incluir 4 elementos:
+
+🚧 Problema
+
+✅ Solução
+
+📈 Resultado esperado
+
+CTA (Agende agora)
+
+Serviços:
+
+Diagnóstico Empresarial
+
+Dashboards Personalizados (Power BI)
+
+Agentes de IA e Automações (n8n, Python)
+
+Desenvolvimento de Software Sob Medida
+
+Produtos Digitais e Kits Prontos
+
+🧩 Soluções por Setor
+Cards com dor principal + solução aplicada + link para landing específica
+
+Ex: Indústria, Saúde, Logística, Jurídico, Varejo
+
+📊 Resultados e Cases
+Cards com estudo de caso e resultado de ROI:
+Ex: “+R$ 20.000/mês”, “-40% retrabalho”
+
+🧠 Blog/Conteúdo
+Artigos com títulos chamativos e SEO otimizado
+
+Carrosséis/reels integrados
+
+Categorias temáticas
+
+📞 Contato
+Formulário com filtro por setor/desafio
+
+WhatsApp fixo flutuante
+
+Calendly ou agenda incorporada
+
+⚙️ Funcionalidades Técnicas:
+
+Layout completamente responsivo
+
+Animações com Framer Motion
+
+SEO otimizado (title, description, keywords)
+
+CTAs visíveis e distribuídos
+
+Integrações externas (WhatsApp, Stripe/Hotmart, GTM)
+
+💡 Importante:
+
+Use as cores das imagens enviadas como referência visual total.
+
+Use como base de layout e clima visual o site https://x.ai
+
+Evite poluição visual, efeitos pesados ou excesso de texto.
+
+Design sóbrio, tecnológico, elegante e direto.
+

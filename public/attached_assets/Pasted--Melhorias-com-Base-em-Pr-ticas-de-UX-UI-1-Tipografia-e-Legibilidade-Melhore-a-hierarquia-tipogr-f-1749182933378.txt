@@ -1,0 +1,98 @@
+✅ Melhorias com Base em Práticas de UX/UI
+1. Tipografia e Legibilidade
+Melhore a hierarquia tipográfica:
+
+Título principal maior, com font-weight acima de 700.
+
+Subtítulo com espaçamento de linha maior e peso mais leve (400–500).
+
+Evite usar muitas cores diferentes no mesmo bloco de texto — isso pode parecer poluído e confuso. Use destaque com moderação.
+
+✅ Sugestão:
+
+css
+Copiar
+Editar
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #CFCFCD;
+}
+2. Harmonia de Cores
+Unifique a paleta:
+
+Utilize gradientes suaves ou tons neutros como base.
+
+Evite transições abruptas (como do azul para o laranja queimado direto no texto).
+
+Use o laranja como ponto de atenção nos botões ou elementos interativos, não em trechos longos de texto.
+
+✅ Exemplo de gradiente sutil no título:
+
+css
+Copiar
+Editar
+background: linear-gradient(to right, #7CC1DF, #2C6ECB);
+-webkit-background-clip: text;
+color: transparent;
+3. Botões (CTAs)
+Melhore a hierarquia entre os botões:
+
+Um botão deve ser primário (ex: agendar) e o outro secundário (ex: conhecer soluções).
+
+Aumente o contraste dos botões com o fundo escuro.
+
+Aplique hover states com leve brilho, elevação ou mudança de cor.
+
+✅ Sugestão visual:
+
+css
+Copiar
+Editar
+button.primary {
+  background-color: #2C6ECB;
+  color: white;
+  box-shadow: 0 4px 12px rgba(44, 110, 203, 0.3);
+}
+button.secondary {
+  background-color: transparent;
+  border: 1px solid #707070;
+  color: #CFCFCD;
+}
+4. Espaçamento e Respiro
+Aumente o padding vertical da seção (mínimo de 80px top/bottom).
+
+Dê mais margin-bottom entre o subtítulo e os botões.
+
+✅ Sugestão:
+
+css
+Copiar
+Editar
+.section-hero {
+  padding: 80px 20px;
+}
+.section-hero p {
+  margin-bottom: 32px;
+}
+.buttons {
+  gap: 16px;
+}
+5. Animações Leves
+Adicione efeitos suaves de fade ou slide na entrada dos elementos.
+
+Use Framer Motion ou AOS para transições que transmitam sofisticação.
+
+💡 Extras que aumentam conversão
+Ícone discreto de WhatsApp ao lado do botão "Agendar diagnóstico gratuito".
+
+Selo de confiança ou estatísticas (ex: +100 clientes atendidos).
+
+Microcopy abaixo dos botões: “Sem compromisso, resposta em até 24h”.
+

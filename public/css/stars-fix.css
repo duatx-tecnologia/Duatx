@@ -1,0 +1,36 @@
+/* Force stars on all sections with maximum specificity */
+section[id="about"]::after,
+section[id="services"]::after,
+section[id="sectors"]::after,
+section[id="technologies"]::after,
+section[id="results"]::after,
+section[id="testimonials"]::after,
+section[id="blog"]::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: 
+    radial-gradient(1px 1px at 120px 80px, rgba(255, 255, 255, 0.4), transparent 2px),
+    radial-gradient(0.8px 0.8px at 280px 200px, rgba(255, 255, 255, 0.3), transparent 1.5px),
+    radial-gradient(1.2px 1.2px at 400px 150px, rgba(255, 255, 255, 0.35), transparent 2px),
+    radial-gradient(0.6px 0.6px at 60px 280px, rgba(255, 255, 255, 0.25), transparent 1px),
+    radial-gradient(1px 1px at 350px 60px, rgba(255, 255, 255, 0.4), transparent 2px),
+    radial-gradient(0.7px 0.7px at 180px 340px, rgba(255, 255, 255, 0.3), transparent 1.5px),
+    radial-gradient(1.1px 1.1px at 30px 180px, rgba(255, 255, 255, 0.35), transparent 2px),
+    radial-gradient(0.5px 0.5px at 380px 280px, rgba(255, 255, 255, 0.2), transparent 1px) !important;
+  background-repeat: repeat !important;
+  background-size: 500px 400px, 600px 500px, 550px 450px, 450px 350px, 650px 550px, 500px 400px, 400px 300px, 700px 600px !important;
+  animation: gentleStarTwinkle 15s ease-in-out infinite !important;
+  z-index: 999 !important;
+  pointer-events: none !important;
+}
+
+@keyframes gentleStarTwinkle {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  25% { opacity: 0.2; transform: scale(0.95); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+  75% { opacity: 0.3; transform: scale(0.98); }
+}

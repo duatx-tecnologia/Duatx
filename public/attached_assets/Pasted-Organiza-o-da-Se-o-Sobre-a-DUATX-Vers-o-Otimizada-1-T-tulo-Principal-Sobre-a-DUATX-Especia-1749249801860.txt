@@ -1,0 +1,65 @@
+Organização da Seção "Sobre a DUATX" – Versão Otimizada
+1. Título Principal
+Sobre a DUATX
+📍 Especialistas em transformar empresas com tecnologia que dá retorno.
+
+2. Bloco de Apresentação (Esquerda)
+Texto adaptado com mais força de posicionamento e clareza:
+
+Somos a Duatx.
+Uma consultoria que elimina desperdício invisível em empresas com dados, IA e automações inteligentes.
+
+A gente entra, mostra onde sua empresa tá perdendo tempo, margem e energia — e resolve com tecnologia que funciona de verdade.
+
+Nossa equipe junta excelência técnica com visão de negócio pra gerar resultado que você consegue medir — e sentir no bolso.
+
+3. Bloco de Missão, Visão e Valores (Direita)
+Cada item deve ser apresentado em cards verticais, com ícones (como já está na imagem) e textos mais impactantes e objetivos.
+
+🎯 Nossa Missão
+Fazer empresas ganharem mais dinheiro eliminando o desperdício invisível com automação, IA, dados e software sob medida.
+
+Simples assim.
+A gente entra, mostra onde a empresa tá sangrando tempo, margem e energia — e resolve.
+
+👁 Nossa Visão
+Ser a empresa que empresários e executivos chamam quando percebem que estão crescendo — mas perdendo dinheiro no caminho.
+
+A Duatx resolve o que trava empresas boas de crescerem com eficiência:
+
+tempo desperdiçado
+
+dados espalhados
+
+decisões sem clareza
+
+processos que só funcionam “se alguém lembrar”
+
+Visão: Resolver isso. Escalar isso. Sustentar isso.
+Com tecnologia que trabalha de verdade.
+
+🔥 Nossos Valores
+Resultado acima de tudo
+Toda entrega precisa gerar valor real.
+Se não economiza tempo, reduz custo ou melhora a tomada de decisão — não é Duatx.
+
+Tecnologia que resolve, não que enfeita
+IA, automação, dashboards, dados: usamos o que funciona. Sem modinha.
+
+Compromisso com o retorno
+Se o cliente não recuperar o que investiu, devolvemos o dinheiro.
+Sem letras miúdas. Sem desculpas.
+
+Ponto final:
+A Duatx existe pra tirar empresas do piloto automático e colocar no comando de verdade.
+
+🎨 Recomendação de Estilo
+Layout em grid com lado esquerdo para o parágrafo de apresentação e lado direito para os cards.
+
+Ícones diferenciados para Missão, Visão e Valores, com uma estética coesa à identidade visual da Duatx.
+
+Background escuro com cards neomórficos, como já utilizado.
+
+Utilizar tipografia Montserrat nas variações Bold (títulos), Medium (valores) e Light (descrições).
+
+Incluir microinterações com Framer Motion para transições suaves ao passar o mouse nos cards.

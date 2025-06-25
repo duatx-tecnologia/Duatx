@@ -1,0 +1,66 @@
+✅ Lista Consolidada de Tecnologias por Categoria
+🧠 Inteligência Artificial e Análise de Dados
+OpenAI GPT – Geração de insights, análise de linguagem natural e agentes conversacionais
+
+Python (pandas, numpy, scikit-learn) – Análise de dados, modelagem, pré-processamento
+
+LangChain – Implementação de agentes autônomos com memória e tomada de decisão
+
+Whisper / Fireflies / Otter.ai – Transcrição de áudio/reuniões para análise
+
+Streamlit – Prototipação de interfaces analíticas interativas
+
+📊 Business Intelligence e Visualização
+Microsoft Power BI – Dashboards personalizados com visualizações dinâmicas
+
+Power Query – ETL para integração e tratamento de dados dentro do Power BI
+
+Power Automate / n8n – Alertas automáticos baseados em indicadores (thresholds)
+
+Excel / Google Sheets – Fontes de dados e controle de input manual (quando necessário)
+
+🤖 Automações e Integrações
+n8n – Plataforma de automação low-code (com webhook, rotas condicionais, chamadas API)
+
+Zapier (opcional) – Alternativa para automações simples e rápidas
+
+APIs REST – Integração entre sistemas internos e externos
+
+Google Drive API / Docs API – Geração automática e organização de documentos
+
+WhatsApp API (EvolutionAPI, Z-API etc.) – Disparo de mensagens e integração com agentes de IA
+
+Redis – Armazenamento temporário e controle de sessões/fluxos em automações
+
+💻 Desenvolvimento de Software Sob Medida
+Frontend:
+
+React 18 + TypeScript
+
+Tailwind CSS – Estilização responsiva e moderna
+
+Vite – Bundler e servidor de desenvolvimento
+
+Wouter – Roteamento leve em SPAs
+
+Shadcn/UI + Radix UI – Componentes acessíveis e bem estruturados
+
+Framer Motion – Animações fluidas e interativas
+
+Backend:
+
+Node.js + Express.js
+
+Drizzle ORM – Mapeamento objeto-relacional para PostgreSQL
+
+PostgreSQL – Banco de dados robusto e escalável
+
+Redis – Cache e controle de sessões em tempo real
+
+Infraestrutura e DevOps:
+
+Railway / Render / Vercel / Replit – Deploy e hospedagem simplificados
+
+Docker (se necessário) – Contêineres para ambiente padronizado
+
+Auth0 / Clerk / JWT – Autenticação e segurança

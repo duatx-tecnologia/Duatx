@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUATX - Transformação Digital com IA e Automação</title>
+    <meta name="description" content="Eliminamos desperdícios invisíveis em empresas com dados, IA, automações e software sob medida. Tecnologia que gera ROI mensurável.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/blog.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="./assets/duatx-logo-tight.svg" alt="DUATX" class="logo">
+            </div>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#about" onclick="scrollToSection('about')">Sobre</a>
+                <a href="#services" onclick="scrollToSection('services')">Serviços</a>
+                <a href="#sectors" onclick="scrollToSection('sectors')">Setores</a>
+                <a href="#technologies" onclick="scrollToSection('technologies')">Tecnologias</a>
+                <a href="#results" onclick="scrollToSection('results')">Resultados</a>
+                <a href="#blog" onclick="scrollToSection('blog')">Blog</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="btn-cta-primary" onclick="scrollToSection('contact')">
+                    Falar Agora
+                </button>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="./assets/duatx-logo-tight.svg" alt="DUATX" class="logo">
+                <button class="mobile-menu-close" id="mobile-menu-close">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="mobile-menu-links">
+                <a href="#about" onclick="scrollToSection('about'); closeMobileMenu()">Sobre</a>
+                <a href="#services" onclick="scrollToSection('services'); closeMobileMenu()">Serviços</a>
+                <a href="#sectors" onclick="scrollToSection('sectors'); closeMobileMenu()">Setores</a>
+                <a href="#technologies" onclick="scrollToSection('technologies'); closeMobileMenu()">Tecnologias</a>
+                <a href="#results" onclick="scrollToSection('results'); closeMobileMenu()">Resultados</a>
+                <a href="#blog" onclick="scrollToSection('blog'); closeMobileMenu()">Blog</a>
+                <button class="btn-cta-primary mobile-cta" onclick="scrollToSection('contact'); closeMobileMenu()">
+                    Falar Agora
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Sua empresa <span class="text-gradient">cresce</span>, mas você sabe onde está <span class="text-gradient">perdendo dinheiro</span>?
+                    </h1>
+                    <p class="hero-subtitle">
+                        Eliminamos desperdícios invisíveis com <strong>dados, IA, automações e software sob medida</strong> — tecnologia que se paga sozinha em até 30 dias.
+                    </p>
+
+                </div>
+                <div class="hero-actions">
+                    <button
+                        class="btn-cta-primary cta-button primary pulse"
+                        onclick="scrollToSection('contact')"
+                    >
+                        <span class="btn-text"
+                            >Agendar diagnóstico gratuito</span
+                        >
+                        <i data-lucide="arrow-right" class="btn-icon"></i>
+                    </button>
+                    <button
+                        class="btn-cta-secondary"
+                        onclick="scrollToSection('services')"
+                    >
+                        <span class="btn-text">Conhecer soluções</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding section-background">
+            <div class="ethereal-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="ethereal-lines"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sobre a DUATX</h2>
+                    <p class="section-subtitle">
+                        📍 Especialistas em transformar empresas com tecnologia que dá retorno.
+                    </p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3 class="about-intro-title">Somos a Duatx.</h3>
+                        <p class="about-description">
+                            A Duatx elimina desperdícios invisíveis em empresas com dados, IA, automações e software sob medida.
+                        </p>
+                        <p class="about-description">
+                            A gente entra, mostra onde sua empresa tá perdendo tempo, margem e energia — e resolve com tecnologia que funciona de verdade.
+                        </p>
+                        
+                        <div class="about-process">
+                            <div class="process-item">
+                                <div class="process-icon">
+                                    <i data-lucide="zap" class="w-5 h-5"></i>
+                                </div>
+                                <p class="about-highlight">
+                                    Automatizamos tarefas repetitivas, organizamos os dados da empresa e desenvolvemos soluções inteligentes sob medida.
+                                </p>
+                            </div>
+                            <div class="process-item">
+                                <div class="process-icon">
+                                    <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                                </div>
+                                <p class="about-highlight">
+                                    Reduzimos retrabalho, aumentamos controle e ajudamos o cliente a tomar decisões com base em dados — e não em achismo.
+                                </p>
+                            </div>
+                            <div class="process-item">
+                                <div class="process-icon">
+                                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                                </div>
+                                <p class="about-highlight">
+                                    Trabalhamos com foco em ROI rápido, entregas objetivas e tecnologia que se paga sozinha.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <p class="about-description">
+                            Nossa equipe junta excelência técnica com visão de negócio pra gerar resultado que você consegue medir — e sentir no bolso.
+                        </p>
+                    </div>
+
+                    <div class="about-values">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i data-lucide="target" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="value-title">Nossa Missão</h3>
+                            <p class="value-description">
+                                Fazer empresas ganharem mais dinheiro eliminando o desperdício invisível com automação, IA, dados e software sob medida.
+                            </p>
+                            <p class="value-simple">
+                                <strong>Simples assim.</strong><br>
+                                A gente entra, mostra onde a empresa tá sangrando tempo, margem e energia — e resolve.
+                            </p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i data-lucide="eye" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="value-title">Nossa Visão</h3>
+                            <p class="value-description">
+                                Ser a empresa que empresários e executivos chamam quando percebem que estão crescendo — mas perdendo dinheiro no caminho.
+                            </p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="value-title">Nossos Valores</h3>
+                            <div class="values-list">
+                                <div class="value-item">
+                                    <strong>Resultado acima de tudo</strong>
+                                    <p>Toda entrega precisa gerar valor real. Se não economiza tempo, reduz custo ou melhora a tomada de decisão — não é Duatx.</p>
+                                </div>
+                                <div class="value-item">
+                                    <strong>Tecnologia que resolve, não que enfeita</strong>
+                                    <p>IA, automação, dashboards, dados e software sob medida: usamos o que funciona. Sem modinha.</p>
+                                </div>
+                                <div class="value-item">
+                                    <strong>Compromisso com o retorno</strong>
+                                    <p>Se o cliente não recuperar o que investiu, devolvemos o dinheiro. Sem letras miúdas. Sem desculpas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section-padding section-background">
+            <div class="ethereal-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="ethereal-lines"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nossos Serviços</h2>
+                    <p class="section-subtitle">
+                        Escolha o serviço ideal para transformar seu negócio e
+                        aumentar
+                        <br />
+                        seus resultados
+                    </p>
+                </div>
+
+                <div class="services-grid" id="services-container">
+                    <!-- Services will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sectors Section -->
+        <section id="sectors" class="section-padding section-background">
+            <div class="ethereal-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="ethereal-lines"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Soluções por Setor</h2>
+                    <p class="section-subtitle">
+                        Tecnologia aplicada à dor real de cada mercado — com foco em escala, eficiência e retorno.
+                    </p>
+                </div>
+
+                <div class="sectors-carousel">
+                    <div class="sectors-grid" id="sectors-container">
+                        <!-- Sectors will be populated by JavaScript -->
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn" id="sectors-prev">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <div class="carousel-dots" id="sectors-dots">
+                            <!-- Dots will be populated by JavaScript -->
+                        </div>
+                        <button class="carousel-btn" id="sectors-next">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section id="technologies" class="section-padding section-background">
+            <div class="ethereal-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="ethereal-lines"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Tecnologias de Ponta</h2>
+                    <p class="section-subtitle">
+                        Ferramentas avançadas para soluções inovadoras
+                    </p>
+                </div>
+
+                <div class="technologies-carousel">
+                    <div class="technologies-grid" id="technologies-container">
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Inteligência Artificial</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="brain" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">OpenAI GPT</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="code" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Python</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="link" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">LangChain</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="mic" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Whisper</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="eye" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">OpenCV</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="network" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">TensorFlow</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Análise de Dados</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Power BI</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="filter" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Power Query</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="table" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Excel</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="trending-up" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Pandas</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="pie-chart" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Plotly</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="activity" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Jupyter</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Automação</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="workflow" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">n8n</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="zap" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Zapier</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="bot" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Make</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="cpu" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Selenium</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="play" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Playwright</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="terminal" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Celery</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Desenvolvimento Frontend</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="component" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">React</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="code-2" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">TypeScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="palette" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Tailwind CSS</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="zap" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Vite</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="route" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Wouter</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="move" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Framer Motion</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Desenvolvimento Backend</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="settings" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Node.js</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="server" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Express.js</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="database" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">PostgreSQL</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="layers" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Drizzle ORM</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="key" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Auth0</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="shield" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">JWT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Infraestrutura</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="train" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Railway</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="triangle" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Vercel</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="box" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Docker</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="cloud" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">AWS</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="globe" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Redis</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">
+                                    <i data-lucide="monitor" class="w-4 h-4"></i>
+                                </div>
+                                <span class="tech-name">Google Docs API</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn" id="technologies-prev">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <div class="carousel-dots" id="technologies-dots">
+                            <div class="carousel-dot active"></div>
+                            <div class="carousel-dot"></div>
+                            <div class="carousel-dot"></div>
+                            <div class="carousel-dot"></div>
+                            <div class="carousel-dot"></div>
+                            <div class="carousel-dot"></div>
+                        </div>
+                        <button class="carousel-btn" id="technologies-next">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Results Section -->
+        <section id="results" class="section-padding section-background">
+            <div class="ethereal-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="ethereal-lines"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Casos de Sucesso</h2>
+                    <p class="section-subtitle">
+                        Transformações reais com resultados comprovados
+                    </p>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="results-carousel" id="results-container">
+                        <!-- Results will be populated by JavaScript -->
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn" id="results-prev">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <div class="carousel-dots" id="results-dots">
+                            <!-- Dots will be populated by JavaScript -->
+                        </div>
+                        <button class="carousel-btn" id="results-next">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section-padding section-background">
+            <div class="ethereal-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="ethereal-lines"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">O que nossos clientes dizem</h2>
+                    <p class="section-subtitle">
+                        Depoimentos reais de empresas transformadas
+                    </p>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="testimonials-carousel" id="testimonials-container">
+                        <!-- Testimonials will be populated by JavaScript -->
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn" id="testimonials-prev">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <div class="carousel-dots" id="testimonials-dots">
+                            <!-- Dots will be populated by JavaScript -->
+                        </div>
+                        <button class="carousel-btn" id="testimonials-next">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section id="blog" class="blog section-padding section-background">
+            <div class="ethereal-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="ethereal-lines"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2>Blog & Insights</h2>
+                    <p>
+                        Conteúdo especializado sobre IA, automação e otimização
+                        de processos empresariais
+                    </p>
+                </div>
+
+                <div class="blog-search-container">
+                    <div class="search-bar">
+                        <i class="search-icon" data-lucide="search"></i>
+                        <input
+                            type="text"
+                            placeholder="Buscar artigos..."
+                            id="blogSearch"
+                        />
+                    </div>
+                    <div class="blog-topics">
+                        <span class="topic-label">Todos (6)</span>
+                        <span class="topic-item active" data-topic="all"
+                            >Inteligência Artificial (4)</span
+                        >
+                        <span class="topic-item" data-topic="dashboards"
+                            >Dashboards (5)</span
+                        >
+                        <span class="topic-item" data-topic="automacao"
+                            >Automação (3)</span
+                        >
+                        <span class="topic-item" data-topic="cases"
+                            >Casos de Sucesso (2)</span
+                        >
+                    </div>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="blog-carousel" id="blog-container">
+                        <article class="blog-card" data-topic="dashboards">
+                            <div class="blog-image">
+                                <div class="blog-category">Dashboards</div>
+                            </div>
+                            <div class="blog-content">
+                                <h3 class="blog-title">
+                                    Como Dashboards Inteligentes Aumentaram a
+                                    Eficiência em 40%
+                                </h3>
+                                <p class="blog-excerpt">
+                                    Descubra como uma empresa de logística
+                                    transformou sua operação com visualização de
+                                    dados em tempo real...
+                                </p>
+                                <div class="blog-meta">
+                                    <span class="blog-date">15 Jan 2024</span>
+                                    <span class="blog-read-time">5 min</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card" data-topic="automacao">
+                            <div class="blog-image">
+                                <div class="blog-category">Automação</div>
+                            </div>
+                            <div class="blog-content">
+                                <h3 class="blog-title">
+                                    Automação de Processos: ROI de 300% em 60 Dias
+                                </h3>
+                                <p class="blog-excerpt">
+                                    Case real de como automações inteligentes
+                                    eliminaram 80% das tarefas repetitivas em uma
+                                    startup...
+                                </p>
+                                <div class="blog-meta">
+                                    <span class="blog-date">12 Jan 2024</span>
+                                    <span class="blog-read-time">7 min</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card" data-topic="all">
+                            <div class="blog-image">
+                                <div class="blog-category">IA</div>
+                            </div>
+                            <div class="blog-content">
+                                <h3 class="blog-title">
+                                    IA Generativa na Prática: Reduzindo Custos
+                                    Operacionais
+                                </h3>
+                                <p class="blog-excerpt">
+                                    Como implementamos assistentes de IA que
+                                    processam documentos e respondem clientes
+                                    automaticamente...
+                                </p>
+                                <div class="blog-meta">
+                                    <span class="blog-date">10 Jan 2024</span>
+                                    <span class="blog-read-time">6 min</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card" data-topic="cases">
+                            <div class="blog-image">
+                                <div class="blog-category">Cases</div>
+                            </div>
+                            <div class="blog-content">
+                                <h3 class="blog-title">
+                                    Transformação Digital em Clínicas: Menos Espera,
+                                    Mais Pacientes
+                                </h3>
+                                <p class="blog-excerpt">
+                                    Como digitalizamos o fluxo de uma clínica,
+                                    reduzindo tempo de espera em 50% e aumentando
+                                    faturamento...
+                                </p>
+                                <div class="blog-meta">
+                                    <span class="blog-date">8 Jan 2024</span>
+                                    <span class="blog-read-time">4 min</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card" data-topic="all">
+                            <div class="blog-image">
+                                <div class="blog-category">IA</div>
+                            </div>
+                            <div class="blog-content">
+                                <h3 class="blog-title">
+                                    Chatbots Inteligentes: Atendimento 24/7 com IA
+                                </h3>
+                                <p class="blog-excerpt">
+                                    Implementação de chatbots que entendem contexto
+                                    e resolvem 90% das dúvidas sem intervenção
+                                    humana...
+                                </p>
+                                <div class="blog-meta">
+                                    <span class="blog-date">5 Jan 2024</span>
+                                    <span class="blog-read-time">5 min</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card" data-topic="dashboards">
+                            <div class="blog-image">
+                                <div class="blog-category">Dashboards</div>
+                            </div>
+                            <div class="blog-content">
+                                <h3 class="blog-title">
+                                    Power BI vs Ferramentas Customizadas: Quando
+                                    Usar Cada Uma
+                                </h3>
+                                <p class="blog-excerpt">
+                                    Análise completa das melhores opções para
+                                    visualização de dados empresariais e critérios
+                                    de escolha...
+                                </p>
+                                <div class="blog-meta">
+                                    <span class="blog-date">3 Jan 2024</span>
+                                    <span class="blog-read-time">8 min</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn" id="blog-prev">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <div class="carousel-dots" id="blog-dots">
+                            <!-- Dots will be populated by JavaScript -->
+                        </div>
+                        <button class="carousel-btn" id="blog-next">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding section-background">
+            <div class="ethereal-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="ethereal-lines"></div>
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-content">
+                        <div class="section-header">
+                            <h2 class="section-title">
+                                Pronto para Transformar sua Empresa?
+                            </h2>
+                            <p class="section-subtitle">
+                                Fale conosco agora e descubra como podemos
+                                eliminar desperdícios e aumentar seus resultados
+                            </p>
+                        </div>
+
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Telefone</h4>
+                                    <p>+55 (11) 9.1290-6767</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>contato@duatx.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Horário</h4>
+                                    <p>Seg - Sex: 9h às 18h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Empresarial</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefone/WhatsApp</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Empresa</label>
+                                <input
+                                    type="text"
+                                    id="company"
+                                    name="company"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Serviço de Interesse</label>
+                                <select id="service" name="service" required>
+                                    <option value="">
+                                        Selecione um serviço
+                                    </option>
+                                    <option value="diagnostico">
+                                        Diagnóstico Empresarial
+                                    </option>
+                                    <option value="dashboards">
+                                        Dashboards Personalizados
+                                    </option>
+                                    <option value="automacao">
+                                        Automações e IA
+                                    </option>
+                                    <option value="software">
+                                        Software Sob Medida
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">
+                                    Descreva seu Desafio
+                                </label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="4"
+                                    placeholder="Conte-nos sobre os principais problemas ou ineficiências que você enfrenta..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-cta-primary">
+                                <span class="btn-text"
+                                    >Enviar Mensagem</span
+                                >
+                                <i data-lucide="send" class="btn-icon"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="./assets/duatx-logo-tight.svg" alt="DUATX" class="footer-logo">
+                    <p class="footer-description">
+                        Transformando empresas com tecnologia que gera resultados reais e mensuráveis.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Serviços</h4>
+                        <ul>
+                            <li><a href="#services">Diagnóstico Empresarial</a></li>
+                            <li><a href="#services">Dashboards Personalizados</a></li>
+                            <li><a href="#services">Automações e IA</a></li>
+                            <li><a href="#services">Software Sob Medida</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="#about">Sobre Nós</a></li>
+                            <li><a href="#results">Casos de Sucesso</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#contact">Contato</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li>+55 (11) 9.1290-6767</li>
+                            <li>contato@duatx.com</li>
+                            <li>Seg - Sex: 9h às 18h</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 DUATX. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a
+        href="https://wa.me/5511912906767?text=Olá! Vim pelo site da Duatx. Gostaria de conversar sobre seus serviços."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-float"
+        aria-label="Contato via WhatsApp"
+    >
+        <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516"
+                fill="currentColor"
+            />
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="./js/data.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script>
+        // Initialize Lucide icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Initialize website
+        document.addEventListener('DOMContentLoaded', function() {
+            const website = new DuatxWebsite();
+            website.init();
+            
+            const animationManager = new AnimationManager();
+            animationManager.init();
+        });
+    </script>
+</body>
+</html>

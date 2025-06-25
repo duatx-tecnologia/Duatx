@@ -1,0 +1,186 @@
+<!-- Blog -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Blog & Insights</h2>
+                <p>Conteúdo especializado sobre IA, automação e otimização de processos empresariais</p>
+            </div>
+
+            <div class="blog-search-container">
+                <div class="search-bar">
+                    <i class="search-icon fas fa-search"></i>
+                    <input type="text" placeholder="Buscar artigos..." id="blogSearch">
+                </div>
+                <div class="blog-topics">
+                    <span class="topic-label">Todos (6)</span>
+                    <span class="topic-item active" data-topic="all">Inteligência Artificial (4)</span>
+                    <span class="topic-item" data-topic="dashboards">Dashboards (5)</span>
+                    <span class="topic-item" data-topic="automacao">Automação (3)</span>
+                    <span class="topic-item" data-topic="cases">Cases (2)</span>
+                </div>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div class="blog-card-icon">
+                            <i data-lucide="brain"></i>
+                        </div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-badges">
+                            <span class="blog-badge ai">Inteligência Artificial</span>
+                            <span class="blog-badge machine-learning">Machine Learning</span>
+                        </div>
+                        <h3>Como a IA está revolucionando a tomada de decisões empresariais</h3>
+                        <div class="blog-meta">
+                            <i data-lucide="clock"></i>
+                            <span>15 min</span>
+                            <i data-lucide="calendar"></i>
+                            <span>06/01/2024</span>
+                        </div>
+                        <p>Descubra como algoritmos de machine learning podem identificar padrões invisíveis nos seus
+                            dados e transformar a forma como sua empresa toma decisões críticas.</p>
+                        <a href="#" class="blog-link">
+                            Ler mais
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div class="blog-card-icon">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-badges">
+                            <span class="blog-badge dashboards">Dashboards</span>
+                            <span class="blog-badge bi">BI</span>
+                        </div>
+                        <h3>5 KPIs essenciais que toda empresa deveria monitorar</h3>
+                        <div class="blog-meta">
+                            <i data-lucide="clock"></i>
+                            <span>8 min</span>
+                            <i data-lucide="calendar"></i>
+                            <span>18/02/2024</span>
+                        </div>
+                        <p>Métricas fundamentais para acompanhar a saúde do seu negócio em tempo real e tomar decisões
+                            baseadas em dados.</p>
+                        <a href="#" class="blog-link">
+                            Ler mais
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div class="blog-card-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-badges">
+                            <span class="blog-badge automacao">Automação</span>
+                        </div>
+                        <h3>Automação que realmente importa: ROI em 90 dias</h3>
+                        <div class="blog-meta">
+                            <i data-lucide="clock"></i>
+                            <span>12 min</span>
+                            <i data-lucide="calendar"></i>
+                            <span>05/01/2024</span>
+                        </div>
+                        <p>Processos simples para identificar e automatizar tarefas que consomem tempo da sua equipe,
+                            com retorno garantido.</p>
+                        <a href="#" class="blog-link">
+                            Ler mais
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div class="blog-card-icon">
+                            <i data-lucide="building-2"></i>
+                        </div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-badges">
+                            <span class="blog-badge cases">Case Study</span>
+                            <span class="blog-badge automacao">Automação</span>
+                        </div>
+                        <h3>Case: Como uma indústria economizou R$ 200mil com IA</h3>
+                        <div class="blog-meta">
+                            <i data-lucide="clock"></i>
+                            <span>20 min</span>
+                            <i data-lucide="calendar"></i>
+                            <span>07/01/2024</span>
+                        </div>
+                        <p>Acompanhe o processo completo de implementação de um sistema preditivo que revolucionou a
+                            operação de uma indústria.</p>
+                        <a href="#" class="blog-link">
+                            Ler mais
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div class="blog-card-icon">
+                            <i data-lucide="bar-chart-3"></i>
+                        </div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-badges">
+                            <span class="blog-badge dashboards">Dashboards</span>
+                            <span class="blog-badge bi">BI</span>
+                        </div>
+                        <h3>Power BI vs Tableau: Qual a melhor escolha para sua empresa?</h3>
+                        <div class="blog-meta">
+                            <i data-lucide="clock"></i>
+                            <span>15 min</span>
+                            <i data-lucide="calendar"></i>
+                            <span>04/01/2024</span>
+                        </div>
+                        <p>Comparativo detalhado entre as duas principais ferramentas de Business Intelligence do
+                            mercado, com prós e contras.</p>
+                        <a href="#" class="blog-link">
+                            Ler mais
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div class="blog-card-icon">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-badges">
+                            <span class="blog-badge ai">Inteligência Artificial</span>
+                            <span class="blog-badge automacao">Automação</span>
+                        </div>
+                        <h3>O futuro da automação: Agentes de IA conversacional</h3>
+                        <div class="blog-meta">
+                            <i data-lucide="clock"></i>
+                            <span>18 min</span>
+                            <i data-lucide="calendar"></i>
+                            <span>02/01/2024</span>
+                        </div>
+                        <p>Como os chatbots inteligentes estão transformando o atendimento ao cliente e a automação de
+                            processos internos.</p>
+                        <a href="#" class="blog-link">
+                            Ler mais
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>

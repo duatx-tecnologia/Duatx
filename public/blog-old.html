@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog - DUATX | Insights em IA e Automação</title>
+        <meta name="description" content="Explore nossos artigos sobre inteligência artificial, automação e transformação digital. Insights práticos para o futuro dos negócios." />
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        
+        <!-- Lucide Icons -->
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+        
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/blog-modern-layout.css" />
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <header id="navbar" class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img
+                            src="assets/x-lightversion@2x.svg"
+                            alt="DUATX"
+                            class="logo-img"
+                        />
+                    </a>
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="index.html#home">Início</a></li>
+                        <li><a href="index.html#about">Sobre</a></li>
+                        <li><a href="index.html#services">Serviços</a></li>
+                        <li><a href="index.html#sectors">Setores</a></li>
+                        <li><a href="index.html#technologies">Tecnologias</a></li>
+                        <li><a href="index.html#results">Casos</a></li>
+                        <li><a href="index.html#testimonials">Depoimentos</a></li>
+                        <li><a href="blog.html" class="active">Blog</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Blog Page Content -->
+        <main class="blog-page">
+            <!-- Hero Section -->
+            <section class="blog-hero">
+                <div class="container">
+                    <div class="blog-hero-content">
+                        <div class="blog-breadcrumb">
+                            <a href="index.html">Início</a>
+                            <i data-lucide="chevron-right"></i>
+                            <span>Blog</span>
+                        </div>
+                        <h1 class="blog-hero-title">Explorando o Futuro da Automação Inteligente</h1>
+                        <p class="blog-hero-subtitle">
+                            Insights, tendências e cases práticos sobre IA, automação e transformação digital para impulsionar seu negócio
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Content -->
+            <section class="blog-content">
+                <div class="container">
+                    <div class="blog-layout">
+                        <!-- Sidebar -->
+                        <aside class="blog-sidebar">
+                            <div class="sidebar-widget">
+                                <h3>Categorias</h3>
+                                <ul class="category-list">
+                                    <li><a href="#" data-category="all">Todos os artigos <span>(12)</span></a></li>
+                                    <li><a href="#" data-category="ia">Inteligência Artificial <span>(6)</span></a></li>
+                                    <li><a href="#" data-category="dashboards">Dashboards <span>(5)</span></a></li>
+                                    <li><a href="#" data-category="automacao">Automação <span>(9)</span></a></li>
+                                    <li><a href="#" data-category="cases">Case Studies <span>(3)</span></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="sidebar-widget">
+                                <h3>Artigos Populares</h3>
+                                <div class="popular-posts">
+                                    <article class="popular-post">
+                                        <div class="post-thumbnail">
+                                            <div class="post-icon">
+                                                <i data-lucide="brain"></i>
+                                            </div>
+                                        </div>
+                                        <div class="post-content">
+                                            <h4><a href="#">IA na Tomada de Decisões</a></h4>
+                                            <span class="post-date">06/01/2024</span>
+                                        </div>
+                                    </article>
+                                    
+                                    <article class="popular-post">
+                                        <div class="post-thumbnail">
+                                            <div class="post-icon">
+                                                <i data-lucide="trending-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="post-content">
+                                            <h4><a href="#">Dashboards Inteligentes</a></h4>
+                                            <span class="post-date">12/Set/2024</span>
+                                        </div>
+                                    </article>
+                                    
+                                    <article class="popular-post">
+                                        <div class="post-thumbnail">
+                                            <div class="post-icon">
+                                                <i data-lucide="zap"></i>
+                                            </div>
+                                        </div>
+                                        <div class="post-content">
+                                            <h4><a href="#">Automação com RPA</a></h4>
+                                            <span class="post-date">05/Set/2024</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+
+                            <div class="sidebar-widget cta-widget">
+                                <div class="cta-content">
+                                    <h3>Pronto para transformar seu negócio?</h3>
+                                    <p>Agende uma consultoria gratuita e descubra como a IA pode revolucionar seus processos</p>
+                                    <a href="index.html#contact" class="cta-button">Falar com Especialista</a>
+                                </div>
+                            </div>
+                        </aside>
+
+                        <!-- Main Content -->
+                        <div class="blog-main">
+                            <div class="blog-search-filters">
+                                <div class="search-box">
+                                    <i data-lucide="search"></i>
+                                    <input type="text" placeholder="Buscar artigos..." id="blogPageSearch">
+                                </div>
+                                <div class="filter-tabs">
+                                    <button class="filter-tab active" data-filter="all">Todos</button>
+                                    <button class="filter-tab" data-filter="recentes">Mais Recentes</button>
+                                    <button class="filter-tab" data-filter="populares">Mais Populares</button>
+                                </div>
+                            </div>
+
+                            <div class="blog-grid" id="blogArticleGrid">
+                                <!-- Article 1 -->
+                                <article class="blog-article" data-category="ia" data-date="2024-01-06">
+                                    <div class="article-badge hot">EM ALTA</div>
+                                    <div class="article-header">
+                                        <div class="article-icon orange">
+                                            <i data-lucide="brain"></i>
+                                        </div>
+                                        <div class="article-meta">
+                                            <span class="category">INTELIGÊNCIA ARTIFICIAL</span>
+                                            <div class="meta-info">
+                                                <span><i data-lucide="clock"></i> 16 min</span>
+                                                <span><i data-lucide="calendar"></i> 06/01/2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2>IA na Tomada de Decisões: Como as Empresas Estão Revolucionando seus Processos</h2>
+                                    <p>Descubra como empresas líderes estão usando inteligência artificial para tomar decisões mais rápidas, precisas e inteligentes. Explore cases reais, tecnologias emergentes e estratégias práticas para implementar IA em seus processos decisórios.</p>
+                                    <div class="article-tags">
+                                        <span class="tag">Machine Learning</span>
+                                        <span class="tag">Decisões</span>
+                                        <span class="tag">Estratégia</span>
+                                    </div>
+                                    <a href="artigo-ia-decisoes.html" class="read-more-btn orange">
+                                        Ler artigo completo
+                                        <i data-lucide="arrow-right"></i>
+                                    </a>
+                                </article>
+
+                                <!-- Article 2 -->
+                                <article class="blog-article" data-category="dashboards" data-date="2024-09-12">
+                                    <div class="article-header">
+                                        <div class="article-icon blue">
+                                            <i data-lucide="trending-up"></i>
+                                        </div>
+                                        <div class="article-meta">
+                                            <span class="category">DASHBOARDS</span>
+                                            <div class="meta-info">
+                                                <span><i data-lucide="clock"></i> 8 min</span>
+                                                <span><i data-lucide="calendar"></i> 12/Set/2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2>Dashboards Inteligentes: A Nova Era da Visualização de Dados</h2>
+                                    <p>Saiba como dashboards modernos com IA estão mudando a forma como líderes visualizam dados e tomam decisões em tempo real. Conheça as ferramentas e metodologias que estão definindo o futuro do Business Intelligence.</p>
+                                    <div class="article-tags">
+                                        <span class="tag">BI</span>
+                                        <span class="tag">Visualização</span>
+                                        <span class="tag">Analytics</span>
+                                    </div>
+                                    <a href="#" class="read-more-btn blue">
+                                        Ler artigo completo
+                                        <i data-lucide="arrow-right"></i>
+                                    </a>
+                                </article>
+
+                                <!-- Article 3 -->
+                                <article class="blog-article" data-category="automacao" data-date="2024-09-05">
+                                    <div class="article-header">
+                                        <div class="article-icon teal">
+                                            <i data-lucide="zap"></i>
+                                        </div>
+                                        <div class="article-meta">
+                                            <span class="category">AUTOMAÇÃO</span>
+                                            <div class="meta-info">
+                                                <span><i data-lucide="clock"></i> 12 min</span>
+                                                <span><i data-lucide="calendar"></i> 05/Set/2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2>Automação com RPA e IA: Eliminando Tarefas Repetitivas</h2>
+                                    <p>Veja como a união entre automação robótica de processos e inteligência artificial está eliminando tarefas repetitivas e liberando tempo para o que realmente importa. Guia completo com exemplos práticos e ROI.</p>
+                                    <div class="article-tags">
+                                        <span class="tag">RPA</span>
+                                        <span class="tag">Produtividade</span>
+                                        <span class="tag">Eficiência</span>
+                                    </div>
+                                    <a href="#" class="read-more-btn orange">
+                                        Ler artigo completo
+                                        <i data-lucide="arrow-right"></i>
+                                    </a>
+                                </article>
+
+                                <!-- Article 4 -->
+                                <article class="blog-article" data-category="cases" data-date="2024-12-04">
+                                    <div class="article-header">
+                                        <div class="article-icon purple">
+                                            <i data-lucide="building-2"></i>
+                                        </div>
+                                        <div class="article-meta">
+                                            <span class="category">CASE STUDY</span>
+                                            <div class="meta-info">
+                                                <span><i data-lucide="clock"></i> 20 min</span>
+                                                <span><i data-lucide="calendar"></i> 04/12/2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2>Case Study: Como IA e Dashboards Transformaram o Varejo</h2>
+                                    <p>Conheça o case real de uma empresa que aumentou as vendas em 40% com IA preditiva e dashboards que mostram o que realmente importa. Análise detalhada da implementação, desafios e resultados obtidos.</p>
+                                    <div class="article-tags">
+                                        <span class="tag">Case Real</span>
+                                        <span class="tag">Varejo</span>
+                                        <span class="tag">ROI</span>
+                                    </div>
+                                    <a href="#" class="read-more-btn blue">
+                                        Ler artigo completo
+                                        <i data-lucide="arrow-right"></i>
+                                    </a>
+                                </article>
+
+                                <!-- Article 5 -->
+                                <article class="blog-article" data-category="dashboards" data-date="2024-11-28">
+                                    <div class="article-header">
+                                        <div class="article-icon blue">
+                                            <i data-lucide="pie-chart"></i>
+                                        </div>
+                                        <div class="article-meta">
+                                            <span class="category">DASHBOARDS</span>
+                                            <div class="meta-info">
+                                                <span><i data-lucide="clock"></i> 14 min</span>
+                                                <span><i data-lucide="calendar"></i> 28/11/2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2>KPIs que Realmente Importam: Guia Definitivo para Métricas Inteligentes</h2>
+                                    <p>Aprenda a identificar e monitorar os indicadores que realmente fazem a diferença para o crescimento do seu negócio. Framework completo para escolher, implementar e acompanhar KPIs estratégicos.</p>
+                                    <div class="article-tags">
+                                        <span class="tag">KPIs</span>
+                                        <span class="tag">Métricas</span>
+                                        <span class="tag">Estratégia</span>
+                                    </div>
+                                    <a href="#" class="read-more-btn orange">
+                                        Ler artigo completo
+                                        <i data-lucide="arrow-right"></i>
+                                    </a>
+                                </article>
+
+                                <!-- Article 6 -->
+                                <article class="blog-article" data-category="ia" data-date="2024-11-15">
+                                    <div class="article-header">
+                                        <div class="article-icon orange">
+                                            <i data-lucide="cpu"></i>
+                                        </div>
+                                        <div class="article-meta">
+                                            <span class="category">INTELIGÊNCIA ARTIFICIAL</span>
+                                            <div class="meta-info">
+                                                <span><i data-lucide="clock"></i> 22 min</span>
+                                                <span><i data-lucide="calendar"></i> 15/11/2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2>Machine Learning para Negócios: Implementação Prática sem Complicação</h2>
+                                    <p>Entenda como implementar machine learning em processos empresariais sem complicação técnica e com resultados práticos. Guia step-by-step com ferramentas, cases e melhores práticas.</p>
+                                    <div class="article-tags">
+                                        <span class="tag">ML</span>
+                                        <span class="tag">Implementação</span>
+                                        <span class="tag">Prático</span>
+                                    </div>
+                                    <a href="#" class="read-more-btn blue">
+                                        Ler artigo completo
+                                        <i data-lucide="arrow-right"></i>
+                                    </a>
+                                </article>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="pagination">
+                                <button class="page-btn prev" disabled>
+                                    <i data-lucide="chevron-left"></i>
+                                    Anterior
+                                </button>
+                                <div class="page-numbers">
+                                    <button class="page-num active">1</button>
+                                    <button class="page-num">2</button>
+                                    <button class="page-num">3</button>
+                                </div>
+                                <button class="page-btn next">
+                                    Próximo
+                                    <i data-lucide="chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <span class="logo-text">DUATX</span>
+                        </div>
+                        <p>Transformando negócios através da inteligência artificial e automação inteligente.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Serviços</h4>
+                        <ul>
+                            <li><a href="index.html#services">Consultoria em IA</a></li>
+                            <li><a href="index.html#services">Dashboards Inteligentes</a></li>
+                            <li><a href="index.html#services">Automação de Processos</a></li>
+                            <li><a href="index.html#services">Análise de Dados</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="index.html#about">Sobre Nós</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="index.html#contact">Contato</a></li>
+                            <li><a href="#">Carreiras</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Contato</h4>
+                        <div class="contact-info">
+                            <p><i data-lucide="mail"></i> contato@duatx.com</p>
+                            <p><i data-lucide="phone"></i> (11) 9999-9999</p>
+                            <p><i data-lucide="map-pin"></i> São Paulo, SP</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2024 DUATX. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="js/blog-page.js"></script>
+        <script>
+            // Initialize Lucide icons
+            lucide.createIcons();
+        </script>
+    </body>
+</html>
