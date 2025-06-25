@@ -33,9 +33,17 @@ function copyDir(src, dest) {
 
 try {
   copyDir('public', 'dist');
-  console.log('Static site built successfully!');
-  console.log('Files copied from public/ to dist/');
+  
+  // Copy root index.html for Vite compatibility
+  if (fs.existsSync('index.html')) {
+    fs.copyFileSync('index.html', 'dist/index.html');
+  }
+  
+  console.log('✓ Static site built successfully!');
+  console.log('✓ Files copied from public/ to dist/');
+  console.log('✓ Root index.html added for deployment compatibility');
+  console.log('✓ Site ready for deployment at dist/');
 } catch (error) {
-  console.error('Build failed:', error.message);
+  console.error('✗ Build failed:', error.message);
   process.exit(1);
 }
