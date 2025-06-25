@@ -39,6 +39,77 @@ const DATA = {
     }
   ],
 
+  technologies: [
+    {
+      name: "Inteligência Artificial",
+      items: [
+        { name: "OpenAI GPT", icon: "brain" },
+        { name: "Python", icon: "code" },
+        { name: "LangChain", icon: "link" },
+        { name: "Whisper", icon: "mic" },
+        { name: "Streamlit", icon: "play" },
+        { name: "Fireflies", icon: "file-audio" }
+      ]
+    },
+    {
+      name: "Business Intelligence",
+      items: [
+        { name: "Power BI", icon: "bar-chart-3" },
+        { name: "Power Query", icon: "database" },
+        { name: "Power Automate", icon: "zap" },
+        { name: "Excel", icon: "file-spreadsheet" },
+        { name: "Google Sheets", icon: "table" },
+        { name: "n8n", icon: "workflow" }
+      ]
+    },
+    {
+      name: "Automações",
+      items: [
+        { name: "n8n", icon: "workflow" },
+        { name: "APIs REST", icon: "globe" },
+        { name: "WhatsApp API", icon: "message-circle" },
+        { name: "Redis", icon: "server" },
+        { name: "Google Docs API", icon: "file-text" },
+        { name: "Zapier", icon: "zap" }
+      ]
+    },
+    {
+      name: "Frontend",
+      items: [
+        { name: "React", icon: "globe" },
+        { name: "TypeScript", icon: "code" },
+        { name: "Tailwind CSS", icon: "palette" },
+        { name: "Vite", icon: "zap" },
+        { name: "React Native", icon: "smartphone" },
+        { name: "Next.js", icon: "layout" }
+      ]
+    },
+    {
+      name: "Backend",
+      items: [
+        { name: "Node.js", icon: "settings" },
+        { name: "Express.js", icon: "server" },
+        { name: "PostgreSQL", icon: "database" },
+        { name: "Drizzle ORM", icon: "layers" },
+        { name: "Auth0", icon: "key" },
+        { name: "JWT", icon: "shield" }
+      ]
+    },
+    {
+      name: "Infraestrutura",
+      items: [
+        { name: "Railway", icon: "train" },
+        { name: "Vercel", icon: "triangle" },
+        { name: "Docker", icon: "box" },
+        { name: "Render", icon: "cloud" },
+        { name: "Replit", icon: "code" },
+        { name: "Redis Cache", icon: "server" }
+      ]
+    }
+  ],
+
+
+
   sectors: [
     {
       id: "saas",
@@ -137,6 +208,7 @@ const DATA = {
       id: "techcorp-automacao",
       company: "TechCorp",
       sector: "Tecnologia",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       challenge: "Processos manuais de onboarding que levavam 2 semanas e geravam 30% de erros",
       solution: "Automação completa do processo com validações inteligentes e integração com RH",
       results: ["Tempo reduzido para 2 dias", "Zero erros de processo", "85% satisfação dos novos funcionários"],
@@ -146,6 +218,7 @@ const DATA = {
       id: "mediplus-dashboard",
       company: "MediPlus",
       sector: "Saúde",
+      image: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       challenge: "Gestão fragmentada de pacientes em múltiplas unidades sem visibilidade centralizada",
       solution: "Dashboard unificado com IA para predição de demanda e otimização de agendas",
       results: ["Redução de 40% no tempo de espera", "Aumento de 25% na capacidade de atendimento", "95% satisfação dos pacientes"],
@@ -155,6 +228,7 @@ const DATA = {
       id: "logistics-pro-otimizacao",
       company: "LogisticsPro",
       sector: "Logística",
+      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       challenge: "Rotas ineficientes e alto custo operacional com baixa visibilidade da frota",
       solution: "Sistema de otimização de rotas com IA e monitoramento em tempo real",
       results: ["Redução de 30% nos custos de combustível", "Aumento de 45% na eficiência de entrega", "Diminuição de 50% em reclamações"],
@@ -164,6 +238,7 @@ const DATA = {
       id: "advocacia-silva-automacao",
       company: "Advocacia Silva",
       sector: "Jurídico",
+      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       challenge: "Gestão manual de prazos e documentos gerando riscos de multas e retrabalho",
       solution: "Automação de gestão documental com alertas inteligentes e templates automatizados",
       results: ["Zero multas por atraso", "Redução de 60% no tempo de elaboração de documentos", "Aumento de 40% na produtividade"],
@@ -173,6 +248,7 @@ const DATA = {
       id: "varejo-mais-predictive",
       company: "VarejoMais",
       sector: "Varejo",
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       challenge: "Alto estoque parado e frequentes rupturas, impactando margem e satisfação",
       solution: "Sistema preditivo de demanda com automação de reposição e análise de tendências",
       results: ["Redução de 50% no estoque parado", "Diminuição de 80% nas rupturas", "Aumento de 35% na margem"],
@@ -182,6 +258,7 @@ const DATA = {
       id: "servicos-pro-workflow",
       company: "ServiçosPro",
       sector: "Serviços",
+      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       challenge: "Processos burocráticos lentos e baixa visibilidade do status dos projetos",
       solution: "Automação de workflows com dashboards em tempo real e chatbots para clientes",
       results: ["Redução de 70% no tempo de aprovação", "Aumento de 90% na satisfação do cliente", "Eliminação de retrabalho"],

@@ -1,0 +1,78 @@
+O erro que você está enfrentando no Replit é:
+
+cpp
+Copiar
+Editar
+Could not resolve entry module "index.html".
+Esse erro ocorre porque o Replit (usando o Vite com Rollup) não encontrou o arquivo index.html na raiz do projeto, que é necessário para builds estáticos (como sites estáticos com Vite + Vanilla JS, ou mesmo com frameworks como React em modo estático).
+
+✅ Soluções possíveis:
+1. Verifique se você tem um arquivo index.html
+Ele precisa estar na raiz do projeto, ou seja, fora de qualquer subpasta como src/.
+
+Se estiver dentro de src/, mova para a raiz do projeto.
+
+2. Está usando Vite + React ou outra SPA?
+Se seu projeto for um SPA (Single Page Application) com Vite, você precisa garantir:
+
+vite.config.js está configurado corretamente com a entrada.
+Exemplo mínimo:
+
+js
+Copiar
+Editar
+// vite.config.js
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  root: '.', // garante que a raiz é o diretório atual
+  build: {
+    outDir: 'dist',
+  }
+})
+E você deve ter:
+
+um index.html na raiz.
+
+main.js ou main.ts importado nesse index.html.
+
+🛠 Etapas para corrigir:
+✅ Confirme se index.html existe na raiz do projeto.
+
+✅ Se estiver usando React/Vite, certifique-se que está usando um index.html com conteúdo semelhante a:
+
+html
+Copiar
+Editar
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Duatx</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
+✅ E que seu main.js ou main.ts esteja em /main.js (ou atualize o caminho no HTML).
+
+✅ Rode localmente o build com:
+
+bash
+Copiar
+Editar
+npm run build
+Se isso funcionar localmente, então tente novamente o deploy no Replit.
+
+💡 Dica extra (caso o projeto esteja incompleto):
+Se você criou o projeto no Replit mas esqueceu de subir os arquivos certos, talvez o projeto ainda não tenha:
+
+index.html
+
+vite.config.js
+
+package.json com dependências certas (vite, react, etc.)
+
+Se quiser, posso gerar uma estrutura mínima para você subir e corrigir.
+

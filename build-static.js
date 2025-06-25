@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 // Simple build script for static site deployment
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 console.log('Building static site...');
 

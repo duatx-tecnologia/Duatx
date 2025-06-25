@@ -1,0 +1,118 @@
+adapte os efeitos para que ele fique responsivo e elegante com visual e interações semelhantes ao site https://x.ai, utilizando apenas HTML5, CSS3 e JavaScript puro (sem frameworks). O site deve simular a mesma experiência visual e sensorial, com foco em IA, tecnologia e sofisticação. Abaixo estão os requisitos detalhados de estilo, layout e efeitos:
+
+1. 💻 Layout e Estilo Visual
+Use estrutura semântica (HTML5): <header>, <main>, <section>, <footer>.
+
+Fundo preto ou cinza muito escuro (#0A0A0A, #121212).
+
+Texto claro com contraste forte (#FFFFFF, #CCCCCC).
+
+Paleta de destaque em azul neon (#00FFFF), roxo cósmico (#8A2BE2) ou tons metálicos.
+
+Tipografia: fontes modernas, como 'Segoe UI', 'Montserrat', 'Inter', ou 'sans-serif'.
+
+css
+Copiar
+Editar
+body {
+  background-color: #0A0A0A;
+  color: #EAEAEA;
+  font-family: 'Segoe UI', sans-serif;
+}
+2. 🌌 Hero Section
+Centralize o conteúdo vertical e horizontalmente com flexbox.
+
+Inclua uma headline grande (font-size: 4rem) e um subtítulo animado com efeito de digitação (typewriter effect com JS).
+
+Adicione um botão “Try Now” com glow animado ao passar o mouse.
+
+css
+Copiar
+Editar
+button:hover {
+  box-shadow: 0 0 15px #00FFFF;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+js
+Copiar
+Editar
+// Typewriter effect
+const text = "Understand the universe with Grok.";
+let i = 0;
+function type() {
+  if (i < text.length) {
+    document.getElementById("headline").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 50);
+  }
+}
+type();
+3. 🎞️ Efeitos de Aparição com Scroll
+Use IntersectionObserver para revelar seções com fade-in e translateY suave ao rolar a página.
+
+js
+Copiar
+Editar
+const elements = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+elements.forEach(el => observer.observe(el));
+css
+Copiar
+Editar
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+4. 🔁 Seções com Cards Interativos
+Crie cards com efeito de inclinação no hover (usando transform: rotateY() em CSS).
+
+Cada card deve apresentar funcionalidades ou benefícios, com sombra animada.
+
+5. 🧠 Simulação de Terminal/API
+Adicione uma seção simulando uma interface de terminal (com <pre> e <code>) ou dados em tempo real (use setInterval para animar números).
+
+html
+Copiar
+Editar
+<pre><code>
+> curl https://api.grok.ai/v3/generate
+> status: 200 OK
+</code></pre>
+6. 📱 Responsividade
+Use media queries para ajustar a tipografia e layout para mobile-first design.
+
+Menu hamburguer no topo com JS básico para mostrar/ocultar.
+
+7. 🎇 Efeitos Extras
+Parallax leve no background usando scrollY.
+
+Cursor personalizado com cursor: url(...) e animações em elementos hover.
+
+Rodapé discreto com links sutis e botão de scroll to top.
+
+✅ Regras finais
+Não utilize nenhuma biblioteca externa.
+
+O site deve ter performance leve e carregar rápido.
+
+Pode conter apenas 3 páginas fictícias: Home, Product, About (ou usar âncoras internas).
+
+Código final deve estar dividido em 3 arquivos:
+
+index.html
+
+style.css
+
+script.js

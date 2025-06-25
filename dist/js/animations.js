@@ -38,6 +38,12 @@ class AnimationManager {
     document.addEventListener('DOMContentLoaded', () => {
       const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .stat-number, .impact-number');
       animatedElements.forEach(el => this.observer.observe(el));
+      
+      // Special observer for services circular section
+      const servicesCircular = document.querySelector('.services-circular');
+      if (servicesCircular) {
+        this.observer.observe(servicesCircular);
+      }
     });
   }
 

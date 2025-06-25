@@ -1,0 +1,52 @@
+Setores em destaque
+Tecnologia aplicada à dor real de cada mercado — com foco em escala, eficiência e retorno.
+
+💻 SaaS
+❌ Desafio: Churn alto, onboarding manual e decisões sem dados confiáveis.
+✅ Solução: Dashboards de MRR, CAC, LTV e churn em tempo real + automações de onboarding, suporte e vendas.
+📈 Resultado: +30% de retenção e redução de 40% no tempo de atendimento.
+
+🛒 Vendas Online
+❌ Desafio: Baixo controle sobre funil de vendas, abandono de carrinho e gestão de campanhas no escuro.
+✅ Solução: Integrações com plataformas, automações de follow-up e dashboards de performance comercial e CAC.
+📈 Resultado: +25% em conversão de leads e controle total sobre campanhas e ROI.
+
+🎥 Criação de Conteúdo
+❌ Desafio: Falta de previsibilidade, retrabalho com entregas e pouca visibilidade de impacto por canal.
+✅ Solução: Dashboards por canal (Instagram, YouTube, etc.), automações de postagem e bots de recomendação de pauta.
+📈 Resultado: +40% de produtividade e clareza sobre o que realmente converte.
+
+⚖️ Jurídico
+❌ Desafio: Retrabalho manual, risco de perda de prazos e dados jurídicos desorganizados.
+✅ Solução: Automação de documentos, alertas inteligentes, controle por área e dashboards jurídicos.
+📈 Resultado: +50% de produtividade e redução drástica de erros em prazos e processos.
+
+🏗️ Construção e Imobiliário
+❌ Desafio: Falta de visibilidade sobre custos, cronogramas e funil de vendas.
+✅ Solução: Dashboards de obra, CRM automatizado, IA para atendimento de leads e integração com ERPs e BIM.
+📈 Resultado: +30% de controle financeiro e aceleração do ciclo de venda.
+
+🛠️ Engenharias
+❌ Desafio: Processos técnicos despadronizados, baixa rastreabilidade e decisões sem dados.
+✅ Solução: Dashboards técnicos, automações operacionais e bots internos para controle de projeto.
+📈 Resultado: +35% de eficiência na gestão de projetos e redução de retrabalho técnico.
+
+🧾 Serviços
+❌ Desafio: Operação travada por tarefas repetitivas e dificuldade em manter padrão.
+✅ Solução: Automação de propostas, contratos, agendamentos e relatórios + bots de atendimento.
+📈 Resultado: +40% de produtividade e padronização das entregas.
+
+🛍️ Varejo
+❌ Desafio: Estoque desatualizado, ruptura de produtos e decisões de compra no escuro.
+✅ Solução: IA preditiva para controle de estoque, dashboards de vendas e automações de campanha.
+📈 Resultado: +35% de margem com redução de perda e melhora de giro.
+
+🏥 Clínicas / Saúde
+❌ Desafio: Agendamentos confusos, prontuários desorganizados e excesso de tarefas administrativas.
+✅ Solução: Sistema integrado com automações, dashboards de gestão e bots para triagem e agendamento.
+📉 Resultado: -30% no tempo de espera e +50% de produtividade da equipe.
+
+🧩 Franquias Diversas
+❌ Desafio: Falta de padronização entre unidades, baixa visibilidade de desempenho e gestão descentralizada.
+✅ Solução: Dashboards por unidade, automações de processos e relatórios comparativos em tempo real.
+📈 Resultado: +45% de eficiência na gestão da rede e unificação dos indicadores estratégicos.
