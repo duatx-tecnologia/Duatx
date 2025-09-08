@@ -1537,6 +1537,51 @@ window.scrollToSection = function(sectionId) {
   website.scrollToSection(sectionId);
 };
 
+// Global functions for cookie banner (called from HTML onclick events)
+function acceptAllCookies() {
+  const preferences = {
+    essential: true,
+    analytics: true,
+    marketing: true
+  };
+  website.saveConsentPreferences(preferences);
+}
+
+function showCookiePreferences() {
+  website.showCookieModal();
+}
+
+function showCookieModal(event) {
+  if (event) event.preventDefault();
+  website.showCookieModal();
+}
+
+function closeCookieModal() {
+  website.hideCookieModal();
+}
+
+function savePreferences() {
+  const analyticsCheckbox = document.getElementById('analytics-cookies');
+  const marketingCheckbox = document.getElementById('marketing-cookies');
+  
+  const preferences = {
+    essential: true, // Always true
+    analytics: analyticsCheckbox ? analyticsCheckbox.checked : false,
+    marketing: marketingCheckbox ? marketingCheckbox.checked : false
+  };
+  
+  website.saveConsentPreferences(preferences);
+}
+
+function rejectOptionalCookies() {
+  const preferences = {
+    essential: true,
+    analytics: false,
+    marketing: false
+  };
+  website.saveConsentPreferences(preferences);
+}
+
 // Phone number formatting for contact form
 document.addEventListener('DOMContentLoaded', () => {
   const phoneInput = document.getElementById('phone');
@@ -2073,51 +2118,3 @@ DuatxWebsite.prototype.disableMarketingCookies = function() {
   document.cookie = '_fbp=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
   document.cookie = 'ads_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
 };
-
-// Initialize the website
-const duatxWebsite = new DuatxWebsite();
-
-// Global functions for cookie banner (called from HTML onclick events)
-function acceptAllCookies() {
-  const preferences = {
-    essential: true,
-    analytics: true,
-    marketing: true
-  };
-  duatxWebsite.saveConsentPreferences(preferences);
-}
-
-function showCookiePreferences() {
-  duatxWebsite.showCookieModal();
-}
-
-function showCookieModal(event) {
-  if (event) event.preventDefault();
-  duatxWebsite.showCookieModal();
-}
-
-function closeCookieModal() {
-  duatxWebsite.hideCookieModal();
-}
-
-function savePreferences() {
-  const analyticsCheckbox = document.getElementById('analytics-cookies');
-  const marketingCheckbox = document.getElementById('marketing-cookies');
-  
-  const preferences = {
-    essential: true, // Always true
-    analytics: analyticsCheckbox ? analyticsCheckbox.checked : false,
-    marketing: marketingCheckbox ? marketingCheckbox.checked : false
-  };
-  
-  duatxWebsite.saveConsentPreferences(preferences);
-}
-
-function rejectOptionalCookies() {
-  const preferences = {
-    essential: true,
-    analytics: false,
-    marketing: false
-  };
-  duatxWebsite.saveConsentPreferences(preferences);
-}
