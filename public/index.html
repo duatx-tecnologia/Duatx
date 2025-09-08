@@ -46,6 +46,106 @@
         <link rel="stylesheet" href="css/stars-fix.css" />
     </head>
     <body>
+        <!-- LGPD Cookie Banner -->
+        <div id="cookie-banner" class="cookie-banner" style="display: none;">
+            <div class="cookie-banner-content">
+                <div class="cookie-banner-text">
+                    <div class="cookie-icon">
+                        <i data-lucide="cookie"></i>
+                    </div>
+                    <div class="cookie-content">
+                        <h3 class="cookie-title">Política de Cookies</h3>
+                        <p class="cookie-description">
+                            Utilizamos cookies essenciais e analíticos para melhorar sua experiência em nosso site. 
+                            Você pode aceitar todos os cookies ou personalizar suas preferências.
+                        </p>
+                        <div class="cookie-links">
+                            <a href="#" class="cookie-policy-link" onclick="showCookieModal(event)">Política de Privacidade</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cookie-buttons">
+                    <button class="cookie-btn cookie-btn-secondary" onclick="showCookiePreferences()">
+                        Personalizar
+                    </button>
+                    <button class="cookie-btn cookie-btn-primary" onclick="acceptAllCookies()">
+                        Aceitar Todos
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cookie Preferences Modal -->
+        <div id="cookie-modal" class="cookie-modal" style="display: none;">
+            <div class="cookie-modal-overlay" onclick="closeCookieModal()"></div>
+            <div class="cookie-modal-content">
+                <div class="cookie-modal-header">
+                    <h2>Preferências de Cookies</h2>
+                    <button class="cookie-modal-close" onclick="closeCookieModal()" aria-label="Fechar">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="cookie-modal-body">
+                    <p class="cookie-modal-intro">
+                        Respeitamos sua privacidade e seguimos as diretrizes da LGPD. Escolha quais tipos de cookies deseja aceitar:
+                    </p>
+                    
+                    <div class="cookie-category">
+                        <div class="cookie-category-header">
+                            <div class="cookie-toggle-container">
+                                <input type="checkbox" id="essential-cookies" checked disabled>
+                                <label for="essential-cookies" class="cookie-switch">
+                                    <span class="cookie-switch-slider"></span>
+                                </label>
+                            </div>
+                            <div class="cookie-category-info">
+                                <h4>Cookies Essenciais</h4>
+                                <p>Necessários para o funcionamento básico do site. Não podem ser desabilitados.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cookie-category">
+                        <div class="cookie-category-header">
+                            <div class="cookie-toggle-container">
+                                <input type="checkbox" id="analytics-cookies">
+                                <label for="analytics-cookies" class="cookie-switch">
+                                    <span class="cookie-switch-slider"></span>
+                                </label>
+                            </div>
+                            <div class="cookie-category-info">
+                                <h4>Cookies Analíticos</h4>
+                                <p>Ajudam a entender como os visitantes interagem com o site, fornecendo informações sobre métricas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cookie-category">
+                        <div class="cookie-category-header">
+                            <div class="cookie-toggle-container">
+                                <input type="checkbox" id="marketing-cookies">
+                                <label for="marketing-cookies" class="cookie-switch">
+                                    <span class="cookie-switch-slider"></span>
+                                </label>
+                            </div>
+                            <div class="cookie-category-info">
+                                <h4>Cookies de Marketing</h4>
+                                <p>Utilizados para personalizar anúncios e medir a eficácia de campanhas publicitárias.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cookie-modal-footer">
+                    <button class="cookie-btn cookie-btn-secondary" onclick="rejectOptionalCookies()">
+                        Aceitar Apenas Essenciais
+                    </button>
+                    <button class="cookie-btn cookie-btn-primary" onclick="savePreferences()">
+                        Salvar Preferências
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <!-- Navigation Bar -->
         <header id="navbar" class="navbar transparent">
             <div class="navbar-container">
