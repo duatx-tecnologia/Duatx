@@ -17,6 +17,7 @@ class DuatxWebsite {
       this.setupScrollEffects();
       this.setupAnimations();
       this.setupWhatsAppCTA();
+      this.setupCookieBanner();
       
       // Setup carousels after a small delay to ensure DOM is ready
       setTimeout(() => {
@@ -1921,3 +1922,202 @@ DuatxWebsite.prototype.updateModernBlogResultsCount = function(count, searchTerm
   
   console.log(`Modern blog filtered: ${count} articles visible`);
 };
+
+DuatxWebsite.prototype.setupCookieBanner = function() {
+  // Check if user has already given consent
+  const cookieConsent = localStorage.getItem('cookieConsent');
+  
+  if (!cookieConsent) {
+    // Show banner after a short delay to ensure page is loaded
+    setTimeout(() => {
+      this.showCookieBanner();
+    }, 1000);
+  } else {
+    // Load and apply user's preferences
+    this.applyCookiePreferences();
+  }
+};
+
+DuatxWebsite.prototype.showCookieBanner = function() {
+  const banner = document.getElementById('cookie-banner');
+  if (banner) {
+    banner.style.display = 'block';
+  }
+};
+
+DuatxWebsite.prototype.hideCookieBanner = function() {
+  const banner = document.getElementById('cookie-banner');
+  if (banner) {
+    banner.style.display = 'none';
+  }
+};
+
+DuatxWebsite.prototype.showCookieModal = function() {
+  const modal = document.getElementById('cookie-modal');
+  if (modal) {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    
+    // Load current preferences
+    this.loadCookiePreferences();
+  }
+};
+
+DuatxWebsite.prototype.hideCookieModal = function() {
+  const modal = document.getElementById('cookie-modal');
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+};
+
+DuatxWebsite.prototype.loadCookiePreferences = function() {
+  const savedPreferences = localStorage.getItem('cookiePreferences');
+  if (savedPreferences) {
+    try {
+      const preferences = JSON.parse(savedPreferences);
+      
+      // Set checkbox states
+      const analyticsCheckbox = document.getElementById('analytics-cookies');
+      const marketingCheckbox = document.getElementById('marketing-cookies');
+      
+      if (analyticsCheckbox) analyticsCheckbox.checked = preferences.analytics || false;
+      if (marketingCheckbox) marketingCheckbox.checked = preferences.marketing || false;
+    } catch (e) {
+      console.error('Error loading cookie preferences:', e);
+    }
+  }
+};
+
+DuatxWebsite.prototype.saveConsentPreferences = function(preferences) {
+  const consentData = {
+    timestamp: new Date().toISOString(),
+    preferences: preferences,
+    version: '1.0'
+  };
+  
+  localStorage.setItem('cookieConsent', JSON.stringify(consentData));
+  localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+  
+  this.applyCookiePreferences();
+  this.hideCookieBanner();
+  this.hideCookieModal();
+  
+  console.log('Cookie preferences saved:', preferences);
+};
+
+DuatxWebsite.prototype.applyCookiePreferences = function() {
+  const savedPreferences = localStorage.getItem('cookiePreferences');
+  if (savedPreferences) {
+    try {
+      const preferences = JSON.parse(savedPreferences);
+      
+      // Apply analytics cookies
+      if (preferences.analytics) {
+        this.enableAnalyticsCookies();
+      } else {
+        this.disableAnalyticsCookies();
+      }
+      
+      // Apply marketing cookies
+      if (preferences.marketing) {
+        this.enableMarketingCookies();
+      } else {
+        this.disableMarketingCookies();
+      }
+      
+      console.log('Cookie preferences applied:', preferences);
+    } catch (e) {
+      console.error('Error applying cookie preferences:', e);
+    }
+  }
+};
+
+DuatxWebsite.prototype.enableAnalyticsCookies = function() {
+  // Here you can add Google Analytics or other analytics tools
+  console.log('Analytics cookies enabled');
+  
+  // Example: Load Google Analytics
+  /*
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'YOUR-TRACKING-ID', 'auto');
+  ga('send', 'pageview');
+  */
+};
+
+DuatxWebsite.prototype.disableAnalyticsCookies = function() {
+  // Clear analytics cookies
+  console.log('Analytics cookies disabled');
+  
+  // Remove analytics cookies if they exist
+  document.cookie = '_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  document.cookie = '_gat=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  document.cookie = '_gid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+};
+
+DuatxWebsite.prototype.enableMarketingCookies = function() {
+  // Here you can add marketing/advertising tools
+  console.log('Marketing cookies enabled');
+  
+  // Example: Load Facebook Pixel, Google Ads, etc.
+};
+
+DuatxWebsite.prototype.disableMarketingCookies = function() {
+  // Clear marketing cookies
+  console.log('Marketing cookies disabled');
+  
+  // Remove marketing cookies if they exist
+  document.cookie = '_fbp=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  document.cookie = 'ads_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+};
+
+// Initialize the website
+const duatxWebsite = new DuatxWebsite();
+
+// Global functions for cookie banner (called from HTML onclick events)
+function acceptAllCookies() {
+  const preferences = {
+    essential: true,
+    analytics: true,
+    marketing: true
+  };
+  duatxWebsite.saveConsentPreferences(preferences);
+}
+
+function showCookiePreferences() {
+  duatxWebsite.showCookieModal();
+}
+
+function showCookieModal(event) {
+  if (event) event.preventDefault();
+  duatxWebsite.showCookieModal();
+}
+
+function closeCookieModal() {
+  duatxWebsite.hideCookieModal();
+}
+
+function savePreferences() {
+  const analyticsCheckbox = document.getElementById('analytics-cookies');
+  const marketingCheckbox = document.getElementById('marketing-cookies');
+  
+  const preferences = {
+    essential: true, // Always true
+    analytics: analyticsCheckbox ? analyticsCheckbox.checked : false,
+    marketing: marketingCheckbox ? marketingCheckbox.checked : false
+  };
+  
+  duatxWebsite.saveConsentPreferences(preferences);
+}
+
+function rejectOptionalCookies() {
+  const preferences = {
+    essential: true,
+    analytics: false,
+    marketing: false
+  };
+  duatxWebsite.saveConsentPreferences(preferences);
+}
