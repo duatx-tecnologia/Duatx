@@ -51,8 +51,10 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(50% 50% at 50% 40%, rgba(54, 176, 255, 0.4), transparent 70%),
-    radial-gradient(30% 30% at 30% 60%, rgba(113, 247, 209, 0.3), transparent 60%),
+    radial-gradient(40% 40% at 60% 30%, rgba(54, 176, 255, 0.4), transparent 65%),
+    radial-gradient(35% 35% at 25% 70%, rgba(34, 197, 94, 0.35), transparent 65%),
+    radial-gradient(30% 30% at 70% 80%, rgba(251, 191, 36, 0.3), transparent 60%),
+    radial-gradient(25% 25% at 20% 20%, rgba(239, 68, 68, 0.25), transparent 55%),
     #000000;
   filter: blur(60px);
 }
@@ -232,16 +234,24 @@ body {
   max-width: 800px;
 }
 
-/* Neon titles */
+/* Hero Logo */
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-logo-img {
+  width: auto;
+  height: clamp(80px, 12vw, 200px);
+  max-width: 100%;
+  filter: brightness(1.1) contrast(1.1);
+}
+
+/* Hide neon title */
 .neon-title {
-  font-size: clamp(48px, 8vw, 120px);
-  line-height: 1.1;
-  margin: 0;
-  font-weight: 300;
-  letter-spacing: 4px;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-shadow: none;
+  display: none;
 }
 
 .neon-title .accent {
