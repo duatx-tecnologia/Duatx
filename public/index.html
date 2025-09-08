@@ -195,51 +195,48 @@
         <div class="scroll-progress" id="scroll-progress"></div>
 
         <!-- Hero Section -->
-        <section id="home" class="hero-section">
-            <div class="hero-background"></div>
-            <div class="grid-background"></div>
+        <section id="home" class="hero-section" data-reveal>
             <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-logo">
-                        <img
-                            src="assets/duatx-logo-tight.svg"
-                            alt="DuatX"
-                            class="hero-logo-img"
-                        />
+                <div class="hero__glass" data-tilt>
+                    <h1 class="neon-title">
+                        Dados, IA e Software <span class="accent">para ROI real</span>
+                    </h1>
+                    <p class="hero-tagline">
+                        Eliminamos desperdícios invisíveis com automações, dashboards e IA sob medida para seu negócio.
+                    </p>
+                    <div class="hero-cta">
+                        <a
+                            href="https://wa.me/5511912906767?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Duatx.%20Gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20gratuito%20para%20minha%20empresa."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn--primary"
+                        >
+                            Agendar Diagnóstico
+                        </a>
+                        <a href="#services" class="btn btn--secondary">
+                            Conhecer Soluções
+                        </a>
                     </div>
-                    <h2 class="hero-tagline">
-                        <span
-                            class="text-gradient typewriter-text"
-                            id="typewriter-headline"
-                            >Dados, Inteligência Artificial e Software para
-                            Otimização de Resultados.</span
-                        >
-                    </h2>
+                    <ul class="hero-badges">
+                        <li>Automação n8n/Python</li>
+                        <li>Dashboards Power BI</li>
+                        <li>IA sob medida</li>
+                        <li>Software Web</li>
+                    </ul>
                 </div>
-                <div class="hero-actions">
-                    <a
-                        href="https://wa.me/5511912906767?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Duatx.%20Gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20gratuito%20para%20minha%20empresa."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-cta-primary cta-button primary pulse"
-                        style="
-                            text-decoration: none;
-                            display: inline-flex;
-                            align-items: center;
-                            justify-content: center;
-                        "
-                    >
-                        <span class="btn-text"
-                            >Agendar diagnóstico gratuito</span
-                        >
-                        <i data-lucide="arrow-right" class="btn-icon"></i>
-                    </a>
-                    <button
-                        class="btn-cta-secondary"
-                        onclick="scrollToSection('sectors')"
-                    >
-                        <span class="btn-text">Conhecer soluções</span>
-                    </button>
+            </div>
+            <div class="hero-media" aria-hidden="true">
+                <div class="glass-card" data-tilt data-reveal>
+                    <h3>+ Eficiência</h3>
+                    <p>Workflows automatizados e decisões mais rápidas.</p>
+                </div>
+                <div class="glass-card" data-tilt data-reveal>
+                    <h3>+ Controle</h3>
+                    <p>Dados unificados em tempo real.</p>
+                </div>
+                <div class="glass-card" data-tilt data-reveal>
+                    <h3>+ ROI</h3>
+                    <p>Tecnologia que se paga sozinha.</p>
                 </div>
             </div>
         </section>
@@ -431,17 +428,8 @@
         <!-- Services Section -->
         <section
             id="services"
-            class="section-padding section-background"
-            style="
-                background: linear-gradient(
-                    180deg,
-                    hsl(220, 30%, 1%) 0%,
-                    hsl(220, 25%, 0.5%) 50%,
-                    hsl(220, 30%, 1%) 100%
-                ) !important;
-                position: relative;
-                overflow: hidden;
-            "
+            class="section-padding"
+            data-reveal
         >
             <div class="ethereal-particles">
                 <div class="particle"></div>
@@ -898,6 +886,7 @@
         <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
         <script src="js/data.js"></script>
+        <script src="js/neon-animations.js"></script>
         <script src="js/animations.js"></script>
         <script src="js/main.js"></script>
     </body>
