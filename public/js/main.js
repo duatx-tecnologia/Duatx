@@ -18,6 +18,7 @@ class DuatxWebsite {
       this.setupAnimations();
       this.setupWhatsAppCTA();
       this.setupCookieBanner();
+      this.setupInteractiveCards();
       
       // Setup carousels after a small delay to ensure DOM is ready
       setTimeout(() => {
@@ -2117,4 +2118,96 @@ DuatxWebsite.prototype.disableMarketingCookies = function() {
   // Remove marketing cookies if they exist
   document.cookie = '_fbp=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
   document.cookie = 'ads_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+};
+
+DuatxWebsite.prototype.setupInteractiveCards = function() {
+  const cards = document.querySelectorAll('.interactive-card');
+  
+  if (cards.length === 0) {
+    console.log('No interactive cards found');
+    return;
+  }
+
+  console.log(`Setting up ${cards.length} interactive cards`);
+
+  // Function to handle card transitions
+  const handleCardTransition = (card, isActive) => {
+    const defaultContent = card.querySelectorAll('.default-content');
+    const altContent = card.querySelectorAll('.alt-content');
+    const defaultImg = card.querySelector('.default-img');
+    const altImg = card.querySelector('.alt-img');
+
+    if (isActive) {
+      // Hide default content
+      defaultContent.forEach(element => {
+        element.style.display = 'none';
+        element.classList.add('inactive');
+      });
+
+      // Show alternative content
+      altContent.forEach(element => {
+        element.style.display = 'block';
+        element.classList.add('active');
+      });
+
+      // Switch images
+      if (defaultImg && altImg) {
+        defaultImg.style.display = 'none';
+        altImg.style.display = 'block';
+        altImg.classList.add('zoomed');
+      }
+    } else {
+      // Show default content
+      defaultContent.forEach(element => {
+        element.style.display = 'block';
+        element.classList.remove('inactive');
+      });
+
+      // Hide alternative content
+      altContent.forEach(element => {
+        element.style.display = 'none';
+        element.classList.remove('active');
+      });
+
+      // Switch back to default images
+      if (defaultImg && altImg) {
+        defaultImg.style.display = 'block';
+        altImg.style.display = 'none';
+        altImg.classList.remove('zoomed');
+      }
+    }
+  };
+
+  // Intersection Observer for better performance
+  const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -20% 0px', // Trigger when card is in the middle 60% of viewport
+    threshold: 0.3
+  };
+
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const card = entry.target;
+      const isInCenter = entry.isIntersecting;
+      
+      handleCardTransition(card, isInCenter);
+      
+      // Add/remove active class for additional styling
+      if (isInCenter) {
+        card.classList.add('card-active');
+      } else {
+        card.classList.remove('card-active');
+      }
+    });
+  }, observerOptions);
+
+  // Observe all interactive cards
+  cards.forEach(card => {
+    cardObserver.observe(card);
+    
+    // Initialize with default state
+    handleCardTransition(card, false);
+  });
+
+  console.log('Interactive cards scroll monitoring initialized');
 };

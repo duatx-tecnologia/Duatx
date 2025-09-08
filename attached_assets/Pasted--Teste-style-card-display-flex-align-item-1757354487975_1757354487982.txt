@@ -1,0 +1,91 @@
+<!--Teste  -->
+        <style>
+          .card {
+            display: flex;  
+            align-items: center;   /* centraliza horizontal */
+            justify-content: center;    /* opcional: centraliza vertical */
+            flex-direction: column;     /* organiza título, texto e imagem em coluna */
+            width: 320px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+          }
+
+          .card img {
+            width: 600px;         /* define a largura */
+            height: 350px;        /* define a altura */
+            object-fit: cover;    /* corta excesso e deixa padronizado */
+            position: relative;
+            left: 50%;                 /* joga o centro da imagem no meio do card */
+            transform: translateX(-50%);
+            border-radius: 10px;
+            transition: all 0.6s ease-in-out;
+          }
+
+          /* Imagem inicial */
+          .default-img {
+            display: block;
+          }
+
+          /* Imagem alternativa */
+          .alt-img {
+            display: none;
+          }
+
+          /* Classe para "zoom" */
+          .zoomed {
+            transform: scale(1.2); /* aumenta a imagem */
+          }
+        </style>
+
+        <div class="card" id="myCard">
+          <!-- Título e texto padrão -->
+          <h3 id="default-title">Título Original</h3>
+          <p id="default-text">Esse é o texto inicial.</p>
+          <img src="assets/dashboard.jpg" class="default-img" alt="Imagem 1">
+
+          <!-- Título e texto alternativos -->
+          <h3 id="alt-title" style="display:none;">Novo Título</h3>
+          <p id="alt-text" style="display:none;">Esse é o texto ao rolar a página.</p>
+          <img src="assets/2.png" class="alt-img" alt="Imagem 2">
+        </div>
+
+        <script>
+          const card = document.getElementById("myCard");
+          const defaultTitle = document.getElementById("default-title");
+          const defaultText = document.getElementById("default-text");
+          const altTitle = document.getElementById("alt-title");
+          const altText = document.getElementById("alt-text");
+          const defaultImg = document.querySelector(".default-img");
+          const altImg = document.querySelector(".alt-img");
+
+          window.addEventListener("scroll", () => {
+            const rect = card.getBoundingClientRect();
+
+            // Quando o card estiver visível no meio da tela
+            if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+              defaultTitle.style.display = "none";
+              defaultText.style.display = "none";
+              defaultImg.style.display = "none";
+
+              altTitle.style.display = "block";
+              altText.style.display = "block";
+              altImg.style.display = "block";
+
+              altImg.classList.add("zoomed"); // dá zoom
+            } else {
+              defaultTitle.style.display = "block";
+              defaultText.style.display = "block";
+              defaultImg.style.display = "block";
+
+              altTitle.style.display = "none";
+              altText.style.display = "none";
+              altImg.style.display = "none";
+
+              altImg.classList.remove("zoomed");
+            }
+          });
+        </script>
+
+            <!--Teste  -->
