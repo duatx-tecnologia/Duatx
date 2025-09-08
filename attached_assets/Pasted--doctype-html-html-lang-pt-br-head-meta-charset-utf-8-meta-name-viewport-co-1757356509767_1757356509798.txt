@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DUATX — Dados, IA e Software</title>
+
+  <!-- Tipografia: troque por Sofia Pro via Adobe Fonts, se licenciado -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/duatx-neon.css">
+</head>
+<body>
+  <!-- Fundo e layers -->
+  <div class="bg">
+    <div class="bg__gradient"></div>
+    <div class="bg__noise"></div>
+    <div class="bg__orbs">
+      <span class="orb orb--a"></span>
+      <span class="orb orb--b"></span>
+      <span class="orb orb--c"></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a class="brand" href="/">DUATX</a>
+    <nav class="nav">
+      <a href="#servicos">Serviços</a>
+      <a href="#setores">Setores</a>
+      <a href="#cases">Casos</a>
+      <a class="btn btn--ghost" href="https://wa.me/5511912906767" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" data-reveal>
+    <div class="hero__glass" data-tilt>
+      <h1 class="neon-title">
+        Dados, IA e Software <span class="accent">para ROI real</span>
+      </h1>
+      <p class="hero__subtitle">
+        Eliminamos desperdícios invisíveis com automações, dashboards e IA sob medida.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#diagnostico">Agendar diagnóstico</a>
+        <a class="btn btn--secondary" href="#servicos">Conhecer soluções</a>
+      </div>
+      <ul class="hero__badges">
+        <li>Automação n8n/Python</li>
+        <li>Dashboards Power BI</li>
+        <li>IA sob medida</li>
+        <li>Software Web</li>
+      </ul>
+    </div>
+    <div class="hero__media" aria-hidden="true">
+      <div class="glass-card" data-tilt>
+        <h3>+ Eficiência</h3>
+        <p>Workflows automatizados e decisões rápidas.</p>
+      </div>
+      <div class="glass-card" data-tilt>
+        <h3>+ Controle</h3>
+        <p>Dados unificados em tempo real.</p>
+      </div>
+      <div class="glass-card" data-tilt>
+        <h3>+ ROI</h3>
+        <p>Tecnologia que se paga sozinha.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Serviços -->
+  <section id="servicos" class="section" data-reveal>
+    <h2 class="section__title">Soluções que geram <span class="accent">resultado</span></h2>
+    <div class="grid">
+      <article class="service glass-card">
+        <h3>Automação Inteligente</h3>
+        <p>Integrações, bots e orquestração com n8n/Python/WhatsApp.</p>
+        <a class="link" href="/servicos#automacao">Ver detalhes →</a>
+      </article>
+      <article class="service glass-card">
+        <h3>Dashboards</h3>
+        <p>Métricas acionáveis e visual de alto impacto em Power BI.</p>
+        <a class="link" href="/servicos#dashboards">Ver detalhes →</a>
+      </article>
+      <article class="service glass-card">
+        <h3>IA sob medida</h3>
+        <p>Agentes, copilotos e modelos adaptados ao seu negócio.</p>
+        <a class="link" href="/servicos#ia">Ver detalhes →</a>
+      </article>
+      <article class="service glass-card">
+        <h3>Software Web</h3>
+        <p>Plataformas e sistemas customizados (HTML/CSS/JS/Node).</p>
+        <a class="link" href="/servicos#software">Ver detalhes →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section id="diagnostico" class="cta" data-reveal>
+    <h2>Vamos mapear ganhos rápidos?</h2>
+    <p>Marcamos um diagnóstico gratuito para identificar 3 oportunidades de ROI em 30 dias.</p>
+    <a class="btn btn--primary btn--xl" href="https://wa.me/5511912906767" target="_blank" rel="noopener">Agendar agora</a>
+  </section>
+
+  <script src="/js/duatx-neon.js" defer></script>
+</body>
+</html>
