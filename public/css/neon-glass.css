@@ -514,3 +514,35 @@ body {
   transform-style: preserve-3d;
   transition: transform 0.3s ease;
 }
+
+/* Hero tagline with typewriter effect */
+.hero-tagline {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: clamp(18px, 3vw, 32px);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.typewriter-text {
+  display: inline;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  background-color: #ffffff;
+  animation: blink 1s infinite;
+  width: 3px;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}

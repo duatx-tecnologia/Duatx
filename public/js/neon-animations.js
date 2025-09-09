@@ -19,6 +19,7 @@ class NeonAnimations {
     this.setupScrollReveal();
     this.setupTiltEffects();
     this.setupOrbs();
+    this.setupTypewriter();
     console.log('Neon animations initialized');
   }
 
@@ -319,6 +320,54 @@ class NeonAnimations {
     bgGradient.style.setProperty('--mouse-y', '50%');
     
     console.log('Mouse tracking initialized for gradient');
+  }
+
+  // Typewriter effect for hero tagline
+  setupTypewriter() {
+    const typewriterElement = document.getElementById('typewriter-text');
+    const cursor = document.querySelector('.typewriter-cursor');
+    
+    if (!typewriterElement) {
+      console.log('Typewriter element not found');
+      return;
+    }
+
+    const text = "Dados, Inteligência Artificial e Software para Otimização de Resultados.";
+    let index = 0;
+    let isDeleting = false;
+    
+    const typeSpeed = 80; // Speed of typing
+    const deleteSpeed = 30; // Speed of deleting
+    const pauseTime = 2000; // Pause at end before restarting
+    
+    const typeWriter = () => {
+      if (!isDeleting && index < text.length) {
+        // Typing
+        typewriterElement.textContent = text.substring(0, index + 1);
+        index++;
+        setTimeout(typeWriter, typeSpeed);
+      } else if (isDeleting && index > 0) {
+        // Deleting
+        typewriterElement.textContent = text.substring(0, index - 1);
+        index--;
+        setTimeout(typeWriter, deleteSpeed);
+      } else if (index === text.length) {
+        // Pause at end, then start deleting
+        setTimeout(() => {
+          isDeleting = true;
+          typeWriter();
+        }, pauseTime);
+      } else if (index === 0 && isDeleting) {
+        // Restart typing
+        isDeleting = false;
+        setTimeout(typeWriter, 500);
+      }
+    };
+
+    // Start typing effect after a small delay
+    setTimeout(typeWriter, 1000);
+    
+    console.log('Typewriter effect initialized');
   }
 }
 
