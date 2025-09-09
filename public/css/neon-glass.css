@@ -515,34 +515,27 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Hero tagline with typewriter effect */
+/* Hero tagline */
 .hero-tagline {
   margin-top: 2rem;
   text-align: center;
+}
+
+.tagline-text {
   font-size: clamp(18px, 3vw, 32px);
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   line-height: 1.4;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease-out 0.5s forwards;
 }
 
-.typewriter-text {
-  display: inline;
-}
-
-.typewriter-cursor {
-  display: inline-block;
-  background-color: #ffffff;
-  animation: blink 1s infinite;
-  width: 3px;
-  margin-left: 2px;
-}
-
-@keyframes blink {
-  0%, 50% {
+@keyframes fadeInUp {
+  to {
     opacity: 1;
-  }
-  51%, 100% {
-    opacity: 0;
+    transform: translateY(0);
   }
 }
