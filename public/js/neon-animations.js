@@ -19,7 +19,6 @@ class NeonAnimations {
     this.setupScrollReveal();
     this.setupTiltEffects();
     this.setupOrbs();
-    this.setupMouseTracking();
     console.log('Neon animations initialized');
   }
 
