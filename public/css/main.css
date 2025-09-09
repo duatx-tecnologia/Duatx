@@ -1364,9 +1364,11 @@ button:active {
   top: 0;
   left: 0;
   width: 100%;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: transparent;
+  box-shadow: none;
   z-index: 1000;
   padding: 20px 40px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar.transparent {
@@ -1375,8 +1377,8 @@ button:active {
 }
 
 .navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .navbar-container {
