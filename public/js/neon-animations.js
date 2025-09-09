@@ -19,6 +19,7 @@ class NeonAnimations {
     this.setupScrollReveal();
     this.setupTiltEffects();
     this.setupOrbs();
+    this.setupMouseTracking();
     console.log('Neon animations initialized');
   }
 
@@ -285,6 +286,40 @@ class NeonAnimations {
       counter.textContent = '0';
       counterObserver.observe(counter);
     });
+  }
+
+  // Mouse tracking for gradient movement
+  setupMouseTracking() {
+    const bgGradient = document.querySelector('.bg__gradient');
+    
+    if (!bgGradient) {
+      console.log('Background gradient not found');
+      return;
+    }
+
+    let rafId = null;
+
+    const handleMouseMove = (e) => {
+      if (rafId) return;
+
+      rafId = requestAnimationFrame(() => {
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
+        
+        bgGradient.style.setProperty('--mouse-x', `${x}%`);
+        bgGradient.style.setProperty('--mouse-y', `${y}%`);
+        
+        rafId = null;
+      });
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    
+    // Initialize with center position
+    bgGradient.style.setProperty('--mouse-x', '50%');
+    bgGradient.style.setProperty('--mouse-y', '50%');
+    
+    console.log('Mouse tracking initialized for gradient');
   }
 }
 
