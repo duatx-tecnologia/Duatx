@@ -56,29 +56,18 @@ body {
   position: absolute;
   inset: 0;
   background: 
-    linear-gradient(45deg, 
-      transparent 20%, 
-      rgba(170, 92, 47, 0.4) 40%, 
-      rgba(150, 180, 168, 0.35) 50%, 
-      rgba(170, 92, 47, 0.4) 60%, 
-      transparent 80%
-    ),
-    linear-gradient(-45deg, 
-      transparent 20%, 
-      rgba(124, 193, 223, 0.3) 40%, 
-      rgba(44, 110, 203, 0.25) 50%, 
-      rgba(124, 193, 223, 0.3) 60%, 
-      transparent 80%
+    radial-gradient(ellipse 120% 80% at var(--mouse-x, 70%) var(--mouse-y, 50%), 
+      rgba(255, 165, 0, 0.8) 0%,
+      rgba(255, 215, 0, 0.7) 15%,
+      rgba(0, 191, 255, 0.6) 35%,
+      rgba(30, 144, 255, 0.5) 50%,
+      rgba(0, 0, 139, 0.4) 70%,
+      transparent 85%
     ),
     #000000;
-  filter: blur(60px);
+  filter: blur(80px);
   opacity: 0.9;
-  transition: all 0.15s ease-out;
-  background-position: 
-    calc(var(--mouse-x, 50%) - 25%) calc(var(--mouse-y, 50%) - 25%), 
-    calc(var(--mouse-x, 50%) + 25%) calc(var(--mouse-y, 50%) - 25%);
-  background-size: 600px 600px, 600px 600px;
-  background-repeat: no-repeat, no-repeat;
+  transition: all 0.2s ease-out;
 }
 
 .bg__noise {
