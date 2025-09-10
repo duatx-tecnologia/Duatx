@@ -4748,47 +4748,31 @@ button:active {
 }
 
 .service-card-new {
-  background: #1a1a1a;
+  background: transparent;
   border-radius: 16px;
   padding: 2rem 1.5rem;
   position: relative;
   min-height: 280px;
   flex: 1;
   max-width: 320px;
-  border: 2px solid transparent;
-  background-clip: padding-box;
+  border: 2px solid;
+  border-image-slice: 1;
 }
 
-.service-card-new::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 16px;
-  padding: 2px;
-  background: linear-gradient(45deg, transparent, transparent);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: exclude;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
+.service-card-new.blue-gradient {
+  border-image: linear-gradient(to bottom, #AA5C2F 0%, #96B4A8 33%, #7CC1DF 66%, #2C6ECB 100%) 1;
 }
 
-.service-card-new.blue-gradient::before {
-  background: linear-gradient(45deg, #4FC3F7, #2196F3, #1976D2);
+.service-card-new.green-gradient {
+  border-image: linear-gradient(to bottom, #AA5C2F 0%, #96B4A8 33%, #7CC1DF 66%, #2C6ECB 100%) 1;
 }
 
-.service-card-new.green-gradient::before {
-  background: linear-gradient(45deg, #81C784, #4CAF50, #2E7D32);
+.service-card-new.brown-gradient {
+  border-image: linear-gradient(to bottom, #AA5C2F 0%, #96B4A8 33%, #7CC1DF 66%, #2C6ECB 100%) 1;
 }
 
-.service-card-new.brown-gradient::before {
-  background: linear-gradient(45deg, #A1887F, #8D6E63, #5D4037);
-}
-
-.service-card-new.orange-gradient::before {
-  background: linear-gradient(45deg, #FFB74D, #FF9800, #F57C00);
+.service-card-new.orange-gradient {
+  border-image: linear-gradient(to bottom, #AA5C2F 0%, #96B4A8 33%, #7CC1DF 66%, #2C6ECB 100%) 1;
 }
 
 .service-icon-new {
@@ -4820,22 +4804,7 @@ button:active {
   width: 60px;
   height: 2px;
   margin: 1.5rem 0;
-}
-
-.service-card-new.blue-gradient .service-divider-new {
-  background: linear-gradient(45deg, #4FC3F7, #2196F3);
-}
-
-.service-card-new.green-gradient .service-divider-new {
-  background: linear-gradient(45deg, #81C784, #4CAF50);
-}
-
-.service-card-new.brown-gradient .service-divider-new {
-  background: linear-gradient(45deg, #A1887F, #8D6E63);
-}
-
-.service-card-new.orange-gradient .service-divider-new {
-  background: linear-gradient(45deg, #FFB74D, #FF9800);
+  background: linear-gradient(to right, #AA5C2F 0%, #96B4A8 33%, #7CC1DF 66%, #2C6ECB 100%);
 }
 
 .service-description-new {
