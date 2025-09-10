@@ -1123,7 +1123,7 @@ p,
 }
 
 .hero-logo-img {
-  height: 14rem;
+  height: 10rem;
   width: auto;
   max-width: 90%;
   object-fit: contain;
@@ -1155,7 +1155,7 @@ p,
 
 @media (max-width: 768px) {
   .hero-logo-img {
-    height: 10rem;
+    height: 8rem;
     max-width: 90%;
   }
 
@@ -1166,7 +1166,7 @@ p,
 
 @media (max-width: 480px) {
   .hero-logo-img {
-    height: 7rem;
+    height: 6rem;
     max-width: 95%;
   }
 
@@ -1393,7 +1393,7 @@ button:active {
 
 /* Hero content img styling */
 .hero-content img {
-  height: 14rem;
+  height: 10rem;
   width: auto;
   max-width: 90%;
   object-fit: contain;
@@ -1404,13 +1404,13 @@ button:active {
 
 @media (max-width: 768px) {
   .hero-content img {
-    height: 10rem;
+    height: 8rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero-content img {
-    height: 7rem;
+    height: 6rem;
   }
 }
 
@@ -1421,7 +1421,7 @@ button:active {
 }
 
 .tagline-text {
-  font-size: clamp(14px, 2vw, 24px);
+  font-size: clamp(12px, 1.8vw, 20px);
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
@@ -1432,7 +1432,7 @@ button:active {
   border-right: 2px solid transparent;
   width: 0;
   animation: typewriter 4s steps(80) 1s forwards;
-  max-width: 90vw;
+  max-width: 95vw;
 }
 
 @keyframes typewriter {
