@@ -4614,7 +4614,8 @@ button:active {
   border-radius: 8px;
   position: relative;
   padding: 2.5rem 2rem 2rem;
-  border-left: 4px solid #4a9eff;
+  border-left: 4px solid;
+  border-image: linear-gradient(to bottom, #AA5C2F 0%, #96B4A8 33%, #7CC1DF 66%, #2C6ECB 100%) 1;
   min-height: 280px;
   display: flex;
   flex-direction: column;
