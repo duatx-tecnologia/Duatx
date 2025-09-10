@@ -1398,15 +1398,34 @@ button:active {
 }
 
 .tagline-text {
-  font-size: clamp(18px, 3vw, 32px);
+  font-size: clamp(16px, 2.5vw, 28px);
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.2;
   margin: 0;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1.5s ease-out 0.5s forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid transparent;
+  width: 0;
+  animation: typewriter 4s steps(60) 1s forwards;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tagline-text {
+    white-space: normal;
+    width: auto;
+    animation: fadeInUp 1.5s ease-out 0.5s forwards;
+  }
 }
 
 @keyframes fadeInUp {
