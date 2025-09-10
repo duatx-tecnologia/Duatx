@@ -4625,8 +4625,10 @@ button:active {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-top: 4rem;
+  margin: 4rem auto 0;
   padding: 0 1rem;
+  max-width: 1200px;
+  justify-items: center;
 }
 
 .mission-card {
