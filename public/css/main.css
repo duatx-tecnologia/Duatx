@@ -1123,7 +1123,7 @@ p,
 }
 
 .hero-logo-img {
-  height: 11.2rem;
+  height: 14rem;
   width: auto;
   max-width: 90%;
   object-fit: contain;
@@ -1155,7 +1155,7 @@ p,
 
 @media (max-width: 768px) {
   .hero-logo-img {
-    height: 8.4rem;
+    height: 10rem;
     max-width: 90%;
   }
 
@@ -1166,7 +1166,7 @@ p,
 
 @media (max-width: 480px) {
   .hero-logo-img {
-    height: 5.6rem;
+    height: 7rem;
     max-width: 95%;
   }
 
@@ -1391,6 +1391,29 @@ button:active {
   box-shadow: none;
 }
 
+/* Hero content img styling */
+.hero-content img {
+  height: 14rem;
+  width: auto;
+  max-width: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.3));
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content img {
+    height: 10rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content img {
+    height: 7rem;
+  }
+}
+
 /* Hero tagline */
 .hero-tagline {
   margin-top: 2rem;
@@ -1398,7 +1421,7 @@ button:active {
 }
 
 .tagline-text {
-  font-size: clamp(16px, 2.5vw, 28px);
+  font-size: clamp(14px, 2vw, 24px);
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
@@ -1408,7 +1431,8 @@ button:active {
   overflow: hidden;
   border-right: 2px solid transparent;
   width: 0;
-  animation: typewriter 4s steps(60) 1s forwards;
+  animation: typewriter 4s steps(80) 1s forwards;
+  max-width: 90vw;
 }
 
 @keyframes typewriter {
