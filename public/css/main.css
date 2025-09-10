@@ -4622,13 +4622,14 @@ button:active {
 
 /* Mission Vision Cards - Following exact image design */
 .mission-vision-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   gap: 2rem;
   margin: 4rem auto 0;
   padding: 0 1rem;
   max-width: 1200px;
-  justify-items: center;
+  width: 100%;
 }
 
 .mission-card {
@@ -4687,7 +4688,8 @@ button:active {
 /* Responsive design for mission cards */
 @media (max-width: 1024px) {
   .mission-vision-cards {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
   }
   
