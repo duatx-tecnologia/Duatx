@@ -4633,7 +4633,7 @@ button:active {
 }
 
 .mission-card {
-  background: #2a2a2a;
+  background: transparent;
   border-radius: 8px;
   position: relative;
   padding: 2.5rem 2rem 2rem;
