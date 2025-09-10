@@ -4599,3 +4599,112 @@ button:active {
     right: calc(50% + 40px);
   }
 }
+
+/* Mission Vision Cards - Following exact image design */
+.mission-vision-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+  padding: 0 1rem;
+}
+
+.mission-card {
+  background: #2a2a2a;
+  border-radius: 8px;
+  position: relative;
+  padding: 2.5rem 2rem 2rem;
+  border-left: 4px solid #4a9eff;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-number {
+  position: absolute;
+  top: -15px;
+  left: 2rem;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  color: #2a2a2a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-content {
+  margin-top: 1rem;
+}
+
+.card-content h3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-content p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive design for mission cards */
+@media (max-width: 1024px) {
+  .mission-vision-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .mission-card {
+    min-height: 220px;
+    padding: 2rem 1.5rem 1.5rem;
+  }
+  
+  .card-content h3 {
+    font-size: 15px;
+  }
+  
+  .card-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-vision-cards {
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  
+  .mission-card {
+    min-height: 200px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .card-number {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  
+  .card-content h3 {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+  
+  .card-content p {
+    font-size: 14px;
+  }
+}
