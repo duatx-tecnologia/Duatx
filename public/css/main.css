@@ -4623,13 +4623,14 @@ button:active {
 /* Mission Vision Cards - Following exact image design */
 .mission-vision-cards {
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
   align-items: flex-start;
   gap: 2rem;
   margin: 4rem auto 0;
   padding: 0 2rem;
   max-width: 1200px;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .mission-card {
@@ -4640,8 +4641,9 @@ button:active {
   border-left: 4px solid;
   border-image: linear-gradient(to bottom, #AA5C2F 0%, #96B4A8 33%, #7CC1DF 66%, #2C6ECB 100%) 1;
   min-height: 280px;
-  flex: 1;
-  max-width: 350px;
+  flex: 0 1 320px !important;
+  max-width: 360px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
