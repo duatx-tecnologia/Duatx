@@ -4982,7 +4982,7 @@ button:active {
 }
 
 .logo-main:hover {
-  transform: scale(1.1) rotate(2deg);
+  transform: scale(1.1);
   filter: brightness(1.2) drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
 }
 
