@@ -4748,7 +4748,7 @@ button:active {
 }
 
 .service-card-new {
-  background: transparent;
+  background: transparent !important;
   border-radius: 16px;
   padding: 2rem 1.5rem;
   position: relative;
@@ -4861,3 +4861,20 @@ button:active {
     height: 35px;
   }
 }
+
+/* Additional override to ensure transparent backgrounds for all service cards */
+.service-card-new, 
+.service-card-new.blue-gradient, 
+.service-card-new.green-gradient, 
+.service-card-new.brown-gradient, 
+.service-card-new.orange-gradient {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.service-card-new::before,
+.service-card-new::after {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
