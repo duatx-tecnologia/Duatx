@@ -4897,3 +4897,78 @@ button:active {
   background-color: transparent !important;
 }
 
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary-gradient {
+  background: transparent;
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 75%, #2C6ECB 100%) 1;
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 200px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(170, 92, 47, 0.3);
+}
+
+.btn-primary-gradient:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-secondary-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary-outline:active {
+  transform: scale(0.98);
+}
+
+/* Responsive buttons */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn-primary-gradient,
+  .btn-secondary-outline {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
