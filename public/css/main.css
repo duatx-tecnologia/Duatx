@@ -4975,6 +4975,27 @@ button:active {
   }
 }
 
+/* Logo hover effects */
+.logo-main {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-main:hover {
+  transform: scale(1.1) rotate(2deg);
+  filter: brightness(1.2) drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+}
+
+.footer-logo {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+}
+
 /* Responsive buttons */
 @media (max-width: 768px) {
   .hero-buttons {
