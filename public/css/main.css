@@ -4999,6 +4999,42 @@ button:active {
   filter: brightness(1.1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
 }
 
+/* Footer Social Media */
+.footer-social {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.instagram-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(240, 148, 51, 0.3);
+}
+
+.instagram-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(240, 148, 51, 0.5);
+  filter: brightness(1.1);
+}
+
+.instagram-link:active {
+  transform: scale(0.95);
+}
+
+.instagram-link i {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 /* Responsive buttons */
 @media (max-width: 768px) {
   .hero-buttons {
