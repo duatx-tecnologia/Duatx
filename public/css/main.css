@@ -4752,9 +4752,9 @@ button:active {
   border-radius: 16px;
   padding: 2rem 1.5rem;
   position: relative;
-  min-height: 280px;
-  flex: 1;
-  max-width: 320px;
+  height: 320px;
+  width: 300px;
+  flex: 0 0 300px;
   border: 2px solid;
   border-image-slice: 1;
 }
@@ -4840,8 +4840,9 @@ button:active {
   }
   
   .service-card-new {
-    flex: 0 1 calc(50% - 0.75rem);
-    min-width: 280px;
+    flex: 0 0 280px;
+    width: 280px;
+    height: 300px;
   }
 }
 
@@ -4853,10 +4854,9 @@ button:active {
   }
   
   .service-card-new {
-    flex: none;
-    width: 100%;
-    max-width: 400px;
-    min-height: 240px;
+    flex: 0 0 280px;
+    width: 320px;
+    height: 280px;
     padding: 1.5rem;
   }
   
