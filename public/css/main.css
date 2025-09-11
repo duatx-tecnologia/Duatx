@@ -5014,7 +5014,7 @@ button:active {
   height: 2.5rem;
   background: linear-gradient(45deg, #AA5C2F 0%, #96B4A8 33%, #7CC1DF 66%, #2C6ECB 100%);
   border-radius: 12px;
-  color: white;
+  color: black;
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(170, 92, 47, 0.3);
