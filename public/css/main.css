@@ -4913,7 +4913,7 @@ button:active {
   border-image: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 75%, #2C6ECB 100%) 1;
   color: white;
   padding: 0.875rem 2rem;
-  border-radius: 8px;
+  border-radius: 25px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -4923,6 +4923,7 @@ button:active {
   min-width: 200px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  animation: pulse-continuous 2s ease-in-out infinite;
 }
 
 .btn-primary-gradient:hover {
@@ -4939,7 +4940,7 @@ button:active {
   border: 2px solid white;
   color: white;
   padding: 0.875rem 2rem;
-  border-radius: 8px;
+  border-radius: 25px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -4956,6 +4957,22 @@ button:active {
 
 .btn-secondary-outline:active {
   transform: scale(0.98);
+}
+
+/* Pulse animation for primary button */
+@keyframes pulse-continuous {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(170, 92, 47, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(170, 92, 47, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(170, 92, 47, 0);
+  }
 }
 
 /* Responsive buttons */
