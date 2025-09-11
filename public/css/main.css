@@ -4627,7 +4627,7 @@ button:active {
   align-items: flex-start;
   gap: 2rem;
   margin: 4rem auto 0;
-  padding: 0 1rem;
+  padding: 0 2rem;
   max-width: 1200px;
   width: 100%;
 }
@@ -4640,6 +4640,8 @@ button:active {
   border-left: 4px solid;
   border-image: linear-gradient(to bottom, #AA5C2F 0%, #96B4A8 33%, #7CC1DF 66%, #2C6ECB 100%) 1;
   min-height: 280px;
+  flex: 1;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
