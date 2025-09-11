@@ -3819,10 +3819,11 @@ button:active {
 }
 
 .whatsapp-cta-text {
-  background: linear-gradient(135deg, hsl(var(--orange-600)) 0%, hsl(var(--blue-600)) 100%);
+  background: transparent;
+  border: 2px solid white;
   padding: 0.75rem 1rem;
   border-radius: 25px;
-  box-shadow: 0 4px 12px rgba(170, 92, 47, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
   opacity: 0;
   transform: translateX(20px);
   transition: all 0.5s ease;
