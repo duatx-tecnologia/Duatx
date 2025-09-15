@@ -4831,7 +4831,7 @@ button:active {
 .image-carousel-container {
   position: relative;
   max-width: 1400px;
-  margin: 4rem auto 0;
+  margin: 4rem auto;
   overflow: hidden;
   border-radius: 1.5rem;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4), -8px -8px 16px rgba(255, 255, 255, 0.05);
