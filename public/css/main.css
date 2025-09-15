@@ -4817,41 +4817,56 @@ button:active {
   height: 1.25rem;
 }
 
-/* Image Carousel Section */
-#image-carousel {
+/* Image Carousel Section - Override all global styles */
+section#image-carousel {
   margin-top: 8rem;
   position: relative;
-  background: 
-    #000000,
-    radial-gradient(ellipse 1200px 600px at 20% 30%, rgba(170, 92, 47, 0.8) 0%, transparent 70%),
-    radial-gradient(ellipse 1000px 500px at 80% 70%, rgba(44, 110, 203, 0.8) 0%, transparent 70%),
-    radial-gradient(ellipse 800px 400px at 60% 10%, rgba(124, 193, 223, 0.6) 0%, transparent 60%),
-    radial-gradient(ellipse 900px 450px at 30% 90%, rgba(150, 180, 168, 0.6) 0%, transparent 60%);
-  background-attachment: fixed;
-  animation: background-flow 20s ease-in-out infinite;
+  background: #000000 !important;
+  z-index: 1;
+  overflow: hidden;
 }
 
-@keyframes background-flow {
+section#image-carousel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse 1200px 600px at 20% 30%, rgba(170, 92, 47, 0.9) 0%, transparent 70%),
+    radial-gradient(ellipse 1000px 500px at 80% 70%, rgba(44, 110, 203, 0.9) 0%, transparent 70%),
+    radial-gradient(ellipse 800px 400px at 60% 10%, rgba(124, 193, 223, 0.7) 0%, transparent 60%),
+    radial-gradient(ellipse 900px 450px at 30% 90%, rgba(150, 180, 168, 0.7) 0%, transparent 60%);
+  z-index: -1;
+  animation: gradient-flow 15s ease-in-out infinite;
+}
+
+section#image-carousel::after {
+  content: none;
+}
+
+@keyframes gradient-flow {
   0% {
-    background-position: 0% 0%, 20% 30%, 80% 70%, 60% 10%, 30% 90%;
+    background-position: 20% 30%, 80% 70%, 60% 10%, 30% 90%;
   }
   25% {
-    background-position: 5% 5%, 25% 35%, 75% 65%, 65% 15%, 25% 85%;
+    background-position: 25% 35%, 75% 65%, 65% 15%, 25% 85%;
   }
   50% {
-    background-position: 10% 10%, 30% 40%, 70% 60%, 70% 20%, 20% 80%;
+    background-position: 30% 40%, 70% 60%, 70% 20%, 20% 80%;
   }
   75% {
-    background-position: 5% 5%, 25% 35%, 75% 65%, 65% 15%, 25% 85%;
+    background-position: 25% 35%, 75% 65%, 65% 15%, 25% 85%;
   }
   100% {
-    background-position: 0% 0%, 20% 30%, 80% 70%, 60% 10%, 30% 90%;
+    background-position: 20% 30%, 80% 70%, 60% 10%, 30% 90%;
   }
 }
 
 
 @media (max-width: 768px) {
-  #image-carousel {
+  section#image-carousel {
     margin-top: 6rem;
   }
 }
@@ -4863,7 +4878,7 @@ button:active {
   overflow: hidden;
   border-radius: 1.5rem;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4), -8px -8px 16px rgba(255, 255, 255, 0.05);
-  z-index: 3;
+  z-index: 2;
 }
 
 .image-carousel-slide {
