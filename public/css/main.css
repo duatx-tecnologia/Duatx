@@ -4569,11 +4569,33 @@ button:active {
   transition: all 0.3s ease;
 }
 
-.service-btn-new:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.6);
+/* Hover effects for each card color */
+.service-card-new.blue-gradient .service-btn-new:hover {
+  background: rgba(44, 110, 203, 0.1);
+  border-color: #2C6ECB;
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(44, 110, 203, 0.3);
+}
+
+.service-card-new.green-gradient .service-btn-new:hover {
+  background: rgba(124, 193, 223, 0.1);
+  border-color: #7CC1DF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(124, 193, 223, 0.3);
+}
+
+.service-card-new.brown-gradient .service-btn-new:hover {
+  background: rgba(150, 180, 168, 0.1);
+  border-color: #96B4A8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(150, 180, 168, 0.3);
+}
+
+.service-card-new.orange-gradient .service-btn-new:hover {
+  background: rgba(170, 92, 47, 0.1);
+  border-color: #AA5C2F;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(170, 92, 47, 0.3);
 }
 
 .service-btn-new:active {
