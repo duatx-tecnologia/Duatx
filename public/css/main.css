@@ -4926,7 +4926,7 @@ button:active {
 /* Image Carousel Section */
 .image-carousel-container {
   position: relative;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 1.5rem;
@@ -4936,7 +4936,7 @@ button:active {
 .image-carousel-slide {
   display: none;
   width: 100%;
-  min-height: 400px;
+  min-height: 600px;
 }
 
 .image-carousel-slide.active {
@@ -4947,9 +4947,9 @@ button:active {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 3rem;
-  padding: 3rem;
-  min-height: 400px;
+  gap: 4rem;
+  padding: 4rem;
+  min-height: 600px;
   background: linear-gradient(135deg, 
     rgba(170, 92, 47, 0.1) 0%, 
     rgba(150, 180, 168, 0.1) 25%,
@@ -4981,7 +4981,8 @@ button:active {
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  height: 450px;
 }
 
 .image-carousel-image img {
@@ -5050,11 +5051,20 @@ button:active {
 
 /* Responsive Design for Image Carousel */
 @media (max-width: 768px) {
+  .image-carousel-slide {
+    min-height: 500px;
+  }
+  
   .image-carousel-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 2.5rem;
+    padding: 3rem;
     text-align: center;
+    min-height: 500px;
+  }
+  
+  .image-carousel-image {
+    height: 300px;
   }
   
   .image-carousel-title {
@@ -5072,8 +5082,17 @@ button:active {
 }
 
 @media (max-width: 480px) {
+  .image-carousel-slide {
+    min-height: 450px;
+  }
+  
   .image-carousel-content {
-    padding: 1.5rem;
+    padding: 2rem;
+    min-height: 450px;
+  }
+  
+  .image-carousel-image {
+    height: 250px;
   }
   
   .image-carousel-title {
