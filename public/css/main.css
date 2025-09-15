@@ -1654,11 +1654,11 @@ button:active {
 }
 
 .about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   margin-top: 1rem;
-  align-items: start;
 }
 
 .about-text {
@@ -1839,8 +1839,10 @@ button:active {
 
 @media (max-width: 768px) {
   .about-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .about-text {
@@ -3286,15 +3288,10 @@ button:active {
 
 /* About Section */
 .about-content {
-  display: grid;
-  gap: 4rem;
-}
-
-@media (min-width: 1024px) {
-  .about-content {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .about-description {
