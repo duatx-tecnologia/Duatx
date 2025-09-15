@@ -4683,8 +4683,7 @@ button:active {
 
 .btn-primary-gradient {
   background: transparent;
-  border: 2px solid;
-  border-image: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 75%, #2C6ECB 100%) 1;
+  border: none;
   color: white;
   padding: 0.875rem 2rem;
   border-radius: 25px;
@@ -4693,11 +4692,22 @@ button:active {
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
   min-width: 200px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   animation: pulse-continuous 2s ease-in-out infinite;
+}
+
+.btn-primary-gradient::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 75%, #2C6ECB 100%);
+  border-radius: 27px;
+  z-index: -1;
 }
 
 .btn-primary-gradient:hover {
