@@ -181,6 +181,13 @@ class DuatxWebsite {
           </div>
           <p class="service-description">${service.result}</p>
         </div>
+        
+        <div class="service-footer">
+          <button class="service-btn" data-testid="button-saiba-mais-${service.id}">
+            <span>Saiba mais</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
       </div>
     `).join('');
 
