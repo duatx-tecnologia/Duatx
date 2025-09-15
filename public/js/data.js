@@ -268,6 +268,14 @@ const DATA = {
 
   testimonials: [
     {
+      id: "rafael-leite",
+      name: "Rafael Leite",
+      role: "VELOCITY KORE",
+      content: "(...) o dashboard ficou muito bom! Estávamos pilotando o negócio no escuro, agora estamos dirigindo uma Ferrari! Parabéns!",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+      rating: 5
+    },
+    {
       id: "carlos-silva",
       name: "Carlos Silva",
       role: "CEO, TechCorp",
