@@ -4462,7 +4462,7 @@ button:active {
   border-radius: 16px;
   padding: 2rem 1.5rem;
   position: relative;
-  height: 400px;
+  height: 480px;
   width: 300px;
   flex: 0 0 300px;
   border: 2px solid;
@@ -4588,7 +4588,7 @@ button:active {
   .service-card-new {
     flex: 0 0 280px;
     width: 280px;
-    height: 380px;
+    height: 460px;
   }
 }
 
@@ -4602,7 +4602,7 @@ button:active {
   .service-card-new {
     flex: 0 0 280px;
     width: 320px;
-    height: 360px;
+    height: 440px;
     padding: 1.5rem;
   }
   
