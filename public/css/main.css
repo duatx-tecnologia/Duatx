@@ -4844,11 +4844,19 @@ button:active {
   gap: 4rem;
   padding: 4rem;
   min-height: 600px;
-  background: linear-gradient(135deg, 
-    rgba(170, 92, 47, 0.1) 0%, 
-    rgba(150, 180, 168, 0.1) 25%,
-    rgba(124, 193, 223, 0.1) 50%,
-    rgba(44, 110, 203, 0.1) 100%);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-carousel-content:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
 }
 
 .image-carousel-text {
@@ -4955,6 +4963,7 @@ button:active {
     padding: 3rem;
     text-align: center;
     min-height: 500px;
+    border-radius: 16px;
   }
   
   .image-carousel-image {
@@ -4983,6 +4992,7 @@ button:active {
   .image-carousel-content {
     padding: 2rem;
     min-height: 450px;
+    border-radius: 12px;
   }
   
   .image-carousel-image {
