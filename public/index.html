@@ -395,6 +395,80 @@
             </div>
         </section>
 
+        <!-- Image Carousel Section -->
+        <section
+            id="image-carousel"
+            class="section-padding section-background"
+            style="
+                background: linear-gradient(
+                    180deg,
+                    hsl(220, 30%, 1%) 0%,
+                    hsl(220, 25%, 0.5%) 50%,
+                    hsl(220, 30%, 1%) 100%
+                ) !important;
+                position: relative;
+                overflow: hidden;
+            "
+        >
+            <div class="ethereal-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="ethereal-lines"></div>
+            <div class="container">
+                <div class="image-carousel-container">
+                    <!-- First Image -->
+                    <div class="image-carousel-slide active" data-slide="0">
+                        <div class="image-carousel-content">
+                            <div class="image-carousel-text">
+                                <h2 class="image-carousel-title">Dashboards Interativos</h2>
+                                <p class="image-carousel-subtitle">
+                                    Visualização de dados em tempo real com insights acionáveis para decisões estratégicas.
+                                </p>
+                            </div>
+                            <div class="image-carousel-image">
+                                <img src="assets/2.png" alt="Dashboard Analytics" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Second Image -->
+                    <div class="image-carousel-slide" data-slide="1">
+                        <div class="image-carousel-content">
+                            <div class="image-carousel-text">
+                                <h2 class="image-carousel-title">Análise de Performance</h2>
+                                <p class="image-carousel-subtitle">
+                                    Monitoramento completo de KPIs e métricas essenciais para o crescimento do seu negócio.
+                                </p>
+                            </div>
+                            <div class="image-carousel-image">
+                                <img src="assets/dashboard.jpg" alt="Performance Dashboard" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Navigation -->
+                <div class="image-carousel-nav">
+                    <div class="image-carousel-dots">
+                        <div class="image-carousel-dot active" data-slide="0"></div>
+                        <div class="image-carousel-dot" data-slide="1"></div>
+                    </div>
+                    <div class="image-carousel-arrows">
+                        <button class="image-carousel-arrow prev" id="image-prev">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <button class="image-carousel-arrow next" id="image-next">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Testimonials Section -->
         <section
             id="testimonials"
