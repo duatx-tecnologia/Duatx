@@ -7,7 +7,6 @@ class DuatxWebsite {
   init() {
     document.addEventListener('DOMContentLoaded', () => {
       this.setupNavigation();
-      this.renderServices();
       this.renderTechnologies();
       this.renderSectors();
       this.renderResults();
@@ -145,57 +144,6 @@ class DuatxWebsite {
     });
   }
 
-  renderServices() {
-    const container = document.getElementById('services-container');
-    if (!container || !DATA.services) return;
-
-    container.innerHTML = DATA.services.map((service, index) => `
-      <div class="service-card fade-in stagger-${index + 1}">
-        <div class="service-header">
-          <div class="service-icon" style="background: ${COLOR_MAP[service.color] || COLOR_MAP['from-blue-600 to-blue-500']}">
-            <i data-lucide="${ICON_MAP[service.icon] || 'code'}" class="w-6 h-6"></i>
-          </div>
-          <h3 class="service-title">${service.title}</h3>
-        </div>
-        
-        <div class="service-section">
-          <div class="service-label problem">
-            <i data-lucide="alert-triangle" class="w-4 h-4"></i>
-            Problema
-          </div>
-          <p class="service-description">${service.problem}</p>
-        </div>
-        
-        <div class="service-section">
-          <div class="service-label solution">
-            <i data-lucide="cpu" class="w-4 h-4"></i>
-            Solução
-          </div>
-          <p class="service-description">${service.solution}</p>
-        </div>
-        
-        <div class="service-section">
-          <div class="service-label result">
-            <i data-lucide="check-circle" class="w-4 h-4"></i>
-            Resultado
-          </div>
-          <p class="service-description">${service.result}</p>
-        </div>
-        
-        <div class="service-footer">
-          <button class="service-btn" data-testid="button-saiba-mais-${service.id}">
-            <span>Saiba mais</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </button>
-        </div>
-      </div>
-    `).join('');
-
-    // Re-initialize icons for new content
-    if (typeof lucide !== 'undefined') {
-      lucide.createIcons();
-    }
-  }
 
   renderSectors() {
     const container = document.getElementById('sectors-container');
