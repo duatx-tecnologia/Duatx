@@ -4337,19 +4337,31 @@ button:active {
 }
 
 .mission-card {
-  background: transparent;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
   position: relative;
   padding: 2.5rem 2rem 2rem;
   border-left: 4px solid;
   border-image: linear-gradient(to bottom, #AA5C2F 0%, #96B4A8 33%, #7CC1DF 66%, #2C6ECB 100%) 1;
-  min-height: 280px;
+  height: 320px;
   flex: 1;
   max-width: 350px;
   min-width: 280px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mission-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
 }
 
 .card-number {
@@ -4401,7 +4413,7 @@ button:active {
   }
   
   .mission-card {
-    min-height: 220px;
+    height: 280px;
     padding: 2rem 1.5rem 1.5rem;
   }
   
@@ -4421,7 +4433,7 @@ button:active {
   }
   
   .mission-card {
-    min-height: 200px;
+    height: 240px;
     padding: 1.5rem 1rem;
   }
   
