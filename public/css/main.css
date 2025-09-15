@@ -4696,6 +4696,8 @@ button:active {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   animation: pulse-continuous 2s ease-in-out infinite;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-primary-gradient::before {
@@ -4732,6 +4734,8 @@ button:active {
   min-width: 200px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-secondary-outline:hover {
