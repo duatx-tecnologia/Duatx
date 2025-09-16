@@ -4837,13 +4837,11 @@ section#image-carousel::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(ellipse 1200px 600px at 20% 30%, rgba(170, 92, 47, 0.9) 0%, transparent 70%),
-    radial-gradient(ellipse 1000px 500px at 80% 70%, rgba(44, 110, 203, 0.9) 0%, transparent 70%),
-    radial-gradient(ellipse 800px 400px at 60% 10%, rgba(124, 193, 223, 0.7) 0%, transparent 60%),
-    radial-gradient(ellipse 900px 450px at 30% 90%, rgba(150, 180, 168, 0.7) 0%, transparent 60%);
+  background-image: url('/assets/BG10_1758037534669.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: -1;
-  animation: gradient-flow 15s ease-in-out infinite;
 }
 
 section#image-carousel::after {
