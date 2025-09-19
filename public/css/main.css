@@ -5008,18 +5008,20 @@ section#image-carousel::after {
 
 .image-carousel-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   font-weight: 800;
   color: white;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.1;
 }
 
 .image-carousel-subtitle {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 .image-carousel-image {
@@ -5114,11 +5116,11 @@ section#image-carousel::after {
   }
   
   .image-carousel-title {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
   
   .image-carousel-subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   
   .image-carousel-nav {
@@ -5143,7 +5145,11 @@ section#image-carousel::after {
   }
   
   .image-carousel-title {
-    font-size: 1.75rem;
+    font-size: 2.2rem;
+  }
+  
+  .image-carousel-subtitle {
+    font-size: 1.1rem;
   }
 }
 
