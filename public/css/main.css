@@ -4417,7 +4417,7 @@ button:active {
 #image-carousel .section-header .section-subtitle {
   transform: translateX(-100%);
   opacity: 0;
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #services .section-header .section-title.animate-in,
@@ -4429,19 +4429,19 @@ button:active {
 }
 
 #services .section-header .section-title.animate-in {
-  transition-delay: 0.1s;
+  transition-delay: 0.2s;
 }
 
 #services .section-header .section-subtitle.animate-in {
-  transition-delay: 0.3s;
+  transition-delay: 0.6s;
 }
 
 #image-carousel .section-header .section-title.animate-in {
-  transition-delay: 0.1s;
+  transition-delay: 0.2s;
 }
 
 #image-carousel .section-header .section-subtitle.animate-in {
-  transition-delay: 0.3s;
+  transition-delay: 0.6s;
 }
 
 .mission-card:hover {
