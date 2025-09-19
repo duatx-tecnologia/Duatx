@@ -2513,21 +2513,29 @@ button:active {
   box-shadow: 0 10px 30px rgba(170, 92, 47, 0.3);
 }
 
-/* Image Carousel Button Specific Styles */
-.image-carousel-text .cta-button.primary {
+/* Image Carousel Fixed Button */
+.image-carousel-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.image-carousel-button {
   background: transparent;
   color: white;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  padding: 1.2rem 2.5rem;
+  padding: 1.2rem 3.5rem;
   font-size: 1rem;
   font-weight: 600;
-  margin-top: 1.5rem;
-  border-radius: 25px;
+  border-radius: 12px;
   box-shadow: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  min-width: 200px;
 }
 
-.image-carousel-text .cta-button.primary:hover {
+.image-carousel-button:hover {
   background: linear-gradient(135deg, #AA5C2F 0%, #2C6ECB 100%);
   border-color: transparent;
   color: white;
