@@ -1387,10 +1387,39 @@ class DuatxWebsite {
       });
     });
 
+    // Setup mission cards animation on scroll
+    this.setupMissionCardsAnimation();
+
     // Respect reduced motion preference
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.documentElement.style.setProperty('--animation-duration', '0.01ms');
     }
+  }
+
+  setupMissionCardsAnimation() {
+    const aboutSection = document.getElementById('about');
+    const missionCards = document.querySelectorAll('.mission-card');
+    
+    if (!aboutSection || missionCards.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add animation class to all mission cards
+          missionCards.forEach(card => {
+            card.classList.add('animate-in');
+          });
+          
+          // Stop observing once animated
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.3, // Trigger when 30% of the section is visible
+      rootMargin: '0px 0px -50px 0px' // Add some margin to trigger earlier
+    });
+
+    observer.observe(aboutSection);
   }
 
   // Utility method to format phone numbers

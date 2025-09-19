@@ -4386,6 +4386,28 @@ button:active {
   justify-content: flex-start;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Animation setup */
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.mission-card.animate-in {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mission-card:nth-child(1).animate-in {
+  transition-delay: 0.1s;
+}
+
+.mission-card:nth-child(2).animate-in {
+  transition-delay: 0.3s;
+}
+
+.mission-card:nth-child(3).animate-in {
+  transition-delay: 0.5s;
 }
 
 .mission-card:hover {
