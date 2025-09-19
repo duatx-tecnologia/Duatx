@@ -4410,6 +4410,40 @@ button:active {
   transition-delay: 0.5s;
 }
 
+/* Services and Projects Section Headers Animation */
+#services .section-header .section-title,
+#services .section-header .section-subtitle,
+#image-carousel .section-header .section-title,
+#image-carousel .section-header .section-subtitle {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#services .section-header .section-title.animate-in,
+#services .section-header .section-subtitle.animate-in,
+#image-carousel .section-header .section-title.animate-in,
+#image-carousel .section-header .section-subtitle.animate-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+#services .section-header .section-title.animate-in {
+  transition-delay: 0.1s;
+}
+
+#services .section-header .section-subtitle.animate-in {
+  transition-delay: 0.3s;
+}
+
+#image-carousel .section-header .section-title.animate-in {
+  transition-delay: 0.1s;
+}
+
+#image-carousel .section-header .section-subtitle.animate-in {
+  transition-delay: 0.3s;
+}
+
 .mission-card:hover {
   background: rgba(255, 255, 255, 0.05);
   transform: translateY(-5px);

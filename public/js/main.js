@@ -1389,6 +1389,9 @@ class DuatxWebsite {
 
     // Setup mission cards animation on scroll
     this.setupMissionCardsAnimation();
+    
+    // Setup services and projects headers animation
+    this.setupSectionHeadersAnimation();
 
     // Respect reduced motion preference
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -1420,6 +1423,42 @@ class DuatxWebsite {
     });
 
     observer.observe(aboutSection);
+  }
+
+  setupSectionHeadersAnimation() {
+    const servicesSection = document.getElementById('services');
+    const projectsSection = document.getElementById('image-carousel');
+    
+    const setupSectionAnimation = (section) => {
+      if (!section) return;
+      
+      const sectionTitle = section.querySelector('.section-header .section-title');
+      const sectionSubtitle = section.querySelector('.section-header .section-subtitle');
+      
+      if (!sectionTitle || !sectionSubtitle) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Add animation class to title and subtitle
+            sectionTitle.classList.add('animate-in');
+            sectionSubtitle.classList.add('animate-in');
+            
+            // Stop observing once animated
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.2, // Trigger when 20% of the section is visible
+        rootMargin: '0px 0px -50px 0px' // Add some margin to trigger earlier
+      });
+
+      observer.observe(section);
+    };
+
+    // Setup animation for both sections
+    setupSectionAnimation(servicesSection);
+    setupSectionAnimation(projectsSection);
   }
 
   // Utility method to format phone numbers
