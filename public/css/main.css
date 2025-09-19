@@ -5029,7 +5029,7 @@ section#image-carousel::after {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
-  height: 550px;
+  height: 450px;
 }
 
 .image-carousel-image img {
@@ -5112,7 +5112,7 @@ section#image-carousel::after {
   }
   
   .image-carousel-image {
-    height: 400px;
+    height: 300px;
   }
   
   .image-carousel-title {
@@ -5141,7 +5141,7 @@ section#image-carousel::after {
   }
   
   .image-carousel-image {
-    height: 350px;
+    height: 250px;
   }
   
   .image-carousel-title {
