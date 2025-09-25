@@ -450,6 +450,15 @@ class DuatxWebsite {
       if (activeVideo) {
         activeVideo.currentTime = 0; // Reset to beginning
         activeVideo.play().catch(e => console.log('Video autoplay prevented:', e));
+        
+        // Log video duration when metadata is loaded
+        if (activeVideo.readyState >= 1) {
+          console.log(`Duração do vídeo: ${activeVideo.duration.toFixed(2)} segundos`);
+        } else {
+          activeVideo.addEventListener('loadedmetadata', () => {
+            console.log(`Duração do vídeo: ${activeVideo.duration.toFixed(2)} segundos`);
+          }, { once: true });
+        }
       }
       
       // Update button states
