@@ -433,10 +433,14 @@ class DuatxWebsite {
       // Remove active from all slides and dots
       slides.forEach((slide, i) => {
         slide.classList.remove('active');
-        // Pause videos in inactive slides
+        // Pause videos in inactive slides and clean up event listeners
         const video = slide.querySelector('video');
         if (video && i !== index) {
           video.pause();
+          // Remove timeupdate listener when slide becomes inactive
+          if (video._timeUpdateHandler) {
+            video.removeEventListener('timeupdate', video._timeUpdateHandler);
+          }
         }
       });
       dots.forEach(dot => dot.classList.remove('active'));
@@ -445,20 +449,26 @@ class DuatxWebsite {
       slides[index].classList.add('active');
       dots[index].classList.add('active');
       
-      // Play video in active slide
+      // Play video in active slide with 30-second loop
       const activeVideo = slides[index].querySelector('video');
       if (activeVideo) {
         activeVideo.currentTime = 0; // Reset to beginning
-        activeVideo.play().catch(e => console.log('Video autoplay prevented:', e));
         
-        // Log video duration when metadata is loaded
-        if (activeVideo.readyState >= 1) {
-          console.log(`Duração do vídeo: ${activeVideo.duration.toFixed(2)} segundos`);
-        } else {
-          activeVideo.addEventListener('loadedmetadata', () => {
-            console.log(`Duração do vídeo: ${activeVideo.duration.toFixed(2)} segundos`);
-          }, { once: true });
-        }
+        // Remove any existing event listeners to prevent conflicts
+        activeVideo.removeEventListener('timeupdate', activeVideo._timeUpdateHandler);
+        
+        // Create 30-second loop handler
+        activeVideo._timeUpdateHandler = function() {
+          if (activeVideo.currentTime >= 30) {
+            activeVideo.currentTime = 0;
+          }
+        };
+        
+        // Add the event listener
+        activeVideo.addEventListener('timeupdate', activeVideo._timeUpdateHandler);
+        
+        // Ensure video plays smoothly
+        activeVideo.play().catch(e => console.log('Video autoplay prevented:', e));
       }
       
       // Update button states
@@ -546,6 +556,15 @@ class DuatxWebsite {
     
     // Initialize
     showSlide(currentSlide);
+    
+    // Ensure video starts properly on page load
+    setTimeout(() => {
+      const initialVideo = slides[0].querySelector('video');
+      if (initialVideo && slides[0].classList.contains('active')) {
+        initialVideo.currentTime = 0;
+        initialVideo.play().catch(e => console.log('Initial video autoplay prevented:', e));
+      }
+    }, 100);
   }
 
   setupBlogCarousel() {
