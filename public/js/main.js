@@ -431,12 +431,26 @@ class DuatxWebsite {
     
     function showSlide(index) {
       // Remove active from all slides and dots
-      slides.forEach(slide => slide.classList.remove('active'));
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        // Pause videos in inactive slides
+        const video = slide.querySelector('video');
+        if (video && i !== index) {
+          video.pause();
+        }
+      });
       dots.forEach(dot => dot.classList.remove('active'));
       
       // Add active to current slide and dot
       slides[index].classList.add('active');
       dots[index].classList.add('active');
+      
+      // Play video in active slide
+      const activeVideo = slides[index].querySelector('video');
+      if (activeVideo) {
+        activeVideo.currentTime = 0; // Reset to beginning
+        activeVideo.play().catch(e => console.log('Video autoplay prevented:', e));
+      }
       
       // Update button states
       prevBtn.disabled = index === 0;
