@@ -5038,7 +5038,7 @@ section#image-carousel::after {
   height: 100%;
   object-fit: contain;
   transition: transform 0.3s ease;
-  border-radius: inherit;
+  border-radius: 1rem;
 }
 
 .image-carousel-nav {
