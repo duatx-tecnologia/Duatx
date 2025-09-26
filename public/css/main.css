@@ -5231,3 +5231,14 @@ section#image-carousel::after {
   );
   z-index: 10;
 }
+
+.section-divider-line::before {
+  content: '';
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  width: 100%;
+  height: calc(1px + 4rem);
+  background: rgba(11, 13, 16, 0.8);
+  z-index: -1;
+}
