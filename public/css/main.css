@@ -5242,3 +5242,44 @@ section#image-carousel::after {
   background: rgba(11, 13, 16, 0.8);
   z-index: -1;
 }
+
+/* About CTA Button */
+.about-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.about-button {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-button:hover {
+  background: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 75%, #2C6ECB 100%);
+  border-color: transparent;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(170, 92, 47, 0.4);
+}
+
+.about-button i {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.about-button:hover i {
+  transform: translateX(4px);
+}
