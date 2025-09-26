@@ -2537,7 +2537,7 @@ button:active {
 }
 
 .image-carousel-button:hover {
-  background: linear-gradient(135deg, #AA5C2F 0%, #2C6ECB 100%);
+  background: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 75%, #2C6ECB 100%);
   border-color: transparent;
   color: white;
   transform: translateY(-2px);
