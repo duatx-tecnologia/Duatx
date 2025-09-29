@@ -678,7 +678,10 @@ body {
         90deg,
         transparent 0%,
         transparent 20%,
-        rgba(255, 255, 255, 0.3) 50%,
+        #AA5C2F 30%,
+        #96B4A8 45%,
+        #7CC1DF 55%,
+        #2C6ECB 70%,
         transparent 80%,
         transparent 100%
     );
