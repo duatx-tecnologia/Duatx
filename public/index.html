@@ -203,15 +203,37 @@
         <!-- About Section -->
         <section
             id="about"
+            class="section-background"
             style="
-                background: rgba(11, 13, 16, 0.4);
-                padding: 2rem 0;
+                background: linear-gradient(
+                    180deg,
+                    transparent 0%,
+                    hsla(220, 40%, 2%, 0.3) 15%,
+                    hsla(220, 35%, 1.5%, 0.6) 30%,
+                    hsl(220, 30%, 1%) 50%,
+                    hsl(220, 25%, 0.5%) 75%,
+                    hsl(220, 30%, 1%) 100%
+                ) !important;
+                position: relative;
+                overflow: hidden;
+                margin-top: -50px;
+                padding: 3rem 2rem 2rem 2rem;
             "
         >
+            <div class="ethereal-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="ethereal-lines"></div>
             <div class="container">
-                <p class="section-subtitle">
-                    A Duatx é uma consultoria e desenvolvedora de soluções tecnológicas sob medida. Criamos automações, dashboards interativos, inteligência artificial aplicada à operação real das empresas e softwares personalizados.
-                </p>
+                <div class="section-header">
+                    <p class="section-subtitle">
+                        A Duatx é uma consultoria e desenvolvedora de soluções tecnológicas sob medida. Criamos automações, dashboards interativos, inteligência artificial aplicada à operação real das empresas e softwares personalizados.
+                    </p>
+                </div>
             </div>
         </section>
 
