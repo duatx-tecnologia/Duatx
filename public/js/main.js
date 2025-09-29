@@ -467,8 +467,21 @@ class DuatxWebsite {
         // Add the event listener
         activeVideo.addEventListener('timeupdate', activeVideo._timeUpdateHandler);
         
-        // Ensure video plays smoothly
-        activeVideo.play().catch(e => console.log('Video autoplay prevented:', e));
+        // Ensure video plays smoothly with mobile compatibility
+        activeVideo.setAttribute('playsinline', '');
+        activeVideo.setAttribute('webkit-playsinline', '');
+        activeVideo.muted = true;
+        activeVideo.play().catch(e => {
+          console.log('Video autoplay prevented:', e);
+          // Add tap-to-play for mobile
+          activeVideo.style.cursor = 'pointer';
+          activeVideo.setAttribute('title', 'Toque para reproduzir');
+          activeVideo.addEventListener('click', function() {
+            if (activeVideo.paused) {
+              activeVideo.play();
+            }
+          });
+        });
       }
       
       // Update button states
@@ -557,14 +570,41 @@ class DuatxWebsite {
     // Initialize
     showSlide(currentSlide);
     
-    // Ensure video starts properly on page load
+    // Ensure video starts properly on page load with mobile compatibility
     setTimeout(() => {
       const initialVideo = slides[0].querySelector('video');
       if (initialVideo && slides[0].classList.contains('active')) {
+        // Set mobile-friendly attributes
+        initialVideo.setAttribute('playsinline', '');
+        initialVideo.setAttribute('webkit-playsinline', '');
+        initialVideo.muted = true;
         initialVideo.currentTime = 0;
-        initialVideo.play().catch(e => console.log('Initial video autoplay prevented:', e));
+        
+        initialVideo.play().catch(e => {
+          console.log('Initial video autoplay prevented:', e);
+          // Add tap-to-play for mobile
+          initialVideo.style.cursor = 'pointer';
+          initialVideo.setAttribute('title', 'Toque para reproduzir');
+          initialVideo.addEventListener('click', function() {
+            if (initialVideo.paused) {
+              initialVideo.play();
+            }
+          });
+        });
       }
     }, 100);
+    
+    // Add user gesture fallback for mobile devices
+    document.addEventListener('touchstart', function() {
+      const videos = document.querySelectorAll('video');
+      videos.forEach(video => {
+        if (video.paused) {
+          video.play().catch(() => {
+            // Silent fail
+          });
+        }
+      });
+    }, { once: true });
   }
 
   setupBlogCarousel() {
