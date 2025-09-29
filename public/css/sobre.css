@@ -28,35 +28,6 @@
     opacity: 0.8;
 }
 
-.breadcrumb-outline {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
-    font-weight: 900;
-    color: transparent;
-    background: linear-gradient(135deg, #2C6ECB 0%, #7CC1DF 25%, #96B4A8 50%, #AA5C2F 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-stroke: 3px transparent;
-    position: relative;
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.breadcrumb-outline::before {
-    content: 'Sobre';
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: transparent;
-    -webkit-text-stroke: 3px;
-    -webkit-text-stroke-color: transparent;
-    background: linear-gradient(135deg, #2C6ECB 0%, #7CC1DF 25%, #96B4A8 50%, #AA5C2F 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    z-index: -1;
-    background-image: linear-gradient(135deg, #2C6ECB 0%, #7CC1DF 25%, #96B4A8 50%, #AA5C2F 100%);
-}
 
 .hero-title {
     font-family: 'Montserrat', sans-serif;
@@ -535,9 +506,6 @@
         margin-bottom: 2rem;
     }
     
-    .breadcrumb-outline {
-        font-size: 2.5rem;
-    }
     
     .hero-description,
     .hero-description-enhanced {
@@ -581,9 +549,6 @@
         font-size: 1.75rem;
     }
     
-    .breadcrumb-outline {
-        font-size: 2rem;
-    }
     
     .hero-description {
         font-size: 0.95rem;
