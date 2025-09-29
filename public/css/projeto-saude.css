@@ -321,7 +321,7 @@ body {
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    background: var(--card-bg);
+    background: #FFFFFF;
     margin-bottom: 2rem;
 }
 
@@ -333,6 +333,8 @@ body {
 .carousel-slide {
     min-width: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .carousel-slide.active {
@@ -343,8 +345,7 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    max-height: 600px;
-    object-fit: contain;
+    object-fit: cover;
     background: #FFFFFF;
 }
 
