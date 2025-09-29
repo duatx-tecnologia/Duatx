@@ -2542,6 +2542,7 @@ button:active {
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   min-width: 280px;
+  text-decoration: none;
 }
 
 .image-carousel-button:hover {
