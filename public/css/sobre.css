@@ -108,6 +108,20 @@
     margin: 0;
 }
 
+.hero-description-enhanced {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.about-description {
+    max-width: 100%;
+}
+
 .hero-visual {
     display: flex;
     justify-content: center;
@@ -291,32 +305,127 @@
     margin: 0;
 }
 
-/* Team Stats */
-.team-stats {
+/* Team Grid */
+.team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
-.stat-card {
-    text-align: center;
-    padding: 2rem 1.5rem;
+.team-member {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+    text-align: left;
 }
 
-.stat-number {
+.member-avatar {
+    flex-shrink: 0;
+}
+
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.avatar-circle.ceo-gradient {
+    background: linear-gradient(145deg, #AA5C2F, #96B4A8);
+}
+
+.avatar-circle.backend-gradient {
+    background: linear-gradient(145deg, #2C6ECB, #7CC1DF);
+}
+
+.avatar-circle.frontend-gradient {
+    background: linear-gradient(145deg, #96B4A8, #7CC1DF);
+}
+
+.avatar-circle.analyst-gradient {
+    background: linear-gradient(145deg, #7CC1DF, #2C6ECB);
+}
+
+.avatar-circle.designer-gradient {
+    background: linear-gradient(145deg, #AA5C2F, #7CC1DF);
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-name {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
-    font-weight: 900;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFFFFF;
     margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.member-role {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #7CC1DF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
     display: block;
 }
 
-.stat-label {
+.member-description {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 0.95rem;
+    font-weight: 400;
     color: #CFCFCD;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.team-bottom-message {
+    margin-top: 3rem;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
+}
+
+.message-icon {
+    flex-shrink: 0;
+}
+
+.icon-x {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #2C6ECB, #7CC1DF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.message-content {
+    flex: 1;
+}
+
+.message-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 1.7;
+    margin: 0;
 }
 
 /* Technology Section */
@@ -396,25 +505,32 @@
         margin-bottom: 2rem;
     }
     
-    .hero-description {
+    .hero-description,
+    .hero-description-enhanced {
         font-size: 1rem;
     }
     
-    .mission-grid,
-    .team-stats,
+    .team-grid,
     .tech-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
     
-    .mission-card,
-    .stat-card,
+    .team-member,
     .tech-category {
         padding: 1.5rem;
     }
     
-    .stat-number {
-        font-size: 2.5rem;
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .team-bottom-message {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
     }
     
     .liquid-glass-card {
