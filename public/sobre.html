@@ -45,28 +45,36 @@
         </div>
     </div>
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav container">
-            <div class="nav-brand">
-                <a href="/" aria-label="DUATX Home">
-                    <img src="assets/duatx-logo-tight.svg" alt="DUATX" class="nav-logo" />
+    <!-- Navigation Bar -->
+    <header id="navbar" class="navbar transparent">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="/" class="logo-link">
+                    <img
+                        src="assets//x-lightversion@2x.svg"
+                        alt="DUATX"
+                        class="logo-img"
+                    />
                 </a>
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="/" class="nav-link">Início</a></li>
-                    <li><a href="/#services" class="nav-link">Serviços</a></li>
-                    <li><a href="/sobre.html" class="nav-link active">Sobre</a></li>
-                    <li><a href="/#contact" class="nav-link">Contato</a></li>
+            <nav>
+                <ul class="menu">
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/sobre.html" class="active">Sobre</a></li>
+                    <li><a href="/#services">Serviços</a></li>
+                    <li><a href="/#image-carousel">Projetos</a></li>
+                    <li><a href="/#testimonials">Depoimentos</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
                 </ul>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
     </header>
 
     <!-- Main Content -->
