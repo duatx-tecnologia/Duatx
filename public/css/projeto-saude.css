@@ -258,6 +258,11 @@ body {
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.about-text:last-child {
+    margin-bottom: 0;
 }
 
 .about-text strong {
