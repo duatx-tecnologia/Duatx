@@ -1033,26 +1033,6 @@ h6,
   }
 }
 
-.section-subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.125rem;
-  font-weight: 400;
-  color: #CFCFCD;
-  text-align: center;
-}
-
-.section-subtitle-large {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.375rem;
-  font-weight: 400;
-  color: #CFCFCD;
-  text-align: center;
-  max-width: 48rem;
-  margin: 0 auto 2rem;
-  line-height: 1.6;
-  letter-spacing: -0.01em;
-}
-
 .section-header {
   margin-bottom: 5rem;
   margin-top: 6rem;
@@ -3867,14 +3847,6 @@ button:active {
 
   .section-title {
     font-size: 2rem;
-  }
-
-  .section-subtitle {
-    font-size: 1.125rem;
-  }
-
-  .section-subtitle-large {
-    font-size: 1.25rem;
   }
 
   .impact-number {
