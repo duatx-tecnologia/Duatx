@@ -433,14 +433,14 @@
 /* Technology Section */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
+    gap: 2.5rem 3rem;
     margin-top: 3rem;
     justify-content: center;
 }
 
 .tech-category {
-    padding: 2rem;
+    padding: 1.5rem;
     background: transparent !important;
     backdrop-filter: none !important;
     text-align: center;
