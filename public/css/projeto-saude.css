@@ -176,8 +176,8 @@ body {
     height: auto;
     border-radius: 20px;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
-    transform: perspective(1000px) rotateY(-8deg) rotateX(3deg) translateX(-40px) translateZ(-100px);
-    opacity: 0.6;
+    transform: perspective(1000px) rotateY(-15deg) rotateX(3deg) translateX(-120px) translateZ(-100px);
+    opacity: 0.8;
     z-index: 1;
     transition: all 0.3s ease;
 }
@@ -195,8 +195,8 @@ body {
 }
 
 .cover-dashboard:hover .cover-dashboard-image-back {
-    transform: perspective(1000px) rotateY(-10deg) rotateX(4deg) translateX(-50px) translateZ(-100px);
-    opacity: 0.7;
+    transform: perspective(1000px) rotateY(-18deg) rotateX(4deg) translateX(-130px) translateZ(-100px);
+    opacity: 0.85;
 }
 
 .cover-dashboard:hover .cover-dashboard-image {
