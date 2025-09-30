@@ -2765,11 +2765,13 @@ button:active {
   justify-content: center;
   width: 100%;
   max-width: 600px;
+  margin: 0 auto;
 }
 
 .testimonials-carousel .testimonial-card {
   width: 100%;
   max-width: 500px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
