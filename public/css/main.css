@@ -4630,6 +4630,7 @@ button:active {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   opacity: 0.9;
+  min-height: 120px;
 }
 
 .service-footer-new {
