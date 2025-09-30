@@ -406,15 +406,15 @@
 }
 
 .icon-x {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     border-radius: 16px;
-    background: linear-gradient(145deg, #2C6ECB, #7CC1DF);
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border: 2px solid white;
 }
 
 .message-content {
