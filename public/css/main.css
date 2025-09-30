@@ -2755,46 +2755,32 @@ button:active {
 
 /* Testimonials Carousel */
 .testimonials-carousel-wrapper {
-  overflow: hidden;
-  position: relative;
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 
 .testimonials-carousel {
   display: flex;
-  width: fit-content;
-  gap: 2rem;
-  animation: 60s linear 0s infinite normal none running infiniteScroll;
-}
-
-.testimonials-carousel:hover {
-  animation-play-state: paused;
-}
-
-@keyframes infiniteScroll {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
 }
 
 .testimonials-carousel .testimonial-card {
-  flex: 0 0 auto;
-  width: 350px;
+  width: 100%;
+  max-width: 500px;
 }
 
 @media (min-width: 768px) {
   .testimonials-carousel .testimonial-card {
-    width: 380px;
+    max-width: 550px;
   }
 }
 
 @media (min-width: 1024px) {
   .testimonials-carousel .testimonial-card {
-    width: 400px;
+    max-width: 600px;
   }
 }
 

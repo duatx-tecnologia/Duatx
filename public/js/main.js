@@ -23,7 +23,6 @@ class DuatxWebsite {
       setTimeout(() => {
         this.setupTechnologiesCarousel();
         this.setupBlogCarousel();
-        this.setupTestimonialsCarousel();
         this.setupImageCarousel();
         this.setupImpactCounters();
       }, 100);
@@ -993,7 +992,7 @@ class DuatxWebsite {
     const container = document.getElementById('testimonials-container');
     if (!container || !DATA.testimonials) return;
 
-    // Generate testimonials HTML with rating images
+    // Generate single testimonial card (no carousel)
     const testimonialsHTML = DATA.testimonials.map((testimonial, index) => `
       <div class="testimonial-card fade-in stagger-${index + 1}">
         <div class="testimonial-rating">
@@ -1018,8 +1017,7 @@ class DuatxWebsite {
       </div>
     `).join('');
 
-    // Duplicate testimonials for infinite scroll effect
-    container.innerHTML = testimonialsHTML + testimonialsHTML;
+    container.innerHTML = testimonialsHTML;
   }
 
   setupContactForm() {
