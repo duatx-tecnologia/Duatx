@@ -433,9 +433,10 @@
 /* Technology Section */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 250px));
     gap: 2rem;
     margin-top: 3rem;
+    justify-content: center;
 }
 
 .tech-category {
