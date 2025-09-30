@@ -436,7 +436,7 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
-    justify-items: start;
+    justify-items: center;
 }
 
 .tech-category {
@@ -444,7 +444,7 @@
     background: transparent !important;
     backdrop-filter: none !important;
     width: 100%;
-    text-align: left;
+    text-align: center;
 }
 
 .tech-category-title {
