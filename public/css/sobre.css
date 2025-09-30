@@ -440,6 +440,8 @@
 
 .tech-category {
     padding: 2rem;
+    background: transparent !important;
+    backdrop-filter: none !important;
 }
 
 .tech-category-title {
@@ -460,8 +462,8 @@
 }
 
 .tech-tag {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: transparent;
+    backdrop-filter: none;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     padding: 0.5rem 1rem;
@@ -473,7 +475,7 @@
 }
 
 .tech-tag:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
 
