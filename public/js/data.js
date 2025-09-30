@@ -274,54 +274,6 @@ const DATA = {
       content: "(...) o dashboard ficou muito bom! Estávamos pilotando o negócio no escuro, agora estamos dirigindo uma Ferrari! Parabéns!",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
       rating: 5
-    },
-    {
-      id: "carlos-silva",
-      name: "Carlos Silva",
-      role: "CEO, TechCorp",
-      content: "A DUATX transformou completamente nossa operação. Em 6 meses, reduzimos custos em 30% e aumentamos nossa margem significativamente.",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      rating: 5
-    },
-    {
-      id: "marina-santos",
-      name: "Marina Santos",
-      role: "CTO, InnovateLab",
-      content: "Os dashboards da DUATX nos deram uma visibilidade que nunca tivemos. Agora tomamos decisões baseadas em dados reais.",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      rating: 5
-    },
-    {
-      id: "ricardo-oliveira",
-      name: "Ricardo Oliveira",
-      role: "Diretor de Operações, LogísticaMax",
-      content: "A automação implementada pela DUATX revolucionou nossa logística. Reduzimos custos em 25% e melhoramos o tempo de entrega.",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      rating: 5
-    },
-    {
-      id: "ana-costa",
-      name: "Ana Costa",
-      role: "Gerente de TI, MediCare",
-      content: "O sistema desenvolvido pela DUATX otimizou nossos processos médicos. Nossos pacientes estão mais satisfeitos e nossa equipe mais produtiva.",
-      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      rating: 5
-    },
-    {
-      id: "eduardo-ferreira",
-      name: "Eduardo Ferreira",
-      role: "Sócio, Advocacia & Consultoria",
-      content: "A automação jurídica da DUATX nos salvou de várias multas e aumentou nossa produtividade em 40%. Investimento que se pagou rapidamente.",
-      avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      rating: 5
-    },
-    {
-      id: "patricia-lima",
-      name: "Patrícia Lima",
-      role: "Diretora Comercial, RetailPlus",
-      content: "O sistema preditivo de estoque da DUATX revolucionou nossa operação. Reduzimos rupturas em 80% e aumentamos nossa margem significativamente.",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
-      rating: 5
     }
   ],
 
