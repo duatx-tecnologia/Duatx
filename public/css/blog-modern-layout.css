@@ -61,7 +61,7 @@ body {
 }
 
 .blog-breadcrumb a {
-  background: linear-gradient(135deg, #AA5C2F 0%, #2C6ECB 100%);
+  background: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 50%, #2C6ECB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -159,7 +159,7 @@ body {
 
 .categories-list a:hover,
 .categories-list a.active {
-  background: linear-gradient(135deg, #AA5C2F 0%, #2C6ECB 100%);
+  background: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 50%, #2C6ECB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -189,7 +189,7 @@ body {
 }
 
 .post-number {
-  background: linear-gradient(135deg, #AA5C2F 0%, #2C6ECB 100%);
+  background: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 50%, #2C6ECB 100%);
   color: white;
   width: 24px;
   height: 24px;
@@ -221,7 +221,7 @@ body {
 }
 
 .post-preview a:hover h4 {
-  background: linear-gradient(135deg, #AA5C2F 0%, #2C6ECB 100%);
+  background: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 50%, #2C6ECB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -312,7 +312,7 @@ body {
 }
 
 .article-title a:hover {
-  background: linear-gradient(135deg, #AA5C2F 0%, #2C6ECB 100%);
+  background: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 50%, #2C6ECB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -341,7 +341,7 @@ body {
 }
 
 .read-more {
-  background: linear-gradient(135deg, #AA5C2F 0%, #2C6ECB 100%);
+  background: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 50%, #2C6ECB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -379,7 +379,7 @@ body {
 
 .pagination-btn:hover,
 .pagination-btn.active {
-  background: linear-gradient(135deg, #AA5C2F 0%, #2C6ECB 100%);
+  background: linear-gradient(135deg, #AA5C2F 0%, #96B4A8 25%, #7CC1DF 50%, #2C6ECB 100%);
   border-color: transparent;
   color: white;
 }
