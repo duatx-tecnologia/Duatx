@@ -169,7 +169,21 @@ body {
     align-items: center;
 }
 
+.cover-dashboard-image-back {
+    position: absolute;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+    transform: perspective(1000px) rotateY(-8deg) rotateX(3deg) translateX(-40px) translateZ(-100px);
+    opacity: 0.6;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
 .cover-dashboard-image {
+    position: relative;
     width: 100%;
     max-width: 700px;
     height: auto;
@@ -177,9 +191,15 @@ body {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
     transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
     transition: transform 0.3s ease;
+    z-index: 2;
 }
 
-.cover-dashboard-image:hover {
+.cover-dashboard:hover .cover-dashboard-image-back {
+    transform: perspective(1000px) rotateY(-10deg) rotateX(4deg) translateX(-50px) translateZ(-100px);
+    opacity: 0.7;
+}
+
+.cover-dashboard:hover .cover-dashboard-image {
     transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
 }
 
