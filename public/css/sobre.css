@@ -473,7 +473,22 @@
 .tech-icon {
     width: 24px;
     height: 24px;
+}
+
+.tech-icon-orange {
+    color: #AA5C2F;
+}
+
+.tech-icon-green {
+    color: #96B4A8;
+}
+
+.tech-icon-blue-light {
     color: #7CC1DF;
+}
+
+.tech-icon-blue-dark {
+    color: #2C6ECB;
 }
 
 .tech-card-title {
