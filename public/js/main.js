@@ -17,6 +17,7 @@ class DuatxWebsite {
       this.setupAnimations();
       this.setupWhatsAppCTA();
       this.setupCookieBanner();
+      this.setupServiceButtons();
       
       // Setup carousels after a small delay to ensure DOM is ready
       setTimeout(() => {
@@ -1562,6 +1563,27 @@ class DuatxWebsite {
       element.classList.remove('loading');
       element.disabled = false;
     }
+  }
+
+  // Setup Service Buttons to redirect to WhatsApp
+  setupServiceButtons() {
+    const serviceButtons = {
+      'button-saiba-mais-ia': 'Olá! Gostaria de saber mais sobre Inteligência Artificial Aplicada.',
+      'button-saiba-mais-automacao': 'Olá! Gostaria de saber mais sobre Automação Inteligente.',
+      'button-saiba-mais-dashboard': 'Olá! Gostaria de saber mais sobre Dashboards Interativos.',
+      'button-saiba-mais-software': 'Olá! Gostaria de saber mais sobre Desenvolvimento de Software Personalizado.'
+    };
+
+    Object.keys(serviceButtons).forEach(testId => {
+      const button = document.querySelector(`[data-testid="${testId}"]`);
+      if (button) {
+        button.addEventListener('click', () => {
+          const message = encodeURIComponent(serviceButtons[testId]);
+          const whatsappUrl = `https://wa.me/5511912906767?text=${message}`;
+          window.open(whatsappUrl, '_blank');
+        });
+      }
+    });
   }
 
   // Setup WhatsApp Call-to-Action
