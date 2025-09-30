@@ -434,7 +434,7 @@
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
-    gap: 2.5rem 3rem;
+    gap: 2.5rem 1rem;
     margin-top: 3rem;
     justify-content: center;
 }
