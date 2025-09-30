@@ -1515,16 +1515,14 @@ class DuatxWebsite {
       if (!section) return;
       
       const sectionTitle = section.querySelector('.section-header .section-title');
-      const sectionSubtitle = section.querySelector('.section-header .section-subtitle');
       
-      if (!sectionTitle || !sectionSubtitle) return;
+      if (!sectionTitle) return;
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Add animation class to title and subtitle
+            // Add animation class to title
             sectionTitle.classList.add('animate-in');
-            sectionSubtitle.classList.add('animate-in');
             
             // Stop observing once animated
             observer.unobserve(entry.target);
