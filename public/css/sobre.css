@@ -517,10 +517,14 @@
         font-size: 1rem;
     }
     
-    .team-grid,
-    .tech-grid {
+    .team-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem 1.5rem;
     }
     
     .team-member,
