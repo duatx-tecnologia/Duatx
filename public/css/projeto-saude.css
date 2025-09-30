@@ -120,7 +120,7 @@ body {
 .cover-logo {
     width: 120px;
     height: auto;
-    filter: invert(1);
+    filter: brightness(0) invert(1);
 }
 
 .cover-text {
