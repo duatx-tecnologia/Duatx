@@ -347,6 +347,7 @@ body {
     display: block;
     object-fit: cover;
     background: #FFFFFF;
+    aspect-ratio: 16 / 9;
 }
 
 .image-caption {
