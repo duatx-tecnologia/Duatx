@@ -1509,6 +1509,7 @@ class DuatxWebsite {
   setupSectionHeadersAnimation() {
     const servicesSection = document.getElementById('services');
     const projectsSection = document.getElementById('image-carousel');
+    const testimonialsSection = document.getElementById('testimonials');
     
     const setupSectionAnimation = (section) => {
       if (!section) return;
@@ -1537,9 +1538,10 @@ class DuatxWebsite {
       observer.observe(section);
     };
 
-    // Setup animation for both sections
+    // Setup animation for all sections
     setupSectionAnimation(servicesSection);
     setupSectionAnimation(projectsSection);
+    setupSectionAnimation(testimonialsSection);
   }
 
   // Utility method to format phone numbers
