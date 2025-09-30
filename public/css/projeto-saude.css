@@ -167,40 +167,40 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    perspective: 1500px;
+    min-height: 500px;
 }
 
 .cover-dashboard-image-back {
     position: absolute;
     width: 100%;
-    max-width: 700px;
+    max-width: 650px;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
-    transform: perspective(1000px) rotateY(-15deg) rotateX(3deg) translateX(-120px) translateZ(-100px);
-    opacity: 0.8;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+    transform: translateX(-150px) translateY(20px) rotateY(25deg) rotateX(5deg);
     z-index: 1;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .cover-dashboard-image {
     position: relative;
     width: 100%;
-    max-width: 700px;
+    max-width: 650px;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-    transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
-    transition: transform 0.3s ease;
+    box-shadow: 0 50px 120px rgba(0, 0, 0, 0.6);
+    transform: translateX(50px) translateY(-20px) rotateY(-15deg) rotateX(5deg);
     z-index: 2;
+    transition: all 0.4s ease;
 }
 
 .cover-dashboard:hover .cover-dashboard-image-back {
-    transform: perspective(1000px) rotateY(-18deg) rotateX(4deg) translateX(-130px) translateZ(-100px);
-    opacity: 0.85;
+    transform: translateX(-160px) translateY(25px) rotateY(28deg) rotateX(6deg);
 }
 
 .cover-dashboard:hover .cover-dashboard-image {
-    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+    transform: translateX(60px) translateY(-25px) rotateY(-18deg) rotateX(6deg);
 }
 
 /* About Project */
