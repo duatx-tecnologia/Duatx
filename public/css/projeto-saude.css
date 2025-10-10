@@ -371,9 +371,10 @@ body {
 
 .project-image {
     width: 100%;
-    height: auto;
+    height: 600px;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
     background: #0B0D10;
 }
 
@@ -381,7 +382,6 @@ body {
     background: linear-gradient(135deg, var(--card-bg) 0%, rgba(26, 29, 35, 0.95) 100%);
     padding: 2rem;
     text-align: center;
-    margin-top: -4px;
 }
 
 .image-caption h3 {
