@@ -363,10 +363,11 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    background: #0B0D10;
 }
 
 .carousel-slide.active {
-    display: block;
+    display: flex;
 }
 
 .project-image {
@@ -382,6 +383,7 @@ body {
     background: linear-gradient(135deg, var(--card-bg) 0%, rgba(26, 29, 35, 0.95) 100%);
     padding: 2rem;
     text-align: center;
+    margin-top: auto;
 }
 
 .image-caption h3 {
