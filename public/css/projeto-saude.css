@@ -127,6 +127,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding-right: 3rem;
 }
 
 .cover-icon {
