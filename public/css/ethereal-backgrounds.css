@@ -2,7 +2,7 @@
 
 /* Force deep black backgrounds on all sections */
 section#about,
-section#services, 
+section#services,
 section#sectors,
 section#technologies,
 section#results,
@@ -10,18 +10,17 @@ section#testimonials,
 section#blog,
 footer.footer {
   background: #000000 !important;
-  background-image: 
+  background-image:
     radial-gradient(ellipse 1200px 600px at 20% 30%, rgba(15, 23, 42, 0.6) 0%, transparent 70%),
     radial-gradient(ellipse 1000px 500px at 80% 70%, rgba(30, 41, 59, 0.5) 0%, transparent 70%),
     radial-gradient(ellipse 1400px 300px at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 80%),
     radial-gradient(ellipse 800px 400px at 10% 90%, rgba(147, 51, 234, 0.08) 0%, transparent 70%),
-    linear-gradient(180deg, 
+    linear-gradient(180deg,
       hsl(220, 30%, 4%) 0%,
       hsl(220, 25%, 2%) 25%,
       hsl(220, 20%, 1%) 50%,
       hsl(220, 25%, 2%) 75%,
-      hsl(220, 30%, 4%) 100%
-    ) !important;
+      hsl(220, 30%, 4%) 100%) !important;
   position: relative;
   overflow: hidden;
   animation: etherealPulse 8s ease-in-out infinite;
@@ -42,7 +41,7 @@ footer.footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(ellipse 600px 300px at 25% 40%, rgba(59, 130, 246, 0.08) 0%, transparent 70%),
     radial-gradient(ellipse 500px 250px at 75% 60%, rgba(147, 51, 234, 0.06) 0%, transparent 70%),
     radial-gradient(ellipse 800px 150px at 50% 90%, rgba(234, 179, 8, 0.04) 0%, transparent 80%),
@@ -67,7 +66,7 @@ footer.footer {
   left: -100%;
   width: 300%;
   height: 300%;
-  background-image: 
+  background-image:
     radial-gradient(1px 1px at 80px 120px, rgba(255, 255, 255, 0.12), transparent),
     radial-gradient(0.8px 0.8px at 200px 80px, rgba(59, 130, 246, 0.1), transparent),
     radial-gradient(0.6px 0.6px at 300px 200px, rgba(147, 51, 234, 0.08), transparent),
@@ -136,40 +135,123 @@ footer.footer::after {
 
 /* Animations for ethereal effects */
 @keyframes digitalMist {
-  0% { transform: translateX(-15px) translateY(-8px) scale(1); opacity: 0.6; }
-  25% { transform: translateX(8px) translateY(-15px) scale(1.03); opacity: 0.8; }
-  50% { transform: translateX(-8px) translateY(8px) scale(0.97); opacity: 0.7; }
-  75% { transform: translateX(12px) translateY(-5px) scale(1.02); opacity: 0.75; }
-  100% { transform: translateX(-15px) translateY(-8px) scale(1); opacity: 0.6; }
+  0% {
+    transform: translateX(-15px) translateY(-8px) scale(1);
+    opacity: 0.6;
+  }
+
+  25% {
+    transform: translateX(8px) translateY(-15px) scale(1.03);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translateX(-8px) translateY(8px) scale(0.97);
+    opacity: 0.7;
+  }
+
+  75% {
+    transform: translateX(12px) translateY(-5px) scale(1.02);
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: translateX(-15px) translateY(-8px) scale(1);
+    opacity: 0.6;
+  }
 }
 
 @keyframes silentDrift {
-  0% { transform: translateX(0) translateY(0) rotate(0deg); opacity: 0.8; }
-  25% { transform: translateX(-60px) translateY(-30px) rotate(1deg); opacity: 1; }
-  50% { transform: translateX(-120px) translateY(-60px) rotate(2deg); opacity: 0.9; }
-  75% { transform: translateX(-180px) translateY(-90px) rotate(1deg); opacity: 0.95; }
-  100% { transform: translateX(-240px) translateY(-120px) rotate(0deg); opacity: 0.8; }
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+
+  25% {
+    transform: translateX(-60px) translateY(-30px) rotate(1deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(-120px) translateY(-60px) rotate(2deg);
+    opacity: 0.9;
+  }
+
+  75% {
+    transform: translateX(-180px) translateY(-90px) rotate(1deg);
+    opacity: 0.95;
+  }
+
+  100% {
+    transform: translateX(-240px) translateY(-120px) rotate(0deg);
+    opacity: 0.8;
+  }
 }
 
 /* Add pulsing glow effect */
 @keyframes etherealPulse {
-  0%, 100% { box-shadow: inset 0 0 60px rgba(59, 130, 246, 0.1), inset 0 0 100px rgba(147, 51, 234, 0.05); }
-  50% { box-shadow: inset 0 0 80px rgba(59, 130, 246, 0.15), inset 0 0 120px rgba(147, 51, 234, 0.08); }
+
+  0%,
+  100% {
+    box-shadow: inset 0 0 60px rgba(59, 130, 246, 0.1), inset 0 0 100px rgba(147, 51, 234, 0.05);
+  }
+
+  50% {
+    box-shadow: inset 0 0 80px rgba(59, 130, 246, 0.15), inset 0 0 120px rgba(147, 51, 234, 0.08);
+  }
 }
 
 /* Gentle star twinkling animation */
 @keyframes gentleStarTwinkle {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  25% { opacity: 0.2; transform: scale(0.95); }
-  50% { opacity: 0.6; transform: scale(1.05); }
-  75% { opacity: 0.3; transform: scale(0.98); }
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+
+  25% {
+    opacity: 0.2;
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+
+  75% {
+    opacity: 0.3;
+    transform: scale(0.98);
+  }
 }
 
 /* Original star twinkling for footer */
 @keyframes starTwinkle {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  20% { opacity: 0.2; transform: scale(0.9); }
-  40% { opacity: 0.8; transform: scale(1.1); }
-  60% { opacity: 0.4; transform: scale(0.95); }
-  80% { opacity: 0.7; transform: scale(1.05); }
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  20% {
+    opacity: 0.2;
+    transform: scale(0.9);
+  }
+
+  40% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+
+  60% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+
+  80% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
 }
