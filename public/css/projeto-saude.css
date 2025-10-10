@@ -373,8 +373,8 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
-    background: #FFFFFF;
+    object-fit: contain;
+    background: transparent;
     aspect-ratio: 16 / 9;
 }
 
