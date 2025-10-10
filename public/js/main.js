@@ -452,6 +452,11 @@ class DuatxWebsite {
       // Play video in active slide with 30-second loop
       const activeVideo = slides[index].querySelector('video');
       if (activeVideo) {
+        // Load video if not loaded yet (lazy loading)
+        if (activeVideo.readyState === 0) {
+          activeVideo.load();
+        }
+        
         activeVideo.currentTime = 0; // Reset to beginning
         
         // Remove any existing event listeners to prevent conflicts
@@ -471,17 +476,20 @@ class DuatxWebsite {
         activeVideo.setAttribute('playsinline', '');
         activeVideo.setAttribute('webkit-playsinline', '');
         activeVideo.muted = true;
-        activeVideo.play().catch(e => {
-          console.log('Video autoplay prevented:', e);
-          // Add tap-to-play for mobile
-          activeVideo.style.cursor = 'pointer';
-          activeVideo.setAttribute('title', 'Toque para reproduzir');
-          activeVideo.addEventListener('click', function() {
-            if (activeVideo.paused) {
-              activeVideo.play();
-            }
+        
+        // Wait for video to be ready before playing
+        if (activeVideo.readyState >= 3) {
+          activeVideo.play().catch(e => {
+            console.log('Video autoplay prevented:', e);
           });
-        });
+        } else {
+          activeVideo.addEventListener('canplay', function playWhenReady() {
+            activeVideo.play().catch(e => {
+              console.log('Video autoplay prevented:', e);
+            });
+            activeVideo.removeEventListener('canplay', playWhenReady);
+          }, { once: true });
+        }
       }
       
       // Update button states
