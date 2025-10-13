@@ -1,139 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós - DUATX</title>
-    <meta name="description" content="Conheça a DUATX - Transformando empresas através de dados, IA e tecnologia. Nossa história, missão e visão de futuro.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/sobre.css">
-</head>
-<body>
-    <!-- LGPD Cookie Banner -->
-    <div id="cookie-banner" class="cookie-banner">
-        <div class="cookie-banner-content">
-            <div class="cookie-banner-text">
-                <div class="cookie-icon">
-                    <i data-lucide="cookie" class="w-5 h-5"></i>
-                </div>
-                <div class="cookie-text-content">
-                    <h3 class="cookie-title">Cookies e Privacidade</h3>
-                    <p class="cookie-description">
-                        Utilizamos cookies essenciais e analíticos para melhorar sua experiência. 
-                        Você pode personalizar suas preferências a qualquer momento.
-                    </p>
-                </div>
-            </div>
-            <div class="cookie-banner-actions">
-                <button class="cookie-btn cookie-btn-secondary" onclick="acceptEssentialOnly()">
-                    Apenas Essenciais
-                </button>
-                <button class="cookie-btn cookie-btn-tertiary" onclick="showCookiePreferences()">
-                    Personalizar
-                </button>
-                <button class="cookie-btn cookie-btn-primary" onclick="acceptAllCookies()">
-                    Aceitar Todos
-                </button>
-            </div>
-        </div>
-    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sobre Nós - DUATX</title>
+        <meta
+            name="description"
+            content="Conheça a DUATX - Transformando empresas através de dados, IA e tecnologia. Nossa história, missão e visão de futuro."
+        />
 
-    <!-- Navigation Bar -->
-    <header id="navbar" class="navbar transparent">
-        <div class="navbar-container">
-            <div class="logo">
-                <a href="/" class="logo-link">
-                    <img
-                        src="assets//x-lightversion@2x.svg"
-                        alt="DUATX"
-                        class="logo-img"
-                    />
-                </a>
-            </div>
-            <nav>
-                <ul class="menu">
-                    <li><a href="/">Início</a></li>
-                    <li><a href="/sobre.html" class="active">Sobre</a></li>
-                    <li><a href="/#services">Serviços</a></li>
-                    <li><a href="/#image-carousel">Projetos</a></li>
-                    <li><a href="/#testimonials">Depoimentos</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
-                </ul>
-            </nav>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
 
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" aria-label="Menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero-about">
-            <div class="ethereal-particles">
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-            </div>
-            <div class="ethereal-lines"></div>
-            <div class="container">
-                <h1 class="hero-title">
-                    Bem-vindo à era dos 
-                    <span class="gradient-text">relatórios digitais</span>
-                </h1>
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <div class="about-description">
-                            <p class="hero-description-enhanced">
-                                Na <strong style="color: white; font-weight: 700;">DUATX</strong>, acreditamos que modernizar processos 
-                                empresariais é essencial para garantir competitividade no mundo digital. Com foco em 
-                                <strong style="color: #7CC1DF;">eficiência e clareza</strong>, nossas soluções otimizam a gestão de 
-                                informações e apoiam decisões mais rápidas e assertivas.
-                            </p>
-                            
-                            <p class="hero-description-enhanced">
-                                Nossa plataforma permite gerar <strong style="color: #96B4A8;">relatórios detalhados</strong> e 
-                                <strong style="color: #AA5C2F;">automatizados</strong>, eliminando burocracia e trazendo agilidade com 
-                                precisão. Ao mesmo tempo, garante <strong style="color: #2C6ECB;">conformidade</strong> com regulamentações 
-                                e mantém sua empresa sempre um passo à frente do mercado.
-                            </p>
-                        </div>
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/sobre.css" />
+    </head>
+    <body>
+        <!-- LGPD Cookie Banner -->
+        <div id="cookie-banner" class="cookie-banner">
+            <div class="cookie-banner-content">
+                <div class="cookie-banner-text">
+                    <div class="cookie-icon">
+                        <i data-lucide="cookie" class="w-5 h-5"></i>
                     </div>
-                    <div class="hero-visual">
-                        <div class="visual-container">
-                            <div class="liquid-glass-card">
-                                <div class="card-content">
-                                    <div class="chart-container">
-                                        <div class="chart-bars">
-                                            <div class="bar" style="height: 60%; background: linear-gradient(145deg, #2C6ECB, #7CC1DF);"></div>
-                                            <div class="bar" style="height: 80%; background: linear-gradient(145deg, #96B4A8, #7CC1DF);"></div>
-                                            <div class="bar" style="height: 45%; background: linear-gradient(145deg, #AA5C2F, #96B4A8);"></div>
-                                            <div class="bar" style="height: 90%; background: linear-gradient(145deg, #7CC1DF, #2C6ECB);"></div>
-                                            <div class="bar" style="height: 70%; background: linear-gradient(145deg, #AA5C2F, #7CC1DF);"></div>
+                    <div class="cookie-text-content">
+                        <h3 class="cookie-title">Cookies e Privacidade</h3>
+                        <p class="cookie-description">
+                            Utilizamos cookies essenciais e analíticos para
+                            melhorar sua experiência. Você pode personalizar
+                            suas preferências a qualquer momento.
+                        </p>
+                    </div>
+                </div>
+                <div class="cookie-banner-actions">
+                    <button
+                        class="cookie-btn cookie-btn-secondary"
+                        onclick="acceptEssentialOnly()"
+                    >
+                        Apenas Essenciais
+                    </button>
+                    <button
+                        class="cookie-btn cookie-btn-tertiary"
+                        onclick="showCookiePreferences()"
+                    >
+                        Personalizar
+                    </button>
+                    <button
+                        class="cookie-btn cookie-btn-primary"
+                        onclick="acceptAllCookies()"
+                    >
+                        Aceitar Todos
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <header id="navbar" class="navbar transparent">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="/" class="logo-link">
+                        <img
+                            src="assets//x-lightversion@2x.svg"
+                            alt="DUATX"
+                            class="logo-img"
+                        />
+                    </a>
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="/">Início</a></li>
+                        <li><a href="/sobre.html" class="active">Sobre</a></li>
+                        <li><a href="/#services">Serviços</a></li>
+                        <li><a href="/#image-carousel">Projetos</a></li>
+                        <li><a href="/#testimonials">Depoimentos</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Hero Section -->
+            <section class="hero-about">
+                <div class="ethereal-particles">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                </div>
+                <div class="ethereal-lines"></div>
+                <div class="container">
+                    <h1 class="hero-title">
+                        Quem
+                        <span class="gradient-text">Somos?</span>
+                    </h1>
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <div class="about-description">
+                                <p class="hero-description-enhanced">
+                                    A
+                                    <strong
+                                        style="color: white; font-weight: 700"
+                                        >DUATX</strong
+                                    >é uma consultoria e desenvolvedora de
+                                    soluções tecnológicas sob medida.
+                                    <strong style="color: #7cc1df"
+                                        >Criamos automações</strong
+                                    >, dashboards interativos, inteligência
+                                    artificial aplicada à operação real das
+                                    empresas e softwares personalizados.
+                                </p>
+
+                                <p class="hero-description-enhanced">
+                                    Não entregamos apenas tecnologia da moda,
+                                    soluções que geram
+                                    <strong style="color: #96b4a8"
+                                        >resultado real.</strong
+                                    >
+
+                                    <strong style="color: #aa5c2f"
+                                        >Nosso foco </strong
+                                    >é transformar dados dispersos em clareza,
+                                    automatizar coisas que consomem tempo,
+                                    aplicar inteligência artificial de forma
+                                    prática e criar sistemas que se adaptam ao
+                                    seu
+                                    <strong style="color: #2c6ecb"
+                                        >negócio.</strong
+                                    >
+                                    Oferecemos visão estratégica e retorno
+                                    mensurável, garantindo que cada investimento
+                                    se traduza em efetividade.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="hero-visual">
+                            <div class="visual-container">
+                                <div class="liquid-glass-card">
+                                    <div class="card-content">
+                                        <div class="chart-container">
+                                            <div class="chart-bars">
+                                                <div
+                                                    class="bar"
+                                                    style="
+                                                        height: 60%;
+                                                        background: linear-gradient(
+                                                            145deg,
+                                                            #2c6ecb,
+                                                            #7cc1df
+                                                        );
+                                                    "
+                                                ></div>
+                                                <div
+                                                    class="bar"
+                                                    style="
+                                                        height: 80%;
+                                                        background: linear-gradient(
+                                                            145deg,
+                                                            #96b4a8,
+                                                            #7cc1df
+                                                        );
+                                                    "
+                                                ></div>
+                                                <div
+                                                    class="bar"
+                                                    style="
+                                                        height: 45%;
+                                                        background: linear-gradient(
+                                                            145deg,
+                                                            #aa5c2f,
+                                                            #96b4a8
+                                                        );
+                                                    "
+                                                ></div>
+                                                <div
+                                                    class="bar"
+                                                    style="
+                                                        height: 90%;
+                                                        background: linear-gradient(
+                                                            145deg,
+                                                            #7cc1df,
+                                                            #2c6ecb
+                                                        );
+                                                    "
+                                                ></div>
+                                                <div
+                                                    class="bar"
+                                                    style="
+                                                        height: 70%;
+                                                        background: linear-gradient(
+                                                            145deg,
+                                                            #aa5c2f,
+                                                            #7cc1df
+                                                        );
+                                                    "
+                                                ></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="floating-elements">
-                                        <div class="floating-card orange-glow">
-                                            <i data-lucide="trending-up" class="w-4 h-4"></i>
-                                        </div>
-                                        <div class="floating-card blue-glow">
-                                            <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
-                                        </div>
-                                        <div class="floating-card green-glow">
-                                            <i data-lucide="activity" class="w-4 h-4"></i>
+                                        <div class="floating-elements">
+                                            <div
+                                                class="floating-card orange-glow"
+                                            >
+                                                <i
+                                                    data-lucide="trending-up"
+                                                    class="w-4 h-4"
+                                                ></i>
+                                            </div>
+                                            <div
+                                                class="floating-card blue-glow"
+                                            >
+                                                <i
+                                                    data-lucide="bar-chart-3"
+                                                    class="w-4 h-4"
+                                                ></i>
+                                            </div>
+                                            <div
+                                                class="floating-card green-glow"
+                                            >
+                                                <i
+                                                    data-lucide="activity"
+                                                    class="w-4 h-4"
+                                                ></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -141,293 +245,350 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Section Divider -->
-        <div class="section-divider-line"></div>
+            <!-- Section Divider -->
+            <div class="section-divider-line"></div>
 
-        <!-- Team Section -->
-        <section class="team-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">EQUIPE <span class="gradient-text">DUATX</span></h2>
+            <!-- Team Section -->
+            <section class="team-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            EQUIPE <span class="gradient-text">DUATX</span>
+                        </h2>
+                    </div>
+
+                    <div class="team-grid">
+                        <div class="team-member neumorphic-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle ceo-gradient">
+                                    <i data-lucide="user" class="w-12 h-12"></i>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3 class="member-name">PABLO ARCELINO</h3>
+                                <span class="member-role">CEO</span>
+                                <p class="member-description">
+                                    Engenheiro civil especializado em Data
+                                    Science e Inteligência Artificial e com
+                                    sólida experiência em inteligência de
+                                    negócios orientada a ROI.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="team-member neumorphic-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle backend-gradient">
+                                    <i data-lucide="user" class="w-12 h-12"></i>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3 class="member-name">DAVI HENRIQUE</h3>
+                                <span class="member-role">BACK END</span>
+                                <p class="member-description">
+                                    Técnico em Desenvolvimento de Sistemas, Full
+                                    Stack e banco de dados. Gestor de automações
+                                    IA e responsável por mais de R$100 mil
+                                    investidos em diferentes nichos.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="team-member neumorphic-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle frontend-gradient">
+                                    <i data-lucide="user" class="w-12 h-12"></i>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3 class="member-name">BIANCA REIS</h3>
+                                <span class="member-role">FRONT END</span>
+                                <p class="member-description">
+                                    Formada em Tecnologia da Informação e
+                                    especializada em Frontend, desenvolve
+                                    interfaces modernas, intuitivas e
+                                    funcionais. Também contribui no Design e
+                                    dashboards.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="team-member neumorphic-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle analyst-gradient">
+                                    <i data-lucide="user" class="w-12 h-12"></i>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3 class="member-name">GABRIEL HENRIQUE</h3>
+                                <span class="member-role"
+                                    >ANALISTA DE DADOS</span
+                                >
+                                <p class="member-description">
+                                    Especialista em Data Science, com foco em
+                                    Análise e Modelagem de Dados, Machine
+                                    Learning, Inteligência Artificial e Business
+                                    Intelligence.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="team-member neumorphic-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle designer-gradient">
+                                    <i data-lucide="user" class="w-12 h-12"></i>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h3 class="member-name">BRUNO TORRES</h3>
+                                <span class="member-role">DESIGNER</span>
+                                <p class="member-description">
+                                    Designer e publicitário, pós-graduando em
+                                    Gestão de Comunicação e Marketing pela ECA -
+                                    USP, especialista comunicação visual
+                                    aplicada em marketing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-bottom-message neumorphic-card">
+                        <div class="message-icon">
+                            <div class="icon-x">
+                                <img
+                                    src="assets//x-lightversion@2x.svg"
+                                    alt="DUATX Logo"
+                                    style="width: 50px; height: 50px"
+                                />
+                            </div>
+                        </div>
+                        <div class="message-content">
+                            <p>
+                                Ter uma equipe de automação à disposição permite
+                                às empresas acessar especialistas sem o custo de
+                                manter um time interno. Assim, obtém tecnologia
+                                de ponta,
+                                <strong
+                                    >resultados rápidos e eficiência
+                                    operacional</strong
+                                >
+                                sem a complexidade de estruturar uma área
+                                própria.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="team-grid">
-                    <div class="team-member neumorphic-card">
-                        <div class="member-avatar">
-                            <div class="avatar-circle ceo-gradient">
-                                <i data-lucide="user" class="w-12 h-12"></i>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h3 class="member-name">PABLO ARCELINO</h3>
-                            <span class="member-role">CEO</span>
-                            <p class="member-description">
-                                Engenheiro civil especializado em Data Science e Inteligência Artificial e com sólida experiência em inteligência de negócios orientada a ROI.
-                            </p>
-                        </div>
-                    </div>
+            </section>
 
-                    <div class="team-member neumorphic-card">
-                        <div class="member-avatar">
-                            <div class="avatar-circle backend-gradient">
-                                <i data-lucide="user" class="w-12 h-12"></i>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h3 class="member-name">DAVI HENRIQUE</h3>
-                            <span class="member-role">BACK END</span>
-                            <p class="member-description">
-                                Técnico em Desenvolvimento de Sistemas, Full Stack e banco de dados. Gestor de automações IA e responsável por mais de R$100 mil investidos em diferentes nichos.
-                            </p>
-                        </div>
-                    </div>
+            <!-- Section Divider -->
+            <div class="section-divider-line"></div>
 
-                    <div class="team-member neumorphic-card">
-                        <div class="member-avatar">
-                            <div class="avatar-circle frontend-gradient">
-                                <i data-lucide="user" class="w-12 h-12"></i>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h3 class="member-name">BIANCA REIS</h3>
-                            <span class="member-role">FRONT END</span>
-                            <p class="member-description">
-                                Formada em Tecnologia da Informação e especializada em Frontend, desenvolve interfaces modernas, intuitivas e funcionais. Também contribui no Design e dashboards.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="team-member neumorphic-card">
-                        <div class="member-avatar">
-                            <div class="avatar-circle analyst-gradient">
-                                <i data-lucide="user" class="w-12 h-12"></i>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h3 class="member-name">GABRIEL MERLIN</h3>
-                            <span class="member-role">ANALISTA DE DADOS</span>
-                            <p class="member-description">
-                                Especialista em Data Science, com foco em Análise e Modelagem de Dados, Machine Learning, Inteligência Artificial e Business Intelligence.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="team-member neumorphic-card">
-                        <div class="member-avatar">
-                            <div class="avatar-circle designer-gradient">
-                                <i data-lucide="user" class="w-12 h-12"></i>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h3 class="member-name">BRUNO TORRES</h3>
-                            <span class="member-role">DESIGNER</span>
-                            <p class="member-description">
-                                Designer e publicitário, pós-graduando em Gestão de Comunicação e Marketing pela ECA - USP, especialista comunicação visual aplicada em marketing.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-bottom-message neumorphic-card">
-                    <div class="message-icon">
-                        <div class="icon-x">
-                            <img src="assets//x-lightversion@2x.svg" alt="DUATX Logo" style="width: 50px; height: 50px;">
-                        </div>
-                    </div>
-                    <div class="message-content">
-                        <p>
-                            Ter uma equipe de automação à disposição permite às empresas acessar 
-                            especialistas sem o custo de manter um time interno. Assim, obtém 
-                            tecnologia de ponta, <strong>resultados rápidos e eficiência operacional</strong> sem a 
-                            complexidade de estruturar uma área própria.
+            <!-- Technology Section -->
+            <section class="technology-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Tecnologias que Utilizamos
+                        </h2>
+                        <p class="section-subtitle">
+                            Stack moderno e ferramentas de ponta para resultados
+                            excepcionais
                         </p>
                     </div>
+
+                    <div class="tech-cards-container">
+                        <div class="tech-card">
+                            <div class="tech-card-header">
+                                <i
+                                    data-lucide="brain"
+                                    class="tech-icon tech-icon-orange"
+                                ></i>
+                                <h3 class="tech-card-title">
+                                    Inteligência Artificial
+                                </h3>
+                            </div>
+                            <div class="tech-tags-wrapper">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">OpenAI</span>
+                                <span class="tech-tag">Machine Learning</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-card">
+                            <div class="tech-card-header">
+                                <i
+                                    data-lucide="database"
+                                    class="tech-icon tech-icon-green"
+                                ></i>
+                                <h3 class="tech-card-title">
+                                    Dados & Analytics
+                                </h3>
+                            </div>
+                            <div class="tech-tags-wrapper">
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">Tableau</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-card">
+                            <div class="tech-card-header">
+                                <i
+                                    data-lucide="code"
+                                    class="tech-icon tech-icon-blue-light"
+                                ></i>
+                                <h3 class="tech-card-title">Desenvolvimento</h3>
+                            </div>
+                            <div class="tech-tags-wrapper">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Next.js</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-card">
+                            <div class="tech-card-header">
+                                <i
+                                    data-lucide="cloud"
+                                    class="tech-icon tech-icon-blue-dark"
+                                ></i>
+                                <h3 class="tech-card-title">Cloud & DevOps</h3>
+                            </div>
+                            <div class="tech-tags-wrapper">
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Kubernetes</span>
+                                <span class="tech-tag">CI/CD</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
         <!-- Section Divider -->
         <div class="section-divider-line"></div>
 
-        <!-- Technology Section -->
-        <section class="technology-section">
+        <!-- Footer -->
+        <footer
+            class="footer"
+            style="
+                background: linear-gradient(
+                    180deg,
+                    hsl(220, 30%, 1%) 0%,
+                    hsl(220, 25%, 0.5%) 50%,
+                    hsl(220, 30%, 1%) 100%
+                ) !important;
+                position: relative;
+                overflow: hidden;
+            "
+        >
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Tecnologias que Utilizamos</h2>
-                    <p class="section-subtitle">
-                        Stack moderno e ferramentas de ponta para resultados excepcionais
-                    </p>
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <img
+                            src="assets/duatx-logo-tight.svg"
+                            alt="DUATX"
+                            class="footer-logo"
+                        />
+                        <p class="footer-description">
+                            Transformando empresas através de dados, IA e
+                            tecnologia.
+                        </p>
+                        <div class="footer-social">
+                            <a
+                                href="https://www.instagram.com/duatx.tecnologia/?theme=dark"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="social-link"
+                                data-testid="link-instagram"
+                                aria-label="Seguir no Instagram"
+                            >
+                                <i data-lucide="instagram"></i>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/company/duatx/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="social-link"
+                                data-testid="link-linkedin"
+                                aria-label="Seguir no LinkedIn"
+                            >
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h3 class="footer-title">Navegação</h3>
+                            <ul class="footer-nav">
+                                <li><a href="/">Início</a></li>
+                                <li><a href="/#services">Serviços</a></li>
+                                <li><a href="/sobre.html">Sobre</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3 class="footer-title">Contato</h3>
+                            <ul class="footer-contact">
+                                <li>contato@duatx.com</li>
+                                <li>+55 (11) 9.1290-6767</li>
+                                <li>São Paulo, SP</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="tech-cards-container">
-                    <div class="tech-card">
-                        <div class="tech-card-header">
-                            <i data-lucide="brain" class="tech-icon tech-icon-orange"></i>
-                            <h3 class="tech-card-title">Inteligência Artificial</h3>
-                        </div>
-                        <div class="tech-tags-wrapper">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">OpenAI</span>
-                            <span class="tech-tag">Machine Learning</span>
-                        </div>
-                    </div>
 
-                    <div class="tech-card">
-                        <div class="tech-card-header">
-                            <i data-lucide="database" class="tech-icon tech-icon-green"></i>
-                            <h3 class="tech-card-title">Dados & Analytics</h3>
-                        </div>
-                        <div class="tech-tags-wrapper">
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">Tableau</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="tech-card-header">
-                            <i data-lucide="code" class="tech-icon tech-icon-blue-light"></i>
-                            <h3 class="tech-card-title">Desenvolvimento</h3>
-                        </div>
-                        <div class="tech-tags-wrapper">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Next.js</span>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="tech-card-header">
-                            <i data-lucide="cloud" class="tech-icon tech-icon-blue-dark"></i>
-                            <h3 class="tech-card-title">Cloud & DevOps</h3>
-                        </div>
-                        <div class="tech-tags-wrapper">
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">CI/CD</span>
-                        </div>
-                    </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 DUATX. Todos os direitos reservados.</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </footer>
 
-    <!-- Section Divider -->
-    <div class="section-divider-line"></div>
-
-    <!-- Footer -->
-    <footer
-        class="footer"
-        style="
-            background: linear-gradient(
-                180deg,
-                hsl(220, 30%, 1%) 0%,
-                hsl(220, 25%, 0.5%) 50%,
-                hsl(220, 30%, 1%) 100%
-            ) !important;
-            position: relative;
-            overflow: hidden;
-        "
-    >
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img
-                        src="assets/duatx-logo-tight.svg"
-                        alt="DUATX"
-                        class="footer-logo"
+        <!-- WhatsApp Button -->
+        <div class="whatsapp-button">
+            <div
+                class="whatsapp-cta-text"
+                id="whatsapp-cta"
+                style="display: none"
+            >
+                <p>💬 Vamos conversar? Clique aqui!</p>
+            </div>
+            <a
+                href="https://wa.me/5511912906767?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Duatx.%20Gostaria%20de%20conversar%20sobre%20seus%20servi%C3%A7os."
+                class="whatsapp-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Falar no WhatsApp"
+            >
+                <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516"
+                        fill="#25D366"
                     />
-                    <p class="footer-description">
-                        Transformando empresas através de dados, IA e
-                        tecnologia.
-                    </p>
-                    <div class="footer-social">
-                        <a 
-                            href="https://www.instagram.com/duatx.tecnologia/?theme=dark" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            class="social-link"
-                            data-testid="link-instagram"
-                            aria-label="Seguir no Instagram"
-                        >
-                            <i data-lucide="instagram"></i>
-                        </a>
-                        <a 
-                            href="https://www.linkedin.com/company/duatx/" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            class="social-link"
-                            data-testid="link-linkedin"
-                            aria-label="Seguir no LinkedIn"
-                        >
-                            <i data-lucide="linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h3 class="footer-title">Navegação</h3>
-                        <ul class="footer-nav">
-                            <li><a href="/">Início</a></li>
-                            <li><a href="/#services">Serviços</a></li>
-                            <li><a href="/sobre.html">Sobre</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h3 class="footer-title">Contato</h3>
-                        <ul class="footer-contact">
-                            <li>contato@duatx.com</li>
-                            <li>+55 (11) 9.1290-6767</li>
-                            <li>São Paulo, SP</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2024 DUATX. Todos os direitos reservados.</p>
-            </div>
+                </svg>
+            </a>
         </div>
-    </footer>
 
-    <!-- WhatsApp Button -->
-    <div class="whatsapp-button">
-        <div
-            class="whatsapp-cta-text"
-            id="whatsapp-cta"
-            style="display: none"
-        >
-            <p>💬 Vamos conversar? Clique aqui!</p>
-        </div>
-        <a
-            href="https://wa.me/5511912906767?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Duatx.%20Gostaria%20de%20conversar%20sobre%20seus%20servi%C3%A7os."
-            class="whatsapp-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Falar no WhatsApp"
-        >
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" fill="#25D366"/>
-            </svg>
-        </a>
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/main.js"></script>
-</body>
+        <!-- Scripts -->
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+        <script src="js/animations.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
