@@ -365,6 +365,7 @@ body {
     display: flex;
     flex-direction: column;
     background: #0B0D10;
+    gap: 0;
 }
 
 .carousel-slide.active {
@@ -376,13 +377,16 @@ body {
     height: 500px;
     display: block;
     object-fit: contain;
-    object-position: center;
+    object-position: center bottom;
     background: #0B0D10;
+    margin: 0;
+    padding: 0;
 }
 
 .image-caption {
     background: linear-gradient(135deg, var(--card-bg) 0%, rgba(26, 29, 35, 0.95) 100%);
     padding: 2rem;
+    margin: 0;
     text-align: center;
     margin-top: auto;
 }
