@@ -114,28 +114,48 @@
                         </div>
                     </div>
                     
-                    <!-- Navigation Arrows -->
-                    <div class="carousel-navigation">
-                        <button class="carousel-btn carousel-prev" id="prevBtn" data-testid="button-carousel-prev">
+                    <!-- Carousel Controls -->
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" id="prevBtn" data-testid="button-prev-slide">
                             <i data-lucide="chevron-left"></i>
                         </button>
-                        <button class="carousel-btn carousel-next" id="nextBtn" data-testid="button-carousel-next">
+                        <button class="carousel-btn next" id="nextBtn" data-testid="button-next-slide">
                             <i data-lucide="chevron-right"></i>
                         </button>
                     </div>
                     
-                    <!-- Dots Indicator -->
-                    <div class="carousel-dots" id="carouselDots"></div>
+                    <!-- Carousel Dots -->
+                    <div class="carousel-dots" id="carouselDots">
+                        <button class="dot active" data-slide="0"></button>
+                        <button class="dot" data-slide="1"></button>
+                    </div>
                 </div>
             </section>
 
-        <!-- Back to Projects -->
-        <div class="container">
-            <section class="back-section">
-                <a href="/" class="back-to-projects" data-testid="link-voltar-projetos">
-                    <i data-lucide="arrow-left"></i>
-                    <span>Voltar para Projetos</span>
-                </a>
+            <!-- CTA Section -->
+            <section class="project-cta">
+                <div class="cta-content">
+                    <h2>Pronto para transformar sua gestão?</h2>
+                    <p>Desenvolvemos soluções personalizadas para o seu segmento. Entre em contato e descubra como podemos otimizar seus resultados.</p>
+                    
+                    <div class="cta-buttons">
+                        <a 
+                            href="https://wa.me/5511912906767?text=Ol%C3%A1%21%20Vi%20o%20projeto%20do%20dashboard%20de%20marketing%20digital.%20Gostaria%20de%20agendar%20uma%20conversa."
+                            class="cta-button primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-testid="button-contato-principal"
+                        >
+                            <i data-lucide="phone"></i>
+                            <span>Agendar conversa</span>
+                        </a>
+                        
+                        <a href="/#image-carousel" class="cta-button secondary" data-testid="button-ver-mais-projetos">
+                            <i data-lucide="eye"></i>
+                            <span>Ver outros projetos</span>
+                        </a>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
@@ -144,90 +164,74 @@
     <footer class="project-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/duatx-logo-tight.svg" alt="DUATX">
+                <div class="footer-brand">
+                    <img src="assets/duatx-logo-tight.svg" alt="DUATX" class="footer-logo">
+                    <p>Transformando empresas através de dados, IA e tecnologia.</p>
                 </div>
-                <p class="footer-text">
-                    Transformando dados em decisões estratégicas
-                </p>
-                <div class="footer-social">
-                    <a href="https://wa.me/5511912906767" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-testid="link-whatsapp-footer">
-                        <i data-lucide="message-circle"></i>
-                    </a>
-                    <a href="https://linkedin.com/company/duatx" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-testid="link-linkedin-footer">
-                        <i data-lucide="linkedin"></i>
-                    </a>
-                    <a href="https://instagram.com/duatx" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-testid="link-instagram-footer">
+                
+                <div class="footer-links">
+                    <a href="https://www.instagram.com/duatx.tecnologia/" target="_blank" rel="noopener noreferrer" data-testid="link-instagram-footer">
                         <i data-lucide="instagram"></i>
                     </a>
+                    <a href="https://www.linkedin.com/company/duatx-tecnologia/" target="_blank" rel="noopener noreferrer" data-testid="link-linkedin-footer">
+                        <i data-lucide="linkedin"></i>
+                    </a>
                 </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 DUATX. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Lucide Icons -->
+    <!-- Scripts -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    
-    <!-- Carousel Script -->
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
-
+        
         // Carousel functionality
-        const track = document.getElementById('carouselTrack');
+        let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
-        const dotsContainer = document.getElementById('carouselDots');
-        
-        let currentIndex = 0;
-        const totalSlides = slides.length;
-        
-        // Create dots
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('carousel-dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(i));
-            dotsContainer.appendChild(dot);
-        }
-        
-        const dots = document.querySelectorAll('.carousel-dot');
+        const track = document.getElementById('carouselTrack');
         
         function updateCarousel() {
-            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            // Update slide position
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
             
-            // Update dots
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex);
+            // Update active states
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
             });
             
-            // Update button states
-            prevBtn.disabled = currentIndex === 0;
-            nextBtn.disabled = currentIndex === totalSlides - 1;
-        }
-        
-        function goToSlide(index) {
-            currentIndex = index;
-            updateCarousel();
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
         }
         
         function nextSlide() {
-            if (currentIndex < totalSlides - 1) {
-                currentIndex++;
-                updateCarousel();
-            }
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
         }
         
         function prevSlide() {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
         }
         
+        // Event listeners
         prevBtn.addEventListener('click', prevSlide);
         nextBtn.addEventListener('click', nextSlide);
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+            });
+        });
         
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
@@ -245,13 +249,9 @@
         
         track.addEventListener('touchend', (e) => {
             touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
-        
-        function handleSwipe() {
             if (touchEndX < touchStartX - 50) nextSlide();
             if (touchEndX > touchStartX + 50) prevSlide();
-        }
+        });
         
         // Initialize
         updateCarousel();
