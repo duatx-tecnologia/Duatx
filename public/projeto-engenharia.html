@@ -303,6 +303,19 @@
             if (touchEndX > touchStartX + 50) prevSlide();
         });
         
+        // Auto-play - advance every 5 seconds
+        let autoplayInterval = setInterval(nextSlide, 5000);
+        
+        // Pause autoplay on user interaction
+        const pauseAutoplay = () => {
+            clearInterval(autoplayInterval);
+            autoplayInterval = setInterval(nextSlide, 5000);
+        };
+        
+        prevBtn.addEventListener('click', pauseAutoplay);
+        nextBtn.addEventListener('click', pauseAutoplay);
+        dots.forEach(dot => dot.addEventListener('click', pauseAutoplay));
+        
         // Initialize
         updateCarousel();
     </script>
