@@ -4975,12 +4975,13 @@ section#image-carousel::after {
   border-radius: 1.5rem;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4), -8px -8px 16px rgba(255, 255, 255, 0.05);
   z-index: 2;
+  height: 700px;
 }
 
 .image-carousel-slide {
   display: none;
   width: 100%;
-  min-height: 600px;
+  height: 700px;
 }
 
 .image-carousel-slide.active {
@@ -4993,7 +4994,7 @@ section#image-carousel::after {
   align-items: center;
   gap: 4rem;
   padding: 4rem;
-  min-height: 600px;
+  height: 700px;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -5107,8 +5108,12 @@ section#image-carousel::after {
 
 /* Responsive Design for Image Carousel */
 @media (max-width: 768px) {
+  .image-carousel-container {
+    height: 900px;
+  }
+  
   .image-carousel-slide {
-    min-height: 500px;
+    height: 900px;
   }
   
   .image-carousel-content {
@@ -5116,7 +5121,7 @@ section#image-carousel::after {
     gap: 2.5rem;
     padding: 3rem;
     text-align: center;
-    min-height: 500px;
+    height: 900px;
     border-radius: 16px;
   }
   
@@ -5139,13 +5144,17 @@ section#image-carousel::after {
 }
 
 @media (max-width: 480px) {
+  .image-carousel-container {
+    height: 850px;
+  }
+  
   .image-carousel-slide {
-    min-height: 450px;
+    height: 850px;
   }
   
   .image-carousel-content {
     padding: 2rem;
-    min-height: 450px;
+    height: 850px;
     border-radius: 12px;
   }
   
