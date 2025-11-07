@@ -36,7 +36,8 @@
     color: #FFFFFF;
     line-height: 1.2;
     margin-bottom: 3rem;
-    text-align: center;
+    text-align: left;
+    max-width: calc(50% - 2rem);
 }
 
 .gradient-text {
