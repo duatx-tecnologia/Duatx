@@ -1,0 +1,2759 @@
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUATX - Dados, IA e Software para Otimização de Resultados</title>
+    <meta name="description" content="Reduza custos invisíveis, automatize tarefas e tome decisões com clareza. Diagnóstico empresarial gratuito disponível.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark-base': '#202020',
+                        'dark-elevated': '#2D2D2D',
+                        'dark-card': '#4E4E4E',
+                        'dark-text': '#707070',
+                        'medium-text': '#939393',
+                        'light-text': '#B7B7B7',
+                        'lighter-text': '#DADADA',
+                        'almost-white': '#FEFEFE',
+                        'burnt-orange': '#AA5C2F',
+                        'gray-green': '#96B4A8',
+                        'light-blue': '#7CC1DF',
+                        'dark-blue': '#2C6ECB',
+                    },
+                    boxShadow: {
+                        'neomorphic': 'inset 2px 2px 4px rgba(0,0,0,0.4), inset -2px -2px 4px rgba(255,255,255,0.05)',
+                        'neomorphic-elevated': '4px 4px 8px rgba(0,0,0,0.4), -4px -4px 8px rgba(255,255,255,0.05)',
+                        'neomorphic-pressed': 'inset 4px 4px 8px rgba(0,0,0,0.4), inset -4px -4px 8px rgba(255,255,255,0.05)',
+                    },
+                    backgroundImage: {
+                        'gradient-orange-blue': 'linear-gradient(135deg, #AA5C2F 0%, #2C6ECB 100%)',
+                        'gradient-blue-orange': 'linear-gradient(135deg, #2C6ECB 0%, #AA5C2F 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-dark-base text-almost-white font-montserrat overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <!-- @COMPONENT: Navigation [sticky header with logo and menu items] -->
+    <nav class="fixed top-0 w-full z-50 bg-dark-base/90 backdrop-blur-sm border-b border-dark-elevated">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-bold text-almost-white tracking-wider">DUATX</span>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-light-text hover:text-almost-white transition-colors duration-200 font-medium">Home</a>
+                        <a href="#services" class="text-light-text hover:text-almost-white transition-colors duration-200 font-medium">Serviços</a>
+                        <a href="#solutions" class="text-light-text hover:text-almost-white transition-colors duration-200 font-medium">Soluções</a>
+                        <a href="#results" class="text-light-text hover:text-almost-white transition-colors duration-200 font-medium">Resultados</a>
+                        <a href="#about" class="text-light-text hover:text-almost-white transition-colors duration-200 font-medium">Sobre</a>
+                        <a href="#contact" class="text-light-text hover:text-almost-white transition-colors duration-200 font-medium">Contato</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button data-event="click:toggleMobileMenu" class="text-light-text p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- Mobile Menu -->
+    <!-- @COMPONENT: MobileMenu [collapsible mobile navigation] -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-dark-base/95 backdrop-blur-sm md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#home" class="text-xl text-light-text hover:text-almost-white transition-colors duration-200 font-medium" data-event="click:closeMobileMenu">Home</a>
+            <a href="#services" class="text-xl text-light-text hover:text-almost-white transition-colors duration-200 font-medium" data-event="click:closeMobileMenu">Serviços</a>
+            <a href="#solutions" class="text-xl text-light-text hover:text-almost-white transition-colors duration-200 font-medium" data-event="click:closeMobileMenu">Soluções</a>
+            <a href="#results" class="text-xl text-light-text hover:text-almost-white transition-colors duration-200 font-medium" data-event="click:closeMobileMenu">Resultados</a>
+            <a href="#about" class="text-xl text-light-text hover:text-almost-white transition-colors duration-200 font-medium" data-event="click:closeMobileMenu">Sobre</a>
+            <a href="#contact" class="text-xl text-light-text hover:text-almost-white transition-colors duration-200 font-medium" data-event="click:closeMobileMenu">Contato</a>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: MobileMenu -->
+
+    <!-- Hero Section -->
+    <!-- @COMPONENT: HeroSection [main landing area with headline and CTA] -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-gradient-orange-blue opacity-10"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                    <span class="text-almost-white">Dados, inteligência artificial</span><br>
+                    <span class="text-transparent bg-clip-text bg-gradient-orange-blue">e software para otimização</span><br>
+                    <span class="text-almost-white">de resultados.</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-light-text font-light mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Reduza custos invisíveis, automatize tarefas e tome decisões com clareza.
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <button class="bg-gradient-orange-blue text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-neomorphic-elevated hover:shadow-neomorphic-pressed transform hover:scale-[0.98] transition-all duration-200" data-event="click:scheduleDemo">
+                    Agendar diagnóstico gratuito
+                </button>
+                
+                <button class="bg-dark-elevated text-light-text px-8 py-4 rounded-xl font-medium text-lg shadow-neomorphic hover:text-almost-white transition-all duration-200 border border-dark-card">
+                    Saiba mais
+                </button>
+            </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute top-1/4 left-10 w-20 h-20 bg-burnt-orange/20 rounded-full blur-xl"></div>
+        <div class="absolute bottom-1/4 right-10 w-32 h-32 bg-dark-blue/20 rounded-full blur-xl"></div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- How It Works Section -->
+    <!-- @COMPONENT: HowItWorksSection [3-step process explanation] -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-almost-white mb-6">Como Funciona</h2>
+                <p class="text-light-text text-lg max-w-2xl mx-auto">
+                    Nosso processo estruturado em três etapas para transformar sua empresa
+                </p>
+            </div>
+            
+            <!-- @MAP: steps.map(step => ( -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-dark-elevated rounded-2xl p-8 shadow-neomorphic border border-dark-card/30 hover:shadow-neomorphic-elevated transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-orange-blue rounded-xl flex items-center justify-center mb-6 shadow-neomorphic">
+                        <i data-lucide="search" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-almost-white mb-4">Entramos com robôs e lupa</h3>
+                    <p class="text-light-text leading-relaxed">
+                        Analisamos profundamente seus processos para identificar gargalos, ineficiências e oportunidades de melhoria através de dados reais.
+                    </p>
+                </div>
+                
+                <div class="bg-dark-elevated rounded-2xl p-8 shadow-neomorphic border border-dark-card/30 hover:shadow-neomorphic-elevated transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-blue-orange rounded-xl flex items-center justify-center mb-6 shadow-neomorphic">
+                        <i data-lucide="cpu" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-almost-white mb-4">Resolvemos com dashboards, IA e automações</h3>
+                    <p class="text-light-text leading-relaxed">
+                        Implementamos soluções personalizadas: dashboards inteligentes, agentes de IA e automações que otimizam seu fluxo de trabalho.
+                    </p>
+                </div>
+                
+                <div class="bg-dark-elevated rounded-2xl p-8 shadow-neomorphic border border-dark-card/30 hover:shadow-neomorphic-elevated transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-orange-blue rounded-xl flex items-center justify-center mb-6 shadow-neomorphic">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-almost-white mb-4">Acompanhamos com dados reais e ROI visível</h3>
+                    <p class="text-light-text leading-relaxed">
+                        Monitoramos continuamente os resultados com métricas claras, garantindo que você veja o retorno do investimento em tempo real.
+                    </p>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HowItWorksSection -->
+
+    <!-- Impact Section -->
+    <!-- @COMPONENT: ImpactSection [KPI cards showing real results] -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-elevated/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-almost-white mb-6">Impacto Real</h2>
+                <p class="text-light-text text-lg max-w-2xl mx-auto">
+                    Resultados mensuráveis que nossos clientes alcançaram
+                </p>
+            </div>
+            
+            <!-- @MAP: impacts.map(impact => ( -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic-elevated border border-dark-card/20 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="text-4xl font-bold text-burnt-orange mb-2">+120h</div>
+                    <div class="text-light-text text-lg">economizadas mensalmente</div>
+                    <div class="w-12 h-1 bg-gradient-orange-blue mx-auto mt-4 rounded-full"></div>
+                </div>
+                
+                <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic-elevated border border-dark-card/20 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="text-4xl font-bold text-gray-green mb-2">-40%</div>
+                    <div class="text-light-text text-lg">redução no churn</div>
+                    <div class="w-12 h-1 bg-gradient-blue-orange mx-auto mt-4 rounded-full"></div>
+                </div>
+                
+                <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic-elevated border border-dark-card/20 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="text-4xl font-bold text-light-blue mb-2">+30%</div>
+                    <div class="text-light-text text-lg">aumento na margem</div>
+                    <div class="w-12 h-1 bg-gradient-orange-blue mx-auto mt-4 rounded-full"></div>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ImpactSection -->
+
+    <!-- Services Section -->
+    <!-- @COMPONENT: ServicesSection [detailed service offerings with problem-solution-result structure] -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-almost-white mb-6">Nossos Serviços</h2>
+                <p class="text-light-text text-lg max-w-2xl mx-auto">
+                    Soluções completas para transformar sua empresa através de dados e tecnologia
+                </p>
+            </div>
+            
+            <!-- @MAP: services.map(service => ( -->
+            <div class="space-y-12">
+                <!-- Service 1: Diagnóstico Empresarial -->
+                <div class="bg-dark-elevated rounded-2xl p-8 shadow-neomorphic border border-dark-card/30">
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                        <div class="lg:col-span-1">
+                            <div class="w-16 h-16 bg-gradient-orange-blue rounded-xl flex items-center justify-center mb-4 shadow-neomorphic">
+                                <i data-lucide="stethoscope" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-almost-white mb-2">Diagnóstico Empresarial</h3>
+                        </div>
+                        
+                        <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-dark-base rounded-xl p-6 shadow-neomorphic">
+                                <div class="text-red-400 font-semibold mb-2 flex items-center">
+                                    <i data-lucide="alert-circle" class="w-5 h-5 mr-2"></i>
+                                    PROBLEMA
+                                </div>
+                                <p class="text-light-text">Falta de visibilidade sobre gargalos, custos ocultos e oportunidades perdidas nos processos empresariais.</p>
+                            </div>
+                            
+                            <div class="bg-dark-base rounded-xl p-6 shadow-neomorphic">
+                                <div class="text-gray-green font-semibold mb-2 flex items-center">
+                                    <i data-lucide="check-circle" class="w-5 h-5 mr-2"></i>
+                                    SOLUÇÃO
+                                </div>
+                                <p class="text-light-text">Análise completa com ferramentas de IA para mapear processos e identificar melhorias específicas.</p>
+                            </div>
+                            
+                            <div class="bg-dark-base rounded-xl p-6 shadow-neomorphic">
+                                <div class="text-light-blue font-semibold mb-2 flex items-center">
+                                    <i data-lucide="trending-up" class="w-5 h-5 mr-2"></i>
+                                    RESULTADO
+                                </div>
+                                <p class="text-light-text">Relatório detalhado com plano de ação e projeção de ROI em 30 dias.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-center">
+                        <button class="bg-gradient-orange-blue text-white px-6 py-3 rounded-xl font-semibold shadow-neomorphic hover:shadow-neomorphic-pressed transform hover:scale-[0.98] transition-all duration-200" data-event="click:scheduleService">
+                            Agende agora
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Service 2: Dashboards Personalizados -->
+                <div class="bg-dark-elevated rounded-2xl p-8 shadow-neomorphic border border-dark-card/30">
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                        <div class="lg:col-span-1">
+                            <div class="w-16 h-16 bg-gradient-blue-orange rounded-xl flex items-center justify-center mb-4 shadow-neomorphic">
+                                <i data-lucide="bar-chart-3" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-almost-white mb-2">Dashboards Personalizados</h3>
+                        </div>
+                        
+                        <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-dark-base rounded-xl p-6 shadow-neomorphic">
+                                <div class="text-red-400 font-semibold mb-2 flex items-center">
+                                    <i data-lucide="alert-circle" class="w-5 h-5 mr-2"></i>
+                                    PROBLEMA
+                                </div>
+                                <p class="text-light-text">Dados espalhados em planilhas, falta de visão unificada e dificuldade para tomar decisões rápidas.</p>
+                            </div>
+                            
+                            <div class="bg-dark-base rounded-xl p-6 shadow-neomorphic">
+                                <div class="text-gray-green font-semibold mb-2 flex items-center">
+                                    <i data-lucide="check-circle" class="w-5 h-5 mr-2"></i>
+                                    SOLUÇÃO
+                                </div>
+                                <p class="text-light-text">Dashboards inteligentes em Power BI com integração automática de dados e alertas personalizados.</p>
+                            </div>
+                            
+                            <div class="bg-dark-base rounded-xl p-6 shadow-neomorphic">
+                                <div class="text-light-blue font-semibold mb-2 flex items-center">
+                                    <i data-lucide="trending-up" class="w-5 h-5 mr-2"></i>
+                                    RESULTADO
+                                </div>
+                                <p class="text-light-text">Decisões 70% mais rápidas com visualização em tempo real de KPIs críticos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-center">
+                        <button class="bg-gradient-blue-orange text-white px-6 py-3 rounded-xl font-semibold shadow-neomorphic hover:shadow-neomorphic-pressed transform hover:scale-[0.98] transition-all duration-200" data-event="click:scheduleService">
+                            Agende agora
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Service 3: Agentes de IA e Automações -->
+                <div class="bg-dark-elevated rounded-2xl p-8 shadow-neomorphic border border-dark-card/30">
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                        <div class="lg:col-span-1">
+                            <div class="w-16 h-16 bg-gradient-orange-blue rounded-xl flex items-center justify-center mb-4 shadow-neomorphic">
+                                <i data-lucide="bot" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-almost-white mb-2">Agentes de IA e Automações</h3>
+                        </div>
+                        
+                        <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-dark-base rounded-xl p-6 shadow-neomorphic">
+                                <div class="text-red-400 font-semibold mb-2 flex items-center">
+                                    <i data-lucide="alert-circle" class="w-5 h-5 mr-2"></i>
+                                    PROBLEMA
+                                </div>
+                                <p class="text-light-text">Tarefas repetitivas consomem tempo valioso da equipe e processos manuais geram erros.</p>
+                            </div>
+                            
+                            <div class="bg-dark-base rounded-xl p-6 shadow-neomorphic">
+                                <div class="text-gray-green font-semibold mb-2 flex items-center">
+                                    <i data-lucide="check-circle" class="w-5 h-5 mr-2"></i>
+                                    SOLUÇÃO
+                                </div>
+                                <p class="text-light-text">Automações inteligentes com n8n e Python, e agentes de IA para processos complexos.</p>
+                            </div>
+                            
+                            <div class="bg-dark-base rounded-xl p-6 shadow-neomorphic">
+                                <div class="text-light-blue font-semibold mb-2 flex items-center">
+                                    <i data-lucide="trending-up" class="w-5 h-5 mr-2"></i>
+                                    RESULTADO
+                                </div>
+                                <p class="text-light-text">Redução de 80% no tempo gasto em tarefas repetitivas e eliminação de erros manuais.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-center">
+                        <button class="bg-gradient-orange-blue text-white px-6 py-3 rounded-xl font-semibold shadow-neomorphic hover:shadow-neomorphic-pressed transform hover:scale-[0.98] transition-all duration-200" data-event="click:scheduleService">
+                            Agende agora
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ServicesSection -->
+
+    <!-- Solutions by Sector -->
+    <!-- @COMPONENT: SolutionsBySector [industry-specific solutions] -->
+    <section id="solutions" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-elevated/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-almost-white mb-6">Soluções por Setor</h2>
+                <p class="text-light-text text-lg max-w-2xl mx-auto">
+                    Especialização setorial para resultados ainda mais efetivos
+                </p>
+            </div>
+            
+            <!-- @MAP: sectors.map(sector => ( -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic-elevated border border-dark-card/20 hover:transform hover:scale-105 transition-all duration-300">
+                    <!-- A modern industrial facility with automated machinery and digital displays -->
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=200" alt="Industrial facility with automation" class="rounded-xl w-full h-32 object-cover mb-6" />
+                    <h3 class="text-xl font-semibold text-almost-white mb-4">Indústria</h3>
+                    <p class="text-light-text mb-4">Otimização da produção com IoT, controle de qualidade automatizado e gestão inteligente de estoque.</p>
+                    <div class="text-burnt-orange font-semibold">Resultados: +25% eficiência produtiva</div>
+                </div>
+                
+                <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic-elevated border border-dark-card/20 hover:transform hover:scale-105 transition-all duration-300">
+                    <!-- A modern hospital corridor with medical staff using digital tablets -->
+                    <img src="https://pixabay.com/get/gfb67a31fb8ad68c0c4eb56b4f63d9e70502cbf36c428f417aaff221c15b62e4514ff1f4474f655605a2cb492f5017fd4950700b85361509424f0dd93ca6b6b2c_1280.jpg" alt="Modern hospital with digital technology" class="rounded-xl w-full h-32 object-cover mb-6" />
+                    <h3 class="text-xl font-semibold text-almost-white mb-4">Saúde</h3>
+                    <p class="text-light-text mb-4">Gestão inteligente de pacientes, otimização de agenda e análise preditiva de demanda.</p>
+                    <div class="text-gray-green font-semibold">Resultados: -30% tempo de espera</div>
+                </div>
+                
+                <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic-elevated border border-dark-card/20 hover:transform hover:scale-105 transition-all duration-300">
+                    <!-- A modern logistics warehouse with automated sorting systems -->
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=200" alt="Automated logistics warehouse" class="rounded-xl w-full h-32 object-cover mb-6" />
+                    <h3 class="text-xl font-semibold text-almost-white mb-4">Logística</h3>
+                    <p class="text-light-text mb-4">Rastreamento inteligente, otimização de rotas e gestão automatizada de frota.</p>
+                    <div class="text-light-blue font-semibold">Resultados: -20% custos logísticos</div>
+                </div>
+                
+                <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic-elevated border border-dark-card/20 hover:transform hover:scale-105 transition-all duration-300">
+                    <!-- A modern law office with lawyers using digital documents and tablets -->
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=200" alt="Modern law office with digital technology" class="rounded-xl w-full h-32 object-cover mb-6" />
+                    <h3 class="text-xl font-semibold text-almost-white mb-4">Jurídico</h3>
+                    <p class="text-light-text mb-4">Automação de documentos, análise inteligente de contratos e gestão de prazos.</p>
+                    <div class="text-dark-blue font-semibold">Resultados: +50% produtividade jurídica</div>
+                </div>
+                
+                <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic-elevated border border-dark-card/20 hover:transform hover:scale-105 transition-all duration-300">
+                    <!-- A modern retail store with digital displays and automated checkout systems -->
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=200" alt="Modern retail store with digital technology" class="rounded-xl w-full h-32 object-cover mb-6" />
+                    <h3 class="text-xl font-semibold text-almost-white mb-4">Varejo</h3>
+                    <p class="text-light-text mb-4">Análise de comportamento do cliente, gestão inteligente de estoque e personalização de ofertas.</p>
+                    <div class="text-burnt-orange font-semibold">Resultados: +35% conversão de vendas</div>
+                </div>
+                
+                <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic-elevated border border-dark-card/20 hover:transform hover:scale-105 transition-all duration-300">
+                    <!-- A modern financial office with multiple screens showing trading data and analytics -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=200" alt="Financial office with trading screens and analytics" class="rounded-xl w-full h-32 object-cover mb-6" />
+                    <h3 class="text-xl font-semibold text-almost-white mb-4">Financeiro</h3>
+                    <p class="text-light-text mb-4">Análise de risco automatizada, detecção de fraudes e relatórios regulatórios inteligentes.</p>
+                    <div class="text-gray-green font-semibold">Resultados: -60% tempo em relatórios</div>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+        </div>
+    </section>
+    <!-- @END_COMPONENT: SolutionsBySector -->
+
+    <!-- Results and Cases -->
+    <!-- @COMPONENT: ResultsSection [case studies with ROI data] -->
+    <section id="results" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-almost-white mb-6">Resultados e Cases</h2>
+                <p class="text-light-text text-lg max-w-2xl mx-auto">
+                    Cases reais de transformação digital com ROI comprovado
+                </p>
+            </div>
+            
+            <!-- @MAP: cases.map(case => ( -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-dark-elevated rounded-2xl p-8 shadow-neomorphic border border-dark-card/30">
+                    <!-- A business analytics dashboard displaying various charts and KPIs on multiple screens -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300" alt="Business analytics dashboard with charts and KPIs" class="rounded-xl w-full h-48 object-cover mb-6" />
+                    
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-semibold text-almost-white">Indústria Metalúrgica</h3>
+                        <div class="text-3xl font-bold text-burnt-orange">+R$ 20.000/mês</div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-burnt-orange rounded-full mt-2"></div>
+                            <p class="text-light-text">Implementação de dashboard de produção em tempo real</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-gray-green rounded-full mt-2"></div>
+                            <p class="text-light-text">Redução de 40% no retrabalho através de alertas automáticos</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-light-blue rounded-full mt-2"></div>
+                            <p class="text-light-text">Aumento de 25% na eficiência operacional</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-4 bg-dark-base rounded-xl shadow-neomorphic">
+                        <div class="text-sm text-medium-text mb-2">ROI alcançado em</div>
+                        <div class="text-2xl font-bold text-almost-white">3 meses</div>
+                    </div>
+                </div>
+                
+                <div class="bg-dark-elevated rounded-2xl p-8 shadow-neomorphic border border-dark-card/30">
+                    <!-- A modern office meeting room with people analyzing data visualization on large screen -->
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300" alt="Corporate team meeting analyzing data visualization" class="rounded-xl w-full h-48 object-cover mb-6" />
+                    
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-semibold text-almost-white">E-commerce Fashion</h3>
+                        <div class="text-3xl font-bold text-gray-green">-40% retrabalho</div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-burnt-orange rounded-full mt-2"></div>
+                            <p class="text-light-text">Automação completa do processo de atendimento</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-gray-green rounded-full mt-2"></div>
+                            <p class="text-light-text">Chatbot inteligente com 90% de resolução automática</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-light-blue rounded-full mt-2"></div>
+                            <p class="text-light-text">Integração com CRM e gestão de estoque</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-4 bg-dark-base rounded-xl shadow-neomorphic">
+                        <div class="text-sm text-medium-text mb-2">Economia anual</div>
+                        <div class="text-2xl font-bold text-almost-white">R$ 240.000</div>
+                    </div>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+            
+            <div class="text-center mt-12">
+                <div class="bg-dark-elevated rounded-2xl p-8 shadow-neomorphic border border-burnt-orange/30 max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-almost-white mb-4">Garantia Total</h3>
+                    <p class="text-light-text text-lg leading-relaxed">
+                        "Se você não recuperar o que investiu, devolvemos o dinheiro."
+                    </p>
+                    <div class="w-16 h-1 bg-gradient-orange-blue mx-auto mt-6 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ResultsSection -->
+
+    <!-- About Section -->
+    <!-- @COMPONENT: AboutSection [company information and team] -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-elevated/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-almost-white mb-6">Sobre a DUATX</h2>
+                <p class="text-light-text text-lg max-w-2xl mx-auto">
+                    Especialistas em transformação digital com base sólida em dados e tecnologia
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <div class="space-y-8">
+                    <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic border border-dark-card/20">
+                        <div class="w-12 h-12 bg-gradient-orange-blue rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="target" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-almost-white mb-4">Nossa Missão</h3>
+                        <p class="text-light-text leading-relaxed">
+                            Democratizar o acesso à inteligência artificial e automação para empresas de todos os tamanhos, 
+                            transformando dados em decisões estratégicas e resultados mensuráveis.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic border border-dark-card/20">
+                        <div class="w-12 h-12 bg-gradient-blue-orange rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="eye" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-almost-white mb-4">Nossa Visão</h3>
+                        <p class="text-light-text leading-relaxed">
+                            Ser referência nacional em soluções de inteligência artificial aplicada aos negócios, 
+                            criando um futuro onde toda empresa tenha acesso à tecnologia de ponta.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic border border-dark-card/20">
+                        <div class="w-12 h-12 bg-gradient-orange-blue rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="heart" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-almost-white mb-4">Nossos Valores</h3>
+                        <ul class="text-light-text space-y-2">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-gray-green"></i>Transparência em todos os processos</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-gray-green"></i>Resultados mensuráveis e comprovados</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-gray-green"></i>Inovação constante e sustentável</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-gray-green"></i>Parceria de longo prazo com clientes</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- A professional team of data scientists and engineers working together in a modern office -->
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=300" alt="Professional team of data scientists working together" class="rounded-2xl shadow-neomorphic-elevated" />
+                </div>
+            </div>
+            
+            <div class="bg-dark-elevated rounded-2xl p-8 shadow-neomorphic border border-dark-card/30">
+                <h3 class="text-2xl font-semibold text-almost-white mb-8 text-center">Quem Somos</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-orange-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="code" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-almost-white mb-2">Equipe Técnica</h4>
+                        <p class="text-light-text">Especialistas em IA, automação e análise de dados com experiência comprovada em grandes corporações.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-blue-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="map-pin" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-almost-white mb-2">Base em São Paulo</h4>
+                        <p class="text-light-text">Escritório central em SP com atuação em todo território nacional e projetos internacionais.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-orange-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="globe" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-almost-white mb-2">Atuação Global</h4>
+                        <p class="text-light-text">Projetos realizados no Brasil, América Latina e Europa, sempre com excelência em entrega.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AboutSection -->
+
+    <!-- Trust Section -->
+    <!-- @COMPONENT: TrustSection [client logos and testimonials] -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-almost-white mb-6">Quem Confia</h2>
+                <p class="text-light-text text-lg max-w-2xl mx-auto">
+                    Empresas de diversos setores que já transformaram seus resultados
+                </p>
+            </div>
+            
+            <!-- Company Logos Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-16 opacity-60">
+                <div class="bg-dark-elevated rounded-xl p-4 shadow-neomorphic flex items-center justify-center h-20">
+                    <span class="text-light-text font-bold">TechCorp</span>
+                </div>
+                <div class="bg-dark-elevated rounded-xl p-4 shadow-neomorphic flex items-center justify-center h-20">
+                    <span class="text-light-text font-bold">InnovaLab</span>
+                </div>
+                <div class="bg-dark-elevated rounded-xl p-4 shadow-neomorphic flex items-center justify-center h-20">
+                    <span class="text-light-text font-bold">DataFlow</span>
+                </div>
+                <div class="bg-dark-elevated rounded-xl p-4 shadow-neomorphic flex items-center justify-center h-20">
+                    <span class="text-light-text font-bold">MetalPlus</span>
+                </div>
+                <div class="bg-dark-elevated rounded-xl p-4 shadow-neomorphic flex items-center justify-center h-20">
+                    <span class="text-light-text font-bold">LogiSmart</span>
+                </div>
+                <div class="bg-dark-elevated rounded-xl p-4 shadow-neomorphic flex items-center justify-center h-20">
+                    <span class="text-light-text font-bold">HealthTech</span>
+                </div>
+            </div>
+            
+            <!-- Testimonials -->
+            <!-- @MAP: testimonials.map(testimonial => ( -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-dark-elevated rounded-2xl p-8 shadow-neomorphic border border-dark-card/30">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-orange-blue rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">RS</span>
+                        </div>
+                        <div>
+                            <div class="text-almost-white font-semibold">Roberto Silva</div>
+                            <div class="text-light-text text-sm">CEO, TechCorp</div>
+                        </div>
+                    </div>
+                    <p class="text-light-text leading-relaxed mb-4">
+                        "A DUATX transformou completamente nossa operação. Em 6 meses, conseguimos reduzir custos em 30% 
+                        e aumentar a produtividade da equipe significativamente."
+                    </p>
+                    <div class="flex text-burnt-orange">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-dark-elevated rounded-2xl p-8 shadow-neomorphic border border-dark-card/30">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-blue-orange rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">MF</span>
+                        </div>
+                        <div>
+                            <div class="text-almost-white font-semibold">Maria Fernanda</div>
+                            <div class="text-light-text text-sm">Diretora, InnovaLab</div>
+                        </div>
+                    </div>
+                    <p class="text-light-text leading-relaxed mb-4">
+                        "Os dashboards personalizados nos deram uma visão clara do negócio que nunca tivemos antes. 
+                        Agora tomamos decisões baseadas em dados reais."
+                    </p>
+                    <div class="flex text-burnt-orange">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TrustSection -->
+
+    <!-- Contact Section -->
+    <!-- @COMPONENT: ContactSection [contact forms and integration points] -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-elevated/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-almost-white mb-6">Entre em Contato</h2>
+                <p class="text-light-text text-lg max-w-2xl mx-auto">
+                    Pronto para transformar sua empresa? Vamos conversar sobre seus desafios
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic-elevated border border-dark-card/20">
+                    <h3 class="text-2xl font-semibold text-almost-white mb-6">Solicite seu Diagnóstico Gratuito</h3>
+                    
+                    <form class="space-y-6" data-mock="true" data-implementation="Integrate with form handling service">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-light-text text-sm font-medium mb-2">Nome *</label>
+                                <input type="text" class="w-full bg-dark-elevated text-almost-white px-4 py-3 rounded-xl shadow-neomorphic border border-dark-card/30 focus:border-burnt-orange focus:outline-none transition-colors" placeholder="Seu nome completo" data-bind="form.name" />
+                            </div>
+                            <div>
+                                <label class="block text-light-text text-sm font-medium mb-2">Email *</label>
+                                <input type="email" class="w-full bg-dark-elevated text-almost-white px-4 py-3 rounded-xl shadow-neomorphic border border-dark-card/30 focus:border-burnt-orange focus:outline-none transition-colors" placeholder="seu@email.com" data-bind="form.email" />
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-light-text text-sm font-medium mb-2">Empresa</label>
+                                <input type="text" class="w-full bg-dark-elevated text-almost-white px-4 py-3 rounded-xl shadow-neomorphic border border-dark-card/30 focus:border-burnt-orange focus:outline-none transition-colors" placeholder="Nome da empresa" data-bind="form.company" />
+                            </div>
+                            <div>
+                                <label class="block text-light-text text-sm font-medium mb-2">Setor *</label>
+                                <select class="w-full bg-dark-elevated text-almost-white px-4 py-3 rounded-xl shadow-neomorphic border border-dark-card/30 focus:border-burnt-orange focus:outline-none transition-colors" data-bind="form.sector">
+                                    <option value="">Selecione o setor</option>
+                                    <option value="industria">Indústria</option>
+                                    <option value="saude">Saúde</option>
+                                    <option value="logistica">Logística</option>
+                                    <option value="juridico">Jurídico</option>
+                                    <option value="varejo">Varejo</option>
+                                    <option value="financeiro">Financeiro</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-light-text text-sm font-medium mb-2">Principal Desafio *</label>
+                            <select class="w-full bg-dark-elevated text-almost-white px-4 py-3 rounded-xl shadow-neomorphic border border-dark-card/30 focus:border-burnt-orange focus:outline-none transition-colors" data-bind="form.challenge">
+                                <option value="">Selecione o principal desafio</option>
+                                <option value="custos">Redução de custos operacionais</option>
+                                <option value="automacao">Automação de processos</option>
+                                <option value="dashboards">Dashboards e relatórios</option>
+                                <option value="ia">Implementação de IA</option>
+                                <option value="dados">Análise e gestão de dados</option>
+                                <option value="produtividade">Aumento de produtividade</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-light-text text-sm font-medium mb-2">Mensagem</label>
+                            <textarea class="w-full bg-dark-elevated text-almost-white px-4 py-3 rounded-xl shadow-neomorphic border border-dark-card/30 focus:border-burnt-orange focus:outline-none transition-colors" rows="4" placeholder="Conte-nos mais sobre seus desafios e objetivos..." data-bind="form.message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-orange-blue text-white py-4 rounded-xl font-semibold text-lg shadow-neomorphic-elevated hover:shadow-neomorphic-pressed transform hover:scale-[0.98] transition-all duration-200" data-event="click:submitForm">
+                            Solicitar Diagnóstico Gratuito
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic-elevated border border-dark-card/20">
+                        <h3 class="text-2xl font-semibold text-almost-white mb-6">Outras Formas de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gradient-orange-blue rounded-xl flex items-center justify-center">
+                                    <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-almost-white font-medium">Telefone</div>
+                                    <div class="text-light-text">(11) 9999-8888</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gradient-blue-orange rounded-xl flex items-center justify-center">
+                                    <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-almost-white font-medium">Email</div>
+                                    <div class="text-light-text">contato@duatx.com</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gradient-orange-blue rounded-xl flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-almost-white font-medium">Endereço</div>
+                                    <div class="text-light-text">São Paulo - SP, Brasil</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Calendar Integration -->
+                    <div class="bg-dark-base rounded-2xl p-8 shadow-neomorphic-elevated border border-dark-card/20">
+                        <h3 class="text-xl font-semibold text-almost-white mb-4">Agende uma Reunião</h3>
+                        <p class="text-light-text mb-6">Prefere conversar diretamente? Agende um horário para uma consultoria inicial gratuita.</p>
+                        
+                        <button class="w-full bg-gradient-blue-orange text-white py-3 rounded-xl font-semibold shadow-neomorphic hover:shadow-neomorphic-pressed transform hover:scale-[0.98] transition-all duration-200" data-event="click:openCalendly" data-implementation="Integrate with Calendly widget">
+                            Agendar Reunião
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- Footer -->
+    <!-- @COMPONENT: Footer [company info and links] -->
+    <footer class="bg-dark-base py-12 px-4 sm:px-6 lg:px-8 border-t border-dark-elevated">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="text-3xl font-bold text-almost-white mb-4">DUATX</div>
+                    <p class="text-light-text leading-relaxed mb-6">
+                        Dados, inteligência artificial e software para otimização de resultados. 
+                        Transformamos empresas através da tecnologia.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="w-10 h-10 bg-dark-elevated rounded-xl shadow-neomorphic flex items-center justify-center hover:bg-burnt-orange transition-colors cursor-pointer">
+                            <i data-lucide="linkedin" class="w-5 h-5 text-light-text hover:text-white"></i>
+                        </div>
+                        <div class="w-10 h-10 bg-dark-elevated rounded-xl shadow-neomorphic flex items-center justify-center hover:bg-burnt-orange transition-colors cursor-pointer">
+                            <i data-lucide="instagram" class="w-5 h-5 text-light-text hover:text-white"></i>
+                        </div>
+                        <div class="w-10 h-10 bg-dark-elevated rounded-xl shadow-neomorphic flex items-center justify-center hover:bg-burnt-orange transition-colors cursor-pointer">
+                            <i data-lucide="youtube" class="w-5 h-5 text-light-text hover:text-white"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-almost-white font-semibold mb-4">Serviços</h4>
+                    <ul class="space-y-2 text-light-text">
+                        <li><a href="#services" class="hover:text-almost-white transition-colors">Diagnóstico Empresarial</a></li>
+                        <li><a href="#services" class="hover:text-almost-white transition-colors">Dashboards Personalizados</a></li>
+                        <li><a href="#services" class="hover:text-almost-white transition-colors">Agentes de IA</a></li>
+                        <li><a href="#services" class="hover:text-almost-white transition-colors">Software Sob Medida</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-almost-white font-semibold mb-4">Empresa</h4>
+                    <ul class="space-y-2 text-light-text">
+                        <li><a href="#about" class="hover:text-almost-white transition-colors">Sobre Nós</a></li>
+                        <li><a href="#results" class="hover:text-almost-white transition-colors">Cases de Sucesso</a></li>
+                        <li><a href="#contact" class="hover:text-almost-white transition-colors">Contato</a></li>
+                        <li><a href="#" class="hover:text-almost-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-dark-elevated mt-8 pt-8 text-center">
+                <p class="text-light-text">© 2024 DUATX. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- WhatsApp Floating Button -->
+    <!-- @COMPONENT: WhatsAppButton [floating contact button] -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button class="w-14 h-14 bg-green-500 rounded-full shadow-neomorphic-elevated flex items-center justify-center hover:scale-110 transition-transform duration-200 animate-pulse" data-event="click:openWhatsApp" data-implementation="Open WhatsApp with predefined message">
+            <i data-lucide="message-circle" class="w-7 h-7 text-white"></i>
+        </button>
+    </div>
+    <!-- @END_COMPONENT: WhatsAppButton -->
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            // Initialize Lucide icons
+            lucide.createIcons();
+            
+            // Mobile menu toggle
+            const mobileMenuToggle = document.querySelector('[data-event="click:toggleMobileMenu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('[data-event="click:closeMobileMenu"]');
+            
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Form submission handler
+            const contactForm = document.querySelector('form[data-mock="true"]');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // @IMPLEMENTATION: Add form validation and submission logic
+                    alert('Formulário enviado! Entraremos em contato em breve.');
+                });
+            }
+            
+            // WhatsApp button handler
+            const whatsappButton = document.querySelector('[data-event="click:openWhatsApp"]');
+            if (whatsappButton) {
+                whatsappButton.addEventListener('click', function() {
+                    const message = encodeURIComponent('Olá! Gostaria de saber mais sobre os serviços da DUATX.');
+                    window.open(`https://wa.me/5511999998888?text=${message}`, '_blank');
+                });
+            }
+            
+            // CTA buttons handlers
+            document.querySelectorAll('[data-event*="scheduleDemo"], [data-event*="scheduleService"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    // @IMPLEMENTATION: Integrate with Calendly or scheduling system
+                    document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+            
+            // Calendly button handler
+            const calendlyButton = document.querySelector('[data-event="click:openCalendly"]');
+            if (calendlyButton) {
+                calendlyButton.addEventListener('click', function() {
+                    // @IMPLEMENTATION: Open Calendly widget or redirect to scheduling page
+                    alert('Redirecionando para o sistema de agendamento...');
+                });
+            }
+            
+            // Scroll-based animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('section > div > div').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+            
+        })();
+    </script>
+    
+    <!-- @STATE: mobileMenuOpen:boolean = false -->
+    <!-- @STATE: currentSection:string = 'home' -->
+    <!-- @STATE: formData:object = {} -->
+    
+    <!-- @FUNCTIONALITY: This website should implement smooth scrolling, form validation, WhatsApp integration, Calendly scheduling, and responsive mobile navigation -->
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUATX - Dados, IA e Software para Otimização de Resultados</title>
+    <meta name="description" content="Reduza custos invisíveis, automatize tarefas e tome decisões com clareza através de dados e inteligência artificial.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark': {
+                            100: '#FEFEFE',
+                            200: '#DADADA', 
+                            300: '#B7B7B7',
+                            400: '#939393',
+                            500: '#707070',
+                            600: '#4E4E4E',
+                            700: '#2D2D2D',
+                            800: '#202020',
+                        },
+                        'accent': {
+                            orange: '#AA5C2F',
+                            green: '#96B4A8', 
+                            lightblue: '#7CC1DF',
+                            darkblue: '#2C6ECB',
+                        }
+                    },
+                    boxShadow: {
+                        'neomorphic': 'inset 8px 8px 16px rgba(0,0,0,0.3), inset -8px -8px 16px rgba(255,255,255,0.05)',
+                        'neomorphic-hover': 'inset 4px 4px 8px rgba(0,0,0,0.4), inset -4px -4px 8px rgba(255,255,255,0.08)',
+                        'card': '8px 8px 16px rgba(0,0,0,0.4), -8px -8px 16px rgba(255,255,255,0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-800 text-dark-100 font-montserrat overflow-x-hidden">
+
+<!-- @COMPONENT: Navigation -->
+<nav class="fixed top-0 w-full bg-dark-800/90 backdrop-blur-sm z-50 border-b border-dark-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-dark-100 tracking-wider">DUATX</div>
+            </div>
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-8">
+                    <a href="#home" class="text-dark-200 hover:text-accent-lightblue transition-colors duration-200 font-medium">Home</a>
+                    <a href="#services" class="text-dark-200 hover:text-accent-lightblue transition-colors duration-200 font-medium">Serviços</a>
+                    <a href="#solutions" class="text-dark-200 hover:text-accent-lightblue transition-colors duration-200 font-medium">Soluções</a>
+                    <a href="#results" class="text-dark-200 hover:text-accent-lightblue transition-colors duration-200 font-medium">Resultados</a>
+                    <a href="#about" class="text-dark-200 hover:text-accent-lightblue transition-colors duration-200 font-medium">Sobre</a>
+                    <a href="#contact" class="text-dark-200 hover:text-accent-lightblue transition-colors duration-200 font-medium">Contato</a>
+                </div>
+            </div>
+            <div class="md:hidden">
+                <button class="text-dark-200 hover:text-dark-100 p-2">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- @END_COMPONENT: Navigation -->
+
+<!-- @COMPONENT: Hero Section -->
+<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+    <div class="absolute inset-0 bg-gradient-to-br from-accent-darkblue/20 via-dark-800 to-accent-orange/20"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-dark-100 mb-6 leading-tight">
+                Dados, inteligência artificial e 
+                <span class="bg-gradient-to-r from-accent-orange to-accent-lightblue bg-clip-text text-transparent">
+                    software
+                </span> 
+                para otimização de resultados
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-dark-200 mb-12 max-w-4xl mx-auto font-light">
+                Reduza custos invisíveis, automatize tarefas e tome decisões com clareza.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <button class="bg-gradient-to-r from-accent-orange to-accent-darkblue text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-card hover:shadow-neomorphic-hover transition-all duration-300 transform hover:scale-105" data-event="click:scheduleConsultation">
+                    Agendar diagnóstico gratuito
+                </button>
+                <button class="text-accent-lightblue border border-accent-lightblue px-8 py-4 rounded-2xl font-medium text-lg hover:bg-accent-lightblue hover:text-dark-800 transition-all duration-300">
+                    Saiba mais
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: Hero Section -->
+
+<!-- @COMPONENT: How It Works Section -->
+<section class="py-20 bg-dark-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-100 mb-4">Como Funciona</h2>
+            <p class="text-xl text-dark-300 max-w-2xl mx-auto">Nosso processo em 3 etapas para transformar seus dados em resultados</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Step 1 -->
+            <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic hover:shadow-card transition-all duration-300 text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-accent-orange to-accent-lightblue rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="search" class="w-8 h-8 text-white"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-dark-100 mb-4">Entramos com robôs e lupa</h3>
+                <p class="text-dark-300">Análise profunda dos seus processos para identificar gargalos e oportunidades de otimização.</p>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic hover:shadow-card transition-all duration-300 text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-accent-lightblue to-accent-darkblue rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="cpu" class="w-8 h-8 text-white"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-dark-100 mb-4">Resolvemos com dashboards, IA e automações</h3>
+                <p class="text-dark-300">Implementamos soluções personalizadas com inteligência artificial e automação de processos.</p>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic hover:shadow-card transition-all duration-300 text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-accent-green to-accent-orange rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="trending-up" class="w-8 h-8 text-white"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-dark-100 mb-4">Acompanhamos com dados reais e ROI visível</h3>
+                <p class="text-dark-300">Monitoramento contínuo com métricas claras e retorno sobre investimento mensurável.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: How It Works Section -->
+
+<!-- @COMPONENT: Impact Section -->
+<section class="py-20 bg-dark-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-100 mb-4">Impacto Real</h2>
+            <p class="text-xl text-dark-300 max-w-2xl mx-auto">Resultados comprovados que nossos clientes alcançaram</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-dark-700 rounded-3xl p-8 shadow-neomorphic text-center">
+                <div class="text-4xl font-bold text-accent-lightblue mb-2">+120h</div>
+                <div class="text-dark-300">economizadas por mês</div>
+            </div>
+            
+            <div class="bg-dark-700 rounded-3xl p-8 shadow-neomorphic text-center">
+                <div class="text-4xl font-bold text-accent-green mb-2">-40%</div>
+                <div class="text-dark-300">redução no churn</div>
+            </div>
+            
+            <div class="bg-dark-700 rounded-3xl p-8 shadow-neomorphic text-center">
+                <div class="text-4xl font-bold text-accent-orange mb-2">+30%</div>
+                <div class="text-dark-300">aumento na margem</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: Impact Section -->
+
+<!-- @COMPONENT: Services Section -->
+<section id="services" class="py-20 bg-dark-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-100 mb-4">Nossos Serviços</h2>
+            <p class="text-xl text-dark-300 max-w-2xl mx-auto">Soluções completas para transformar seus dados em vantagem competitiva</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Service 1: Diagnóstico Empresarial -->
+            <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic hover:shadow-card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-accent-orange to-accent-lightblue rounded-xl flex items-center justify-center mr-4">
+                        <i data-lucide="search" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-dark-100">Diagnóstico Empresarial</h3>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="border-l-4 border-red-500 pl-4">
+                        <h4 class="font-semibold text-red-400 mb-2">🚧 Problema</h4>
+                        <p class="text-dark-300">Decisões baseadas em achismos e falta de visibilidade sobre processos internos.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h4 class="font-semibold text-green-400 mb-2">✅ Solução</h4>
+                        <p class="text-dark-300">Análise detalhada de todos os processos com identificação de gargalos e oportunidades.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-accent-lightblue pl-4">
+                        <h4 class="font-semibold text-accent-lightblue mb-2">📈 Resultado esperado</h4>
+                        <p class="text-dark-300">Visão clara dos pontos de melhoria e ROI potencial de 200-400%.</p>
+                    </div>
+                </div>
+                
+                <button class="w-full bg-gradient-to-r from-accent-orange to-accent-darkblue text-white py-3 rounded-xl font-semibold hover:shadow-neomorphic-hover transition-all duration-300">
+                    Agende agora
+                </button>
+            </div>
+            
+            <!-- Service 2: Dashboards Personalizados -->
+            <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic hover:shadow-card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-accent-lightblue to-accent-darkblue rounded-xl flex items-center justify-center mr-4">
+                        <i data-lucide="bar-chart" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-dark-100">Dashboards Personalizados</h3>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="border-l-4 border-red-500 pl-4">
+                        <h4 class="font-semibold text-red-400 mb-2">🚧 Problema</h4>
+                        <p class="text-dark-300">Dados espalhados em planilhas sem insights acionáveis.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h4 class="font-semibold text-green-400 mb-2">✅ Solução</h4>
+                        <p class="text-dark-300">Dashboards integrados em Power BI com visualizações intuitivas e alertas automatizados.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-accent-lightblue pl-4">
+                        <h4 class="font-semibold text-accent-lightblue mb-2">📈 Resultado esperado</h4>
+                        <p class="text-dark-300">Decisões 70% mais rápidas e precisas com dados em tempo real.</p>
+                    </div>
+                </div>
+                
+                <button class="w-full bg-gradient-to-r from-accent-lightblue to-accent-darkblue text-white py-3 rounded-xl font-semibold hover:shadow-neomorphic-hover transition-all duration-300">
+                    Agende agora
+                </button>
+            </div>
+            
+            <!-- Service 3: Agentes de IA e Automações -->
+            <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic hover:shadow-card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-accent-green to-accent-orange rounded-xl flex items-center justify-center mr-4">
+                        <i data-lucide="bot" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-dark-100">Agentes de IA e Automações</h3>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="border-l-4 border-red-500 pl-4">
+                        <h4 class="font-semibold text-red-400 mb-2">🚧 Problema</h4>
+                        <p class="text-dark-300">Tarefas repetitivas consumindo tempo valioso da equipe.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h4 class="font-semibold text-green-400 mb-2">✅ Solução</h4>
+                        <p class="text-dark-300">Automações inteligentes com n8n e Python, incluindo chatbots e processamento de dados.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-accent-lightblue pl-4">
+                        <h4 class="font-semibold text-accent-lightblue mb-2">📈 Resultado esperado</h4>
+                        <p class="text-dark-300">Redução de 60-80% no tempo gasto em tarefas manuais.</p>
+                    </div>
+                </div>
+                
+                <button class="w-full bg-gradient-to-r from-accent-green to-accent-orange text-white py-3 rounded-xl font-semibold hover:shadow-neomorphic-hover transition-all duration-300">
+                    Agende agora
+                </button>
+            </div>
+            
+            <!-- Service 4: Desenvolvimento de Software -->
+            <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic hover:shadow-card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-accent-darkblue to-accent-orange rounded-xl flex items-center justify-center mr-4">
+                        <i data-lucide="code" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-dark-100">Software Sob Medida</h3>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="border-l-4 border-red-500 pl-4">
+                        <h4 class="font-semibold text-red-400 mb-2">🚧 Problema</h4>
+                        <p class="text-dark-300">Softwares genéricos que não atendem necessidades específicas do negócio.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h4 class="font-semibold text-green-400 mb-2">✅ Solução</h4>
+                        <p class="text-dark-300">Desenvolvimento de aplicações personalizadas com React, Python e integração completa.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-accent-lightblue pl-4">
+                        <h4 class="font-semibold text-accent-lightblue mb-2">📈 Resultado esperado</h4>
+                        <p class="text-dark-300">Sistema perfeitamente adaptado às suas necessidades com escalabilidade garantida.</p>
+                    </div>
+                </div>
+                
+                <button class="w-full bg-gradient-to-r from-accent-darkblue to-accent-orange text-white py-3 rounded-xl font-semibold hover:shadow-neomorphic-hover transition-all duration-300">
+                    Agende agora
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: Services Section -->
+
+<!-- @COMPONENT: Solutions by Sector -->
+<section id="solutions" class="py-20 bg-dark-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-100 mb-4">Soluções por Setor</h2>
+            <p class="text-xl text-dark-300 max-w-2xl mx-auto">Expertise especializada para diferentes segmentos de mercado</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Industry -->
+            <div class="bg-dark-700 rounded-3xl p-6 shadow-neomorphic hover:shadow-card transition-all duration-300 group cursor-pointer">
+                <!-- Modern industrial manufacturing facility with automated systems -->
+                <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Industrial manufacturing facility" class="w-full h-48 object-cover rounded-2xl mb-4" />
+                <h3 class="text-xl font-semibold text-dark-100 mb-2">Indústria</h3>
+                <p class="text-dark-300 mb-4"><strong>Dor:</strong> Desperdício na produção e falta de controle de qualidade</p>
+                <p class="text-accent-lightblue mb-4"><strong>Solução:</strong> IoT + IA para monitoramento em tempo real e predição de falhas</p>
+                <div class="flex items-center text-accent-orange group-hover:text-accent-lightblue transition-colors duration-300">
+                    <span class="font-medium">Ver solução completa</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </div>
+            </div>
+            
+            <!-- Healthcare -->
+            <div class="bg-dark-700 rounded-3xl p-6 shadow-neomorphic hover:shadow-card transition-all duration-300 group cursor-pointer">
+                <!-- Modern medical facility with digital health technology -->
+                <img src="https://pixabay.com/get/g5c26db767e641cad1690b9ffa445fc915e60ad98749a93c301b2b6876de95e84b7b29908699de3a6c5ad96a636ecf8dd058c3509e604f89c0cc9eedbc7b45588_1280.jpg" alt="Healthcare technology and medical equipment" class="w-full h-48 object-cover rounded-2xl mb-4" />
+                <h3 class="text-xl font-semibold text-dark-100 mb-2">Saúde</h3>
+                <p class="text-dark-300 mb-4"><strong>Dor:</strong> Gestão ineficiente de prontuários e agendamentos</p>
+                <p class="text-accent-lightblue mb-4"><strong>Solução:</strong> Sistema integrado com IA para otimização de fluxos médicos</p>
+                <div class="flex items-center text-accent-orange group-hover:text-accent-lightblue transition-colors duration-300">
+                    <span class="font-medium">Ver solução completa</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </div>
+            </div>
+            
+            <!-- Logistics -->
+            <div class="bg-dark-700 rounded-3xl p-6 shadow-neomorphic hover:shadow-card transition-all duration-300 group cursor-pointer">
+                <!-- Modern logistics warehouse with automated sorting systems -->
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Automated logistics warehouse systems" class="w-full h-48 object-cover rounded-2xl mb-4" />
+                <h3 class="text-xl font-semibold text-dark-100 mb-2">Logística</h3>
+                <p class="text-dark-300 mb-4"><strong>Dor:</strong> Rotas não otimizadas aumentando custos de transporte</p>
+                <p class="text-accent-lightblue mb-4"><strong>Solução:</strong> Algoritmos de otimização para rotas e gestão de frota</p>
+                <div class="flex items-center text-accent-orange group-hover:text-accent-lightblue transition-colors duration-300">
+                    <span class="font-medium">Ver solução completa</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </div>
+            </div>
+            
+            <!-- Legal -->
+            <div class="bg-dark-700 rounded-3xl p-6 shadow-neomorphic hover:shadow-card transition-all duration-300 group cursor-pointer">
+                <!-- Modern law office with digital document management -->
+                <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Modern law office with digital technology" class="w-full h-48 object-cover rounded-2xl mb-4" />
+                <h3 class="text-xl font-semibold text-dark-100 mb-2">Jurídico</h3>
+                <p class="text-dark-300 mb-4"><strong>Dor:</strong> Gestão manual de processos e prazos legais</p>
+                <p class="text-accent-lightblue mb-4"><strong>Solução:</strong> Automação de documentos e alertas inteligentes de prazos</p>
+                <div class="flex items-center text-accent-orange group-hover:text-accent-lightblue transition-colors duration-300">
+                    <span class="font-medium">Ver solução completa</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </div>
+            </div>
+            
+            <!-- Retail -->
+            <div class="bg-dark-700 rounded-3xl p-6 shadow-neomorphic hover:shadow-card transition-all duration-300 group cursor-pointer">
+                <!-- Modern retail store with digital analytics and customer insights -->
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Modern retail environment with digital technology" class="w-full h-48 object-cover rounded-2xl mb-4" />
+                <h3 class="text-xl font-semibold text-dark-100 mb-2">Varejo</h3>
+                <p class="text-dark-300 mb-4"><strong>Dor:</strong> Falta de insights sobre comportamento do consumidor</p>
+                <p class="text-accent-lightblue mb-4"><strong>Solução:</strong> Analytics avançado para personalização e previsão de demanda</p>
+                <div class="flex items-center text-accent-orange group-hover:text-accent-lightblue transition-colors duration-300">
+                    <span class="font-medium">Ver solução completa</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </div>
+            </div>
+            
+            <!-- Finance -->
+            <div class="bg-dark-700 rounded-3xl p-6 shadow-neomorphic hover:shadow-card transition-all duration-300 group cursor-pointer">
+                <!-- Modern financial trading floor with data analytics screens -->
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Financial data analytics and trading systems" class="w-full h-48 object-cover rounded-2xl mb-4" />
+                <h3 class="text-xl font-semibold text-dark-100 mb-2">Financeiro</h3>
+                <p class="text-dark-300 mb-4"><strong>Dor:</strong> Análise de risco manual e relatórios demorados</p>
+                <p class="text-accent-lightblue mb-4"><strong>Solução:</strong> IA para detecção de fraudes e automação de relatórios</p>
+                <div class="flex items-center text-accent-orange group-hover:text-accent-lightblue transition-colors duration-300">
+                    <span class="font-medium">Ver solução completa</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: Solutions by Sector -->
+
+<!-- @COMPONENT: Results and Cases -->
+<section id="results" class="py-20 bg-dark-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-100 mb-4">Resultados e Cases</h2>
+            <p class="text-xl text-dark-300 max-w-2xl mx-auto">Cases reais com ROI comprovado</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Case 1 -->
+            <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic hover:shadow-card transition-all duration-300">
+                <!-- Professional business analytics dashboard showing growth metrics -->
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300" alt="Business analytics dashboard with growth metrics" class="w-full h-40 object-cover rounded-2xl mb-6" />
+                <div class="text-3xl font-bold text-accent-lightblue mb-2">+R$ 20.000/mês</div>
+                <h3 class="text-lg font-semibold text-dark-100 mb-3">E-commerce de Moda</h3>
+                <p class="text-dark-300 mb-4">Implementação de sistema de recomendação por IA aumentou conversão em 35%</p>
+                <div class="flex items-center text-accent-orange">
+                    <span class="font-medium">Ver case completo</span>
+                    <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                </div>
+            </div>
+            
+            <!-- Case 2 -->
+            <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic hover:shadow-card transition-all duration-300">
+                <!-- Modern manufacturing plant with efficiency improvements -->
+                <img src="https://pixabay.com/get/g02a05f13f2a7d8960e857f1be39eee56e2730ea0a791d83372109df5eab1021dcbeee95edcb83852e45878b99489ea54d380326ba33469491b59b9e58c3f65f7_1280.jpg" alt="Efficient manufacturing processes with automation" class="w-full h-40 object-cover rounded-2xl mb-6" />
+                <div class="text-3xl font-bold text-accent-green mb-2">-40% retrabalho</div>
+                <h3 class="text-lg font-semibold text-dark-100 mb-3">Indústria Metalúrgica</h3>
+                <p class="text-dark-300 mb-4">Controle de qualidade automatizado reduziu defeitos e aumentou produtividade</p>
+                <div class="flex items-center text-accent-orange">
+                    <span class="font-medium">Ver case completo</span>
+                    <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                </div>
+            </div>
+            
+            <!-- Case 3 -->
+            <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic hover:shadow-card transition-all duration-300">
+                <!-- Healthcare facility with improved patient flow systems -->
+                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300" alt="Healthcare facility with digital patient management" class="w-full h-40 object-cover rounded-2xl mb-6" />
+                <div class="text-3xl font-bold text-accent-orange mb-2">+60% eficiência</div>
+                <h3 class="text-lg font-semibold text-dark-100 mb-3">Clínica Médica</h3>
+                <p class="text-dark-300 mb-4">Automatização de agendamentos reduziu tempo de espera e aumentou satisfação</p>
+                <div class="flex items-center text-accent-orange">
+                    <span class="font-medium">Ver case completo</span>
+                    <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Guarantee Section -->
+        <div class="mt-16 text-center">
+            <div class="bg-gradient-to-r from-accent-orange/20 to-accent-lightblue/20 rounded-3xl p-8 border border-accent-orange/30">
+                <h3 class="text-2xl font-bold text-dark-100 mb-4">Nossa Garantia</h3>
+                <p class="text-xl text-dark-200 max-w-3xl mx-auto">
+                    "Se você não recuperar o que investiu, devolvemos o dinheiro."
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: Results and Cases -->
+
+<!-- @COMPONENT: Testimonials -->
+<section class="py-20 bg-dark-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-100 mb-4">Quem Confia na DUATX</h2>
+            <p class="text-xl text-dark-300 max-w-2xl mx-auto">Depoimentos de clientes que transformaram seus negócios</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <!-- Testimonial 1 -->
+            <div class="bg-dark-700 rounded-3xl p-8 shadow-neomorphic">
+                <div class="flex items-center mb-6">
+                    <!-- Professional business executive headshot -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100" alt="CEO testimonial" class="w-16 h-16 rounded-full mr-4" />
+                    <div>
+                        <div class="font-semibold text-dark-100">Carlos Silva</div>
+                        <div class="text-dark-300">CEO, TechCorp</div>
+                    </div>
+                </div>
+                <p class="text-dark-200 mb-4 italic">
+                    "A DUATX transformou completamente nossa operação. Em 6 meses, reduzimos custos em 30% e aumentamos nossa margem significativamente."
+                </p>
+                <div class="flex text-accent-orange">
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="bg-dark-700 rounded-3xl p-8 shadow-neomorphic">
+                <div class="flex items-center mb-6">
+                    <!-- Professional businesswoman headshot -->
+                    <img src="https://pixabay.com/get/g96aa10eb9577606056f6b7bac68c14e9b7701e8acfc537d4aa6f37aacb086845064742e6c59d4af461c60d22988394cd162fa44fb2f83404867c5911294d5420_1280.jpg" alt="CTO testimonial" class="w-16 h-16 rounded-full mr-4" />
+                    <div>
+                        <div class="font-semibold text-dark-100">Marina Santos</div>
+                        <div class="text-dark-300">CTO, InnovateLab</div>
+                    </div>
+                </div>
+                <p class="text-dark-200 mb-4 italic">
+                    "Os dashboards da DUATX nos deram uma visibilidade que nunca tivemos. Agora tomamos decisões baseadas em dados reais."
+                </p>
+                <div class="flex text-accent-orange">
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Company Logos -->
+        <div class="text-center">
+            <h3 class="text-xl font-semibold text-dark-200 mb-8">Empresas que confiam em nós</h3>
+            <div class="flex flex-wrap justify-center items-center gap-8 opacity-60">
+                <div class="text-2xl font-bold text-dark-400">TechCorp</div>
+                <div class="text-2xl font-bold text-dark-400">InnovateLab</div>
+                <div class="text-2xl font-bold text-dark-400">DataFlow</div>
+                <div class="text-2xl font-bold text-dark-400">SmartSys</div>
+                <div class="text-2xl font-bold text-dark-400">AutoPro</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: Testimonials -->
+
+<!-- @COMPONENT: About Section -->
+<section id="about" class="py-20 bg-dark-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-100 mb-4">Sobre a DUATX</h2>
+            <p class="text-xl text-dark-300 max-w-2xl mx-auto">Especialistas em transformação digital com base técnica sólida</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+                <!-- Professional tech team working on data analytics projects -->
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Professional tech team collaborating on data projects" class="rounded-3xl shadow-card" />
+            </div>
+            
+            <div class="space-y-8">
+                <div class="bg-dark-800 rounded-3xl p-6 shadow-neomorphic">
+                    <h3 class="text-xl font-semibold text-accent-lightblue mb-3">Nossa Missão</h3>
+                    <p class="text-dark-200">Democratizar o acesso à inteligência artificial e análise de dados, transformando empresas através da tecnologia e otimização de processos.</p>
+                </div>
+                
+                <div class="bg-dark-800 rounded-3xl p-6 shadow-neomorphic">
+                    <h3 class="text-xl font-semibold text-accent-green mb-3">Nossa Visão</h3>
+                    <p class="text-dark-200">Ser a principal referência em soluções de IA e automação no Brasil, ajudando empresas a maximizar seus resultados com tecnologia de ponta.</p>
+                </div>
+                
+                <div class="bg-dark-800 rounded-3xl p-6 shadow-neomorphic">
+                    <h3 class="text-xl font-semibold text-accent-orange mb-3">Nossos Valores</h3>
+                    <p class="text-dark-200">Transparência, excelência técnica, foco em resultados mensuráveis e compromisso com o sucesso do cliente em cada projeto.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center bg-dark-800 rounded-3xl p-8 shadow-neomorphic">
+            <h3 class="text-2xl font-semibold text-dark-100 mb-4">Quem Somos</h3>
+            <p class="text-dark-200 max-w-4xl mx-auto mb-6">
+                Somos uma equipe técnica especializada com base em São Paulo e atuação nacional e internacional. 
+                Nosso time é composto por engenheiros de dados, cientistas de dados, desenvolvedores full-stack e 
+                especialistas em IA, todos com experiência comprovada em grandes empresas e projetos complexos.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-accent-lightblue">
+                <span class="bg-dark-700 px-4 py-2 rounded-xl">São Paulo, Brasil</span>
+                <span class="bg-dark-700 px-4 py-2 rounded-xl">Atuação Nacional</span>
+                <span class="bg-dark-700 px-4 py-2 rounded-xl">Projetos Internacionais</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: About Section -->
+
+<!-- @COMPONENT: Blog Section -->
+<section class="py-20 bg-dark-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-100 mb-4">Blog & Conteúdo</h2>
+            <p class="text-xl text-dark-300 max-w-2xl mx-auto">Insights sobre IA, dados e transformação digital</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Blog Post 1 -->
+            <div class="bg-dark-700 rounded-3xl overflow-hidden shadow-neomorphic hover:shadow-card transition-all duration-300 group cursor-pointer">
+                <!-- AI and machine learning visualization with data streams -->
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="AI and machine learning data visualization" class="w-full h-48 object-cover" />
+                <div class="p-6">
+                    <div class="text-sm text-accent-lightblue mb-2">IA & Automação</div>
+                    <h3 class="text-lg font-semibold text-dark-100 mb-3 group-hover:text-accent-lightblue transition-colors duration-300">
+                        Como a IA Generativa Pode Transformar Sua Empresa em 2024
+                    </h3>
+                    <p class="text-dark-300 mb-4">Descubra as principais aplicações da inteligência artificial generativa nos negócios e como implementar...</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-dark-400">5 min de leitura</span>
+                        <div class="flex items-center text-accent-orange group-hover:text-accent-lightblue transition-colors duration-300">
+                            <span class="font-medium">Ler mais</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 2 -->
+            <div class="bg-dark-700 rounded-3xl overflow-hidden shadow-neomorphic hover:shadow-card transition-all duration-300 group cursor-pointer">
+                <!-- Business data analytics dashboard showing ROI metrics -->
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Business analytics ROI dashboard" class="w-full h-48 object-cover" />
+                <div class="p-6">
+                    <div class="text-sm text-accent-green mb-2">Dashboards</div>
+                    <h3 class="text-lg font-semibold text-dark-100 mb-3 group-hover:text-accent-lightblue transition-colors duration-300">
+                        5 KPIs Essenciais para Medir o ROI da Sua Transformação Digital
+                    </h3>
+                    <p class="text-dark-300 mb-4">Aprenda quais métricas realmente importam para avaliar o sucesso dos seus investimentos em tecnologia...</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-dark-400">7 min de leitura</span>
+                        <div class="flex items-center text-accent-orange group-hover:text-accent-lightblue transition-colors duration-300">
+                            <span class="font-medium">Ler mais</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 3 -->
+            <div class="bg-dark-700 rounded-3xl overflow-hidden shadow-neomorphic hover:shadow-card transition-all duration-300 group cursor-pointer">
+                <!-- Automated workflow and process optimization visualization -->
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Automated business process workflows" class="w-full h-48 object-cover" />
+                <div class="p-6">
+                    <div class="text-sm text-accent-orange mb-2">Automação</div>
+                    <h3 class="text-lg font-semibold text-dark-100 mb-3 group-hover:text-accent-lightblue transition-colors duration-300">
+                        Guia Completo: Automatizando Processos Empresariais com Python
+                    </h3>
+                    <p class="text-dark-300 mb-4">Tutorial prático sobre como implementar automações que economizam horas de trabalho manual...</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-dark-400">12 min de leitura</span>
+                        <div class="flex items-center text-accent-orange group-hover:text-accent-lightblue transition-colors duration-300">
+                            <span class="font-medium">Ler mais</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <button class="bg-gradient-to-r from-accent-orange to-accent-lightblue text-white px-8 py-3 rounded-xl font-semibold hover:shadow-neomorphic-hover transition-all duration-300">
+                Ver todos os artigos
+            </button>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: Blog Section -->
+
+<!-- @COMPONENT: Contact Section -->
+<section id="contact" class="py-20 bg-dark-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark-100 mb-4">Entre em Contato</h2>
+            <p class="text-xl text-dark-300 max-w-2xl mx-auto">Pronto para transformar sua empresa? Vamos conversar sobre suas necessidades</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic">
+                <h3 class="text-2xl font-semibold text-dark-100 mb-6">Agende seu Diagnóstico Gratuito</h3>
+                
+                <form class="space-y-6" data-implementation="Form should handle validation and submission">
+                    <div>
+                        <label class="block text-dark-200 font-medium mb-2">Nome Completo</label>
+                        <input type="text" class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-dark-100 focus:outline-none focus:border-accent-lightblue transition-colors duration-300" placeholder="Seu nome completo" />
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark-200 font-medium mb-2">Email Empresarial</label>
+                        <input type="email" class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-dark-100 focus:outline-none focus:border-accent-lightblue transition-colors duration-300" placeholder="seu@empresa.com" />
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark-200 font-medium mb-2">Setor da Empresa</label>
+                        <select class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-dark-100 focus:outline-none focus:border-accent-lightblue transition-colors duration-300">
+                            <option>Selecione seu setor</option>
+                            <option>Indústria</option>
+                            <option>Saúde</option>
+                            <option>Logística</option>
+                            <option>Jurídico</option>
+                            <option>Varejo</option>
+                            <option>Financeiro</option>
+                            <option>Tecnologia</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark-200 font-medium mb-2">Principal Desafio</label>
+                        <select class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-dark-100 focus:outline-none focus:border-accent-lightblue transition-colors duration-300">
+                            <option>Selecione seu principal desafio</option>
+                            <option>Reduzir custos operacionais</option>
+                            <option>Automatizar processos</option>
+                            <option>Melhorar tomada de decisões</option>
+                            <option>Aumentar produtividade</option>
+                            <option>Desenvolver software personalizado</option>
+                            <option>Implementar dashboards</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark-200 font-medium mb-2">Mensagem</label>
+                        <textarea rows="4" class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-dark-100 focus:outline-none focus:border-accent-lightblue transition-colors duration-300" placeholder="Conte-nos mais sobre seus desafios e objetivos..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-gradient-to-r from-accent-orange to-accent-darkblue text-white py-4 rounded-xl font-semibold text-lg hover:shadow-neomorphic-hover transition-all duration-300">
+                        Agendar Diagnóstico Gratuito
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Contact Info & Calendly -->
+            <div class="space-y-8">
+                <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic">
+                    <h3 class="text-xl font-semibold text-dark-100 mb-6">Outras Formas de Contato</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gradient-to-r from-accent-green to-accent-lightblue rounded-xl flex items-center justify-center mr-4">
+                                <i data-lucide="message-circle" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-dark-100">WhatsApp</div>
+                                <div class="text-dark-300">+55 (11) 99999-9999</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gradient-to-r from-accent-orange to-accent-darkblue rounded-xl flex items-center justify-center mr-4">
+                                <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-dark-100">Email</div>
+                                <div class="text-dark-300">contato@duatx.com</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gradient-to-r from-accent-lightblue to-accent-green rounded-xl flex items-center justify-center mr-4">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-dark-100">Localização</div>
+                                <div class="text-dark-300">São Paulo, Brasil</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Calendly Embed Placeholder -->
+                <div class="bg-dark-800 rounded-3xl p-8 shadow-neomorphic">
+                    <h3 class="text-xl font-semibold text-dark-100 mb-4">Agende Direto na Agenda</h3>
+                    <div class="bg-dark-700 rounded-xl p-8 text-center border-2 border-dashed border-dark-600" data-implementation="Integrate Calendly widget here">
+                        <i data-lucide="calendar" class="w-16 h-16 text-accent-lightblue mx-auto mb-4"></i>
+                        <p class="text-dark-300 mb-4">Widget do Calendly será integrado aqui</p>
+                        <button class="bg-gradient-to-r from-accent-lightblue to-accent-darkblue text-white px-6 py-3 rounded-xl font-semibold">
+                            Abrir Agenda
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: Contact Section -->
+
+<!-- @COMPONENT: Footer -->
+<footer class="bg-dark-800 border-t border-dark-600 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div class="md:col-span-2">
+                <div class="text-3xl font-bold text-dark-100 mb-4">DUATX</div>
+                <p class="text-dark-300 mb-6 max-w-md">
+                    Transformando empresas através de dados, inteligência artificial e automação. 
+                    Sua parceira em inovação tecnológica.
+                </p>
+                <div class="flex space-x-4">
+                    <div class="w-10 h-10 bg-gradient-to-r from-accent-orange to-accent-lightblue rounded-lg flex items-center justify-center cursor-pointer hover:shadow-neomorphic-hover transition-all duration-300">
+                        <i data-lucide="linkedin" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="w-10 h-10 bg-gradient-to-r from-accent-lightblue to-accent-darkblue rounded-lg flex items-center justify-center cursor-pointer hover:shadow-neomorphic-hover transition-all duration-300">
+                        <i data-lucide="instagram" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="w-10 h-10 bg-gradient-to-r from-accent-green to-accent-orange rounded-lg flex items-center justify-center cursor-pointer hover:shadow-neomorphic-hover transition-all duration-300">
+                        <i data-lucide="youtube" class="w-5 h-5 text-white"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-semibold text-dark-100 mb-4">Links Rápidos</h4>
+                <ul class="space-y-2">
+                    <li><a href="#services" class="text-dark-300 hover:text-accent-lightblue transition-colors duration-200">Serviços</a></li>
+                    <li><a href="#solutions" class="text-dark-300 hover:text-accent-lightblue transition-colors duration-200">Soluções</a></li>
+                    <li><a href="#results" class="text-dark-300 hover:text-accent-lightblue transition-colors duration-200">Resultados</a></li>
+                    <li><a href="#about" class="text-dark-300 hover:text-accent-lightblue transition-colors duration-200">Sobre</a></li>
+                    <li><a href="#contact" class="text-dark-300 hover:text-accent-lightblue transition-colors duration-200">Contato</a></li>
+                </ul>
+            </div>
+            
+            <!-- Services -->
+            <div>
+                <h4 class="font-semibold text-dark-100 mb-4">Serviços</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-dark-300 hover:text-accent-lightblue transition-colors duration-200">Diagnóstico Empresarial</a></li>
+                    <li><a href="#" class="text-dark-300 hover:text-accent-lightblue transition-colors duration-200">Dashboards</a></li>
+                    <li><a href="#" class="text-dark-300 hover:text-accent-lightblue transition-colors duration-200">Automação</a></li>
+                    <li><a href="#" class="text-dark-300 hover:text-accent-lightblue transition-colors duration-200">Software Personalizado</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-dark-600 mt-12 pt-8 text-center">
+            <p class="text-dark-400">
+                © 2024 DUATX. Todos os direitos reservados. | 
+                <a href="#" class="hover:text-accent-lightblue transition-colors duration-200">Política de Privacidade</a> | 
+                <a href="#" class="hover:text-accent-lightblue transition-colors duration-200">Termos de Uso</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- @END_COMPONENT: Footer -->
+
+<!-- @COMPONENT: WhatsApp Floating Button -->
+<div class="fixed bottom-6 right-6 z-50">
+    <button class="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse" data-event="click:openWhatsApp" data-implementation="Should open WhatsApp with pre-filled message">
+        <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
+    </button>
+</div>
+<!-- @END_COMPONENT: WhatsApp Floating Button -->
+
+<script>
+(function() {
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Simple animation on scroll (intersection observer)
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all sections for animation
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(section);
+    });
+    
+    // Form validation placeholder
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // @IMPLEMENTATION: Add form validation and submission logic
+            alert('Formulário enviado! (Implementar integração real)');
+        });
+    }
+    
+    // WhatsApp button
+    const whatsappBtn = document.querySelector('[data-event="click:openWhatsApp"]');
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function() {
+            // @IMPLEMENTATION: Replace with actual WhatsApp number and message
+            const message = encodeURIComponent('Olá! Gostaria de agendar um diagnóstico gratuito para minha empresa.');
+            window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+        });
+    }
+})();
+</script>
+
+<!-- @IMPLEMENTATION: Add Google Tag Manager script here -->
+<!-- @IMPLEMENTATION: Add Calendly script integration -->
+<!-- @IMPLEMENTATION: Add Stripe/Hotmart integration scripts -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUATX - Dados, IA e Software para Otimização de Resultados</title>
+    <meta name="description" content="Reduza custos invisíveis, automatize tarefas e tome decisões com clareza. Especialistas em Business Intelligence, IA e Automação.">
+    <meta name="keywords" content="business intelligence, automação, IA, dashboards, power bi, análise de dados, otimização">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    'montserrat': ['Montserrat', 'sans-serif'],
+                },
+                colors: {
+                    'gray-950': '#202020',
+                    'gray-900': '#2D2D2D',
+                    'gray-800': '#4E4E4E',
+                    'gray-700': '#707070',
+                    'gray-600': '#939393',
+                    'gray-400': '#B7B7B7',
+                    'gray-200': '#DADADA',
+                    'gray-50': '#FEFEFE',
+                    'orange-600': '#AA5C2F',
+                    'green-500': '#96B4A8',
+                    'blue-400': '#7CC1DF',
+                    'blue-600': '#2C6ECB',
+                },
+                animation: {
+                    'float': 'float 6s ease-in-out infinite',
+                    'glow': 'glow 2s ease-in-out infinite alternate',
+                    'slideUp': 'slideUp 0.8s ease-out',
+                    'fadeIn': 'fadeIn 1s ease-out',
+                },
+                keyframes: {
+                    float: {
+                        '0%, 100%': { transform: 'translateY(0px)' },
+                        '50%': { transform: 'translateY(-10px)' },
+                    },
+                    glow: {
+                        'from': { boxShadow: '0 0 20px rgba(124, 193, 223, 0.3)' },
+                        'to': { boxShadow: '0 0 30px rgba(124, 193, 223, 0.6)' },
+                    },
+                    slideUp: {
+                        'from': { opacity: '0', transform: 'translateY(30px)' },
+                        'to': { opacity: '1', transform: 'translateY(0)' },
+                    },
+                    fadeIn: {
+                        'from': { opacity: '0' },
+                        'to': { opacity: '1' },
+                    }
+                },
+                boxShadow: {
+                    'neomorphic': 'inset -8px -8px 16px rgba(255, 255, 255, 0.05), inset 8px 8px 16px rgba(0, 0, 0, 0.3)',
+                    'neomorphic-elevated': '8px 8px 16px rgba(0, 0, 0, 0.4), -8px -8px 16px rgba(255, 255, 255, 0.05)',
+                    'neomorphic-pressed': 'inset 8px 8px 16px rgba(0, 0, 0, 0.4), inset -8px -8px 16px rgba(255, 255, 255, 0.05)',
+                }
+            }
+        }
+    };
+    </script>
+    
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #AA5C2F 0%, #2C6ECB 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #AA5C2F 0%, #2C6ECB 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-50 font-montserrat">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-950/90 backdrop-blur-lg border-b border-gray-800/50" data-mock="true">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold gradient-text">DUATX</div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-blue-400 transition-colors duration-300 font-medium">Home</a>
+                        <a href="#servicos" class="hover:text-blue-400 transition-colors duration-300 font-medium">Serviços</a>
+                        <a href="#sobre" class="hover:text-blue-400 transition-colors duration-300 font-medium">Sobre</a>
+                        <a href="#resultados" class="hover:text-blue-400 transition-colors duration-300 font-medium">Resultados</a>
+                        <a href="#contato" class="hover:text-blue-400 transition-colors duration-300 font-medium">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-orange-600/20"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="animate-slideUp">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                    <span class="gradient-text">Dados, inteligência artificial</span><br>
+                    <span class="text-gray-200">e software para</span><br>
+                    <span class="gradient-text">otimização de resultados</span>
+                </h1>
+                
+                <p class="text-xl sm:text-2xl text-gray-400 mb-12 max-w-4xl mx-auto font-light">
+                    Reduza custos invisíveis, automatize tarefas e tome decisões com clareza.
+                </p>
+                
+                <button class="bg-gradient-to-r from-orange-600 to-blue-600 hover:from-orange-500 hover:to-blue-500 text-white px-12 py-4 rounded-2xl text-lg font-semibold shadow-neomorphic-elevated hover:shadow-neomorphic-pressed transform transition-all duration-300 hover:scale-105 animate-glow" data-implementation="Should open Calendly modal or redirect to scheduling page">
+                    Agendar Diagnóstico Gratuito
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section class="py-24 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl font-bold gradient-text mb-6">Como Funciona</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Nosso processo estruturado para transformar seus dados em resultados concretos
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500 hover:-translate-y-2">
+                    <!-- Modern search and analysis icon representing investigation -->
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-600 to-orange-500 rounded-2xl flex items-center justify-center mb-6 shadow-neomorphic">
+                        <i data-lucide="search" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Entramos com robôs e lupa</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Analisamos profundamente seus processos, identificamos gargalos ocultos e mapeamos oportunidades de otimização com precisão cirúrgica.
+                    </p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500 hover:-translate-y-2">
+                    <!-- Dashboard/analytics icon -->
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl flex items-center justify-center mb-6 shadow-neomorphic">
+                        <i data-lucide="bar-chart-3" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Resolvemos com dashboards, IA e automações</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Implementamos soluções personalizadas com dashboards inteligentes, agentes de IA e automações que trabalham 24/7.
+                    </p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500 hover:-translate-y-2">
+                    <!-- Trending up icon for growth/ROI -->
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-400 rounded-2xl flex items-center justify-center mb-6 shadow-neomorphic">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Acompanhamos com dados reais e ROI visível</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Monitoramento contínuo com métricas claras, relatórios automáticos e ROI mensurável para cada investimento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacto Real -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl font-bold gradient-text mb-6">Impacto Real</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Resultados mensuráveis que nossos clientes alcançaram
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 rounded-3xl p-8 text-center shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500" data-mock="true">
+                    <div class="text-5xl font-bold gradient-text mb-2">+120h</div>
+                    <div class="text-gray-400 text-lg">economizadas por mês</div>
+                </div>
+                <div class="bg-gray-900 rounded-3xl p-8 text-center shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500" data-mock="true">
+                    <div class="text-5xl font-bold gradient-text mb-2">-40%</div>
+                    <div class="text-gray-400 text-lg">redução de churn</div>
+                </div>
+                <div class="bg-gray-900 rounded-3xl p-8 text-center shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500" data-mock="true">
+                    <div class="text-5xl font-bold gradient-text mb-2">+30%</div>
+                    <div class="text-gray-400 text-lg">aumento de margem</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem Confia -->
+    <section class="py-24 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold gradient-text mb-6">Quem Confia</h2>
+                <p class="text-xl text-gray-400">Empresas que já transformaram seus resultados conosco</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60" data-mock="true">
+                <div class="bg-gray-800 rounded-2xl p-6 flex items-center justify-center h-24 shadow-neomorphic">
+                    <span class="text-lg font-semibold text-gray-400">TechCorp</span>
+                </div>
+                <div class="bg-gray-800 rounded-2xl p-6 flex items-center justify-center h-24 shadow-neomorphic">
+                    <span class="text-lg font-semibold text-gray-400">DataFlow</span>
+                </div>
+                <div class="bg-gray-800 rounded-2xl p-6 flex items-center justify-center h-24 shadow-neomorphic">
+                    <span class="text-lg font-semibold text-gray-400">InnovateLab</span>
+                </div>
+                <div class="bg-gray-800 rounded-2xl p-6 flex items-center justify-center h-24 shadow-neomorphic">
+                    <span class="text-lg font-semibold text-gray-400">SmartBiz</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl font-bold gradient-text mb-6">Nossos Serviços</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Soluções completas para transformar seus dados em vantagem competitiva
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Diagnóstico Empresarial -->
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-600 to-orange-500 rounded-2xl flex items-center justify-center mb-6 shadow-neomorphic">
+                        <i data-lucide="clipboard-check" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Diagnóstico Empresarial</h3>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="alert-triangle" class="w-4 h-4 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-red-400 mb-1">Problema</h4>
+                                <p class="text-gray-400 text-sm">Decisões baseadas em intuição e dados fragmentados</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-green-400 mb-1">Solução</h4>
+                                <p class="text-gray-400 text-sm">Análise completa de processos e identificação de oportunidades</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="trending-up" class="w-4 h-4 text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-blue-400 mb-1">Resultado</h4>
+                                <p class="text-gray-400 text-sm">Roadmap claro com ROI projetado para cada ação</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full bg-gradient-to-r from-orange-600 to-blue-600 hover:from-orange-500 hover:to-blue-500 text-white py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+                        Agende Agora
+                    </button>
+                </div>
+
+                <!-- Dashboards Personalizados -->
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl flex items-center justify-center mb-6 shadow-neomorphic">
+                        <i data-lucide="bar-chart-4" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Dashboards Personalizados</h3>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="alert-triangle" class="w-4 h-4 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-red-400 mb-1">Problema</h4>
+                                <p class="text-gray-400 text-sm">Dados espalhados em planilhas e sistemas desconectados</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-green-400 mb-1">Solução</h4>
+                                <p class="text-gray-400 text-sm">Dashboards em Power BI com integração de múltiplas fontes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="trending-up" class="w-4 h-4 text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-blue-400 mb-1">Resultado</h4>
+                                <p class="text-gray-400 text-sm">Visão 360° do negócio em tempo real</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full bg-gradient-to-r from-orange-600 to-blue-600 hover:from-orange-500 hover:to-blue-500 text-white py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+                        Agende Agora
+                    </button>
+                </div>
+
+                <!-- Agentes de IA -->
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-400 rounded-2xl flex items-center justify-center mb-6 shadow-neomorphic">
+                        <i data-lucide="bot" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Agentes de IA e Automações</h3>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="alert-triangle" class="w-4 h-4 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-red-400 mb-1">Problema</h4>
+                                <p class="text-gray-400 text-sm">Tarefas repetitivas consomem tempo da equipe</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-green-400 mb-1">Solução</h4>
+                                <p class="text-gray-400 text-sm">Automações inteligentes com n8n e Python</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="trending-up" class="w-4 h-4 text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-blue-400 mb-1">Resultado</h4>
+                                <p class="text-gray-400 text-sm">Economia de 80% do tempo em processos manuais</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full bg-gradient-to-r from-orange-600 to-blue-600 hover:from-orange-500 hover:to-blue-500 text-white py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+                        Agende Agora
+                    </button>
+                </div>
+
+                <!-- Software Sob Medida -->
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-green-500 rounded-2xl flex items-center justify-center mb-6 shadow-neomorphic">
+                        <i data-lucide="code" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Software Sob Medida</h3>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="alert-triangle" class="w-4 h-4 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-red-400 mb-1">Problema</h4>
+                                <p class="text-gray-400 text-sm">Soluções genéricas não atendem necessidades específicas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-green-400 mb-1">Solução</h4>
+                                <p class="text-gray-400 text-sm">Desenvolvimento personalizado com React e TypeScript</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="trending-up" class="w-4 h-4 text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-blue-400 mb-1">Resultado</h4>
+                                <p class="text-gray-400 text-sm">Sistema perfeitamente alinhado aos seus processos</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full bg-gradient-to-r from-orange-600 to-blue-600 hover:from-orange-500 hover:to-blue-500 text-white py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+                        Agende Agora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soluções por Setor -->
+    <section class="py-24 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl font-bold gradient-text mb-6">Soluções por Setor</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Expertise especializada para as necessidades do seu segmento
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-900 rounded-3xl p-6 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500 hover:-translate-y-2" data-mock="true">
+                    <div class="w-12 h-12 bg-gradient-to-br from-orange-600 to-orange-500 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="factory" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-200">Indústria</h3>
+                    <p class="text-gray-400 text-sm mb-4">Otimização de produção e redução de desperdícios</p>
+                    <div class="text-orange-600 font-semibold text-sm">Saiba mais →</div>
+                </div>
+                
+                <div class="bg-gray-900 rounded-3xl p-6 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500 hover:-translate-y-2" data-mock="true">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="heart-pulse" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-200">Saúde</h3>
+                    <p class="text-gray-400 text-sm mb-4">Gestão de pacientes e otimização de recursos</p>
+                    <div class="text-blue-600 font-semibold text-sm">Saiba mais →</div>
+                </div>
+                
+                <div class="bg-gray-900 rounded-3xl p-6 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500 hover:-translate-y-2" data-mock="true">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-400 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="truck" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-200">Logística</h3>
+                    <p class="text-gray-400 text-sm mb-4">Rastreamento inteligente e otimização de rotas</p>
+                    <div class="text-green-500 font-semibold text-sm">Saiba mais →</div>
+                </div>
+                
+                <div class="bg-gray-900 rounded-3xl p-6 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500 hover:-translate-y-2" data-mock="true">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-500 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="scale" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-200">Jurídico</h3>
+                    <p class="text-gray-400 text-sm mb-4">Automação de processos e análise de contratos</p>
+                    <div class="text-blue-600 font-semibold text-sm">Saiba mais →</div>
+                </div>
+                
+                <div class="bg-gray-900 rounded-3xl p-6 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500 hover:-translate-y-2" data-mock="true">
+                    <div class="w-12 h-12 bg-gradient-to-br from-orange-600 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="shopping-cart" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-200">Varejo</h3>
+                    <p class="text-gray-400 text-sm mb-4">Análise de vendas e previsão de demanda</p>
+                    <div class="text-orange-600 font-semibold text-sm">Saiba mais →</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resultados e Cases -->
+    <section id="resultados" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl font-bold gradient-text mb-6">Resultados e Cases</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Cases reais com ROI comprovado e resultados mensuráveis
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500" data-mock="true">
+                    <!-- Modern office workspace showcasing business analytics -->
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Modern office workspace with data analytics" class="w-full h-48 object-cover rounded-2xl mb-6" />
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">E-commerce Nacional</h3>
+                    <p class="text-gray-400 mb-6">
+                        Implementação de dashboard de vendas em tempo real e automação de estoque resultou em aumento significativo da margem de lucro.
+                    </p>
+                    <div class="text-3xl font-bold gradient-text mb-2">+R$ 20.000/mês</div>
+                    <div class="text-gray-400">Aumento de receita recorrente</div>
+                </div>
+                
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-neomorphic hover:shadow-neomorphic-elevated transition-all duration-500" data-mock="true">
+                    <!-- AI automation technology in corporate setting -->
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="AI automation technology dashboard" class="w-full h-48 object-cover rounded-2xl mb-6" />
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Indústria Metalúrgica</h3>
+                    <p class="text-gray-400 mb-6">
+                        Automação de processos administrativos e dashboards de produção eliminaram retrabalhos e otimizaram a operação.
+                    </p>
+                    <div class="text-3xl font-bold gradient-text mb-2">-40%</div>
+                    <div class="text-gray-400">Redução de retrabalho</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-24 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl font-bold gradient-text mb-6">Sobre a DUATX</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Especialistas em transformação digital com base em São Paulo e atuação nacional e internacional
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-12 mb-16">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-600 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-neomorphic">
+                        <i data-lucide="target" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Missão</h3>
+                    <p class="text-gray-400">
+                        Transformar dados em resultados concretos através de soluções tecnológicas inovadoras e personalizadas
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-neomorphic">
+                        <i data-lucide="eye" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Visão</h3>
+                    <p class="text-gray-400">
+                        Ser referência em otimização de processos empresariais através de inteligência artificial e automação
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-neomorphic">
+                        <i data-lucide="heart" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Valores</h3>
+                    <p class="text-gray-400">
+                        Transparência, resultado mensurável, inovação contínua e parceria de longo prazo com nossos clientes
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <!-- Corporate team meeting in modern office -->
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=600" alt="Corporate team meeting with technology focus" class="w-full max-w-4xl mx-auto rounded-3xl shadow-neomorphic mb-8" />
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                    Nossa equipe multidisciplinar combina expertise técnica com visão de negócios, garantindo soluções que realmente transformam resultados.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantia -->
+    <section class="py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-gradient-to-r from-orange-600/20 to-blue-600/20 rounded-3xl p-12 shadow-neomorphic border border-gray-800/50">
+                <div class="w-20 h-20 bg-gradient-to-br from-orange-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-neomorphic">
+                    <i data-lucide="shield-check" class="w-10 h-10 text-white"></i>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold gradient-text mb-6">Garantia Total</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    "Se você não recuperar o que investiu, devolvemos o dinheiro."
+                </p>
+                <p class="text-gray-400">
+                    Temos tanta confiança em nossos resultados que oferecemos garantia total no seu investimento. 
+                    Seus resultados são nossa responsabilidade.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-24 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl font-bold gradient-text mb-6">Vamos Conversar?</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Entre em contato e receba um diagnóstico gratuito personalizado para o seu negócio
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-neomorphic">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-200">Formulário de Contato</h3>
+                    <form class="space-y-6" data-implementation="Should handle form submission with validation">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Nome Completo</label>
+                            <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-gray-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent shadow-neomorphic" placeholder="Seu nome completo" data-mock="true" />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-gray-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent shadow-neomorphic" placeholder="seu@email.com" data-mock="true" />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Setor/Área</label>
+                            <select class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-gray-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent shadow-neomorphic" data-mock="true">
+                                <option>Selecione seu setor</option>
+                                <option>E-commerce</option>
+                                <option>Indústria</option>
+                                <option>Saúde</option>
+                                <option>Logística</option>
+                                <option>Jurídico</option>
+                                <option>Varejo</option>
+                                <option>Outros</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Principal Desafio</label>
+                            <textarea rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-gray-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent shadow-neomorphic resize-none" placeholder="Conte-nos sobre seu principal desafio com dados e processos..." data-mock="true"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-orange-600 to-blue-600 hover:from-orange-500 hover:to-blue-500 text-white py-4 rounded-xl text-lg font-semibold shadow-neomorphic-elevated hover:shadow-neomorphic-pressed transform transition-all duration-300 hover:scale-105">
+                            Enviar Solicitação
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="bg-gray-900 rounded-3xl p-8 shadow-neomorphic">
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-200">Outras Formas de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-400 rounded-xl flex items-center justify-center shadow-neomorphic">
+                                    <i data-lucide="message-circle" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-200">WhatsApp</h4>
+                                    <p class="text-gray-400">Resposta imediata</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl flex items-center justify-center shadow-neomorphic">
+                                    <i data-lucide="calendar" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-200">Agendar Reunião</h4>
+                                    <p class="text-gray-400">Calendly integrado</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-orange-600 to-orange-500 rounded-xl flex items-center justify-center shadow-neomorphic">
+                                    <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-200">Email Direto</h4>
+                                    <p class="text-gray-400">contato@duatx.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Data visualization charts showcasing business analytics -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Advanced data visualization charts and business analytics dashboard" class="w-full rounded-3xl shadow-neomorphic" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-gray-950 border-t border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-3xl font-bold gradient-text mb-4">DUATX</div>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Dados, inteligência artificial e software para otimização de resultados. 
+                    Transformando dados em vantagem competitiva.
+                </p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300" data-mock="true">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300" data-mock="true">
+                        <i data-lucide="twitter" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300" data-mock="true">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                    </a>
+                </div>
+                
+                <div class="text-gray-500 text-sm">
+                    © 2024 DUATX. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button class="w-16 h-16 bg-green-500 hover:bg-green-400 text-white rounded-full shadow-neomorphic-elevated hover:shadow-neomorphic-pressed transform transition-all duration-300 hover:scale-110 animate-float" data-implementation="Should open WhatsApp chat">
+            <i data-lucide="message-circle" class="w-8 h-8 mx-auto"></i>
+        </button>
+    </div>
+
+    <script>
+    (function() {
+        // Initialize Lucide icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for scroll animations
+        document.querySelectorAll('section').forEach((section) => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(section);
+        });
+
+        // Form validation and submission
+        const contactForm = document.querySelector('#contato form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                const inputs = this.querySelectorAll('input[required], textarea[required], select[required]');
+                let isValid = true;
+                
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        isValid = false;
+                        input.style.borderColor = '#ef4444';
+                    } else {
+                        input.style.borderColor = '#374151';
+                    }
+                });
+                
+                if (isValid) {
+                    // Show success message (in real implementation, this would submit to backend)
+                    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                    this.reset();
+                } else {
+                    alert('Por favor, preencha todos os campos obrigatórios.');
+                }
+            });
+        }
+
+        // Add hover effects to cards
+        document.querySelectorAll('[class*="shadow-neomorphic"]').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // CTA button effects
+        document.querySelectorAll('button[class*="gradient"]').forEach(button => {
+            button.addEventListener('click', function() {
+                // Add ripple effect
+                const ripple = document.createElement('span');
+                ripple.style.cssText = `
+                    position: absolute;
+                    border-radius: 50%;
+                    background: rgba(255,255,255,0.3);
+                    transform: scale(0);
+                    animation: ripple 0.6s linear;
+                    pointer-events: none;
+                `;
+                
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = '50%';
+                ripple.style.top = '50%';
+                ripple.style.marginLeft = -(size / 2) + 'px';
+                ripple.style.marginTop = -(size / 2) + 'px';
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add CSS for ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+            button {
+                position: relative;
+                overflow: hidden;
+            }
+        `;
+        document.head.appendChild(style);
+
+    })();
+    </script>
+
+    <!-- Google Tag Manager (Mock Implementation) -->
+    <script data-mock="true">
+    // GTM implementation would go here
+    console.log('GTM integration ready for implementation');
+    </script>
+</body>
+</html>
