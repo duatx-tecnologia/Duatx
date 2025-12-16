@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agente de Atendimento - Chatbot Inteligente | DUATX</title>
+    <meta name="description" content="Case de sucesso - Agente de Atendimento com IA para automação de suporte e vendas desenvolvido pela DUATX">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/projeto-saude.css">
+    <style>
+        .agente-cover-image {
+            max-width: 100% !important;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            transform: none !important;
+        }
+        
+        .project-video {
+            width: 100%;
+            max-height: 600px;
+            object-fit: contain;
+            background: #0a0a0a;
+            border-radius: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .agente-cover-image {
+                max-width: 100% !important;
+                width: 100%;
+            }
+            
+            .project-video {
+                max-height: 400px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .project-video {
+                max-height: 300px;
+            }
+        }
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/duatx-logo-tight.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="project-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="back-link" data-testid="link-voltar">
+                    <i data-lucide="arrow-left"></i>
+                    <span>Voltar</span>
+                </a>
+                
+                <a 
+                    href="https://wa.me/5511912906767?text=Ol%C3%A1%21%20Vi%20o%20projeto%20do%20Agente%20de%20Atendimento.%20Gostaria%20de%20conversar%20sobre%20uma%20solu%C3%A7%C3%A3o%20similar."
+                    class="contact-cta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="button-contato-projeto"
+                >
+                    <i data-lucide="message-circle"></i>
+                    <span>Quero uma solução assim</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="project-main">
+        <!-- Project Cover -->
+        <section class="project-cover">
+            <div class="cover-content">
+                <div class="cover-brand">
+                    <img src="assets/duatx-logo-tight.svg" alt="DUATX" class="cover-logo">
+                </div>
+                <div class="cover-text">
+                    <div class="cover-icon">
+                        <i data-lucide="bot"></i>
+                    </div>
+                    <h1 class="cover-title">
+                        Agente de Atendimento<br>
+                        <strong>Inteligente com IA</strong>
+                    </h1>
+                </div>
+                <div class="cover-dashboard">
+                    <img src="assets/agente-fluxo-3d-1.png" alt="Fluxo do Agente de Atendimento" class="cover-dashboard-image agente-cover-image">
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- About the Project -->
+            <section class="about-project">
+                <div class="about-header">
+                    <h2 class="about-title">SOBRE O PROJETO</h2>
+                </div>
+                
+                <div class="about-content">
+                    <p class="about-text">
+                        O Agente de Atendimento foi desenvolvido para automatizar e otimizar a comunicação com clientes. Utilizando Inteligência Artificial avançada, o sistema entende o contexto das conversas e oferece respostas precisas e personalizadas, funcionando 24 horas por dia, 7 dias por semana.
+                    </p>
+
+                    <p class="about-text">
+                        Com integração multicanal, o agente atende simultaneamente via WhatsApp, chat do site, Instagram e outras plataformas. Ele é capaz de qualificar leads, agendar reuniões, responder dúvidas frequentes, processar pedidos e encaminhar casos complexos para atendimento humano quando necessário.
+                    </p>
+
+                    <p class="about-text">
+                        O fluxo de atendimento foi construído com automações inteligentes que conectam diferentes sistemas: CRM, agenda, banco de dados e APIs externas. Isso garante que cada interação seja contextualizada e eficiente, reduzindo tempo de resposta e aumentando a satisfação do cliente.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+            <!-- Project Images Carousel -->
+            <section class="project-gallery">
+                <div class="project-carousel-container">
+                    <div class="project-carousel">
+                        <div class="carousel-track" id="carouselTrack">
+                            <!-- Slide 1 - Video com Som -->
+                            <div class="carousel-slide active">
+                                <video 
+                                    src="assets/agente-video-som.mp4" 
+                                    controls
+                                    autoplay
+                                    muted
+                                    playsinline
+                                    webkit-playsinline
+                                    preload="auto"
+                                    class="project-image project-video"
+                                    data-testid="video-agente-demo"
+                                >
+                                    Seu navegador não suporta vídeo HTML5.
+                                </video>
+                                <div class="image-caption">
+                                    <h3>Demonstração do Agente de Atendimento</h3>
+                                    <p>Clique no vídeo para ativar o som e ver a demonstração completa</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 - Fluxo 3D parte 1 -->
+                            <div class="carousel-slide">
+                                <img src="assets/agente-fluxo-3d-1.png" alt="Fluxo de Automação - Recebimento e Processamento" class="project-image">
+                                <div class="image-caption">
+                                    <h3>Tratamento de Mensagens</h3>
+                                    <p>Recebimento, processamento de texto, áudio e imagem com memória integrada</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 3 - Fluxo 3D parte 2 -->
+                            <div class="carousel-slide">
+                                <img src="assets/agente-fluxo-3d-2.png" alt="Fluxo de Automação - IA e Respostas" class="project-image">
+                                <div class="image-caption">
+                                    <h3>Agente de IA e Respostas</h3>
+                                    <p>Processamento com IA, memória de contexto e envio de respostas fracionadas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel Controls -->
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" id="prevBtn" data-testid="button-prev-slide">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn next" id="nextBtn" data-testid="button-next-slide">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Carousel Dots -->
+                    <div class="carousel-dots" id="carouselDots">
+                        <button class="dot active" data-slide="0"></button>
+                        <button class="dot" data-slide="1"></button>
+                        <button class="dot" data-slide="2"></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="project-cta">
+                <div class="cta-content">
+                    <h2>Pronto para automatizar seu atendimento?</h2>
+                    <p>Desenvolvemos agentes inteligentes personalizados para o seu negócio. Entre em contato e descubra como podemos otimizar sua comunicação com clientes.</p>
+                    
+                    <div class="cta-buttons">
+                        <a 
+                            href="https://wa.me/5511912906767?text=Ol%C3%A1%21%20Vi%20o%20projeto%20do%20Agente%20de%20Atendimento.%20Gostaria%20de%20agendar%20uma%20conversa."
+                            class="cta-button primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-testid="button-contato-principal"
+                        >
+                            <i data-lucide="phone"></i>
+                            <span>Agendar conversa</span>
+                        </a>
+                        
+                        <a href="/#image-carousel" class="cta-button secondary" data-testid="button-ver-mais-projetos">
+                            <i data-lucide="eye"></i>
+                            <span>Ver outros projetos</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/duatx-logo-tight.svg" alt="DUATX" class="footer-logo">
+                    <p>Transformando empresas através de dados, IA e tecnologia.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="https://www.instagram.com/duatx.tecnologia/" target="_blank" rel="noopener noreferrer" data-testid="link-instagram-footer">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/duatx-tecnologia/" target="_blank" rel="noopener noreferrer" data-testid="link-linkedin-footer">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 DUATX. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        lucide.createIcons();
+        
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const track = document.getElementById('carouselTrack');
+        
+        function updateCarousel() {
+            // Update slide position
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update active states
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+        
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
+        
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToSlide(index));
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+        
+        // Touch/swipe support
+        let startX = 0;
+        let endX = 0;
+        
+        track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        
+        track.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
